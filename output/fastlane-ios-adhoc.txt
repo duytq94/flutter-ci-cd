@@ -1,0 +1,1125 @@
+[⠋] 🚀 [⠙] 🚀 [⠹] 🚀 [⠸] 🚀 [⠼] 🚀 [⠴] 🚀 [⠦] 🚀 [✔] 🚀 
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                    Used plugins                                                                                                                     |
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Plugin                                    | Version | Action                                                                                                                                                                                        |
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| fastlane-plugin-firebase_app_distribution | 0.5.0   | firebase_app_distribution, firebase_app_distribution_add_testers, firebase_app_distribution_get_latest_release, firebase_app_distribution_get_udids, firebase_app_distribution_remove_testers |
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[08:18:06]: Sending anonymous analytics information
+[08:18:06]: Learn more at https://docs.fastlane.tools/#metrics
+[08:18:06]: No personal or sensitive data is sent.
+[08:18:06]: You can disable this by adding `opt_out_usage` at the top of your Fastfile
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:18:06]: ------------------------------
+[08:18:06]: --- Step: default_platform ---
+[08:18:06]: ------------------------------
+[08:18:06]: Driving the lane 'ios adhoc' 🚀
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:18:06]: -------------------
+[08:18:06]: --- Step: is_ci ---
+[08:18:06]: -------------------
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:18:06]: -----------------------------
+[08:18:06]: --- Step: setup_circle_ci ---
+[08:18:06]: -----------------------------
+[08:18:06]: Skipping Log Path setup as FL_OUTPUT_DIR is unset
+[08:18:06]: Creating temporary keychain: "fastlane_tmp_keychain".
+[08:18:06]: $ security list-keychains -d user
+[08:18:06]: ▸ "/Users/distiller/Library/Keychains/fastlane_tmp_keychain-db"
+[08:18:06]: Found keychain '/Users/distiller/Library/Keychains/fastlane_tmp_keychain-db' in list-keychains, adding to search list skipped
+[08:18:06]: Enabling match readonly mode.
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:18:06]: -------------------
+[08:18:06]: --- Step: is_ci ---
+[08:18:06]: -------------------
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:18:06]: -------------------
+[08:18:06]: --- Step: match ---
+[08:18:06]: -------------------
+[08:18:06]: Successfully loaded '/Users/distiller/project/ios/fastlane/Matchfile' 📄
+
++----------------+--------------------------------------------------------------------------------+
+|                           Detected Values from './fastlane/Matchfile'                           |
++----------------+--------------------------------------------------------------------------------+
+| git_url        | git@gitlab.com:mobile-app-flutter-match.git                                    |
+| storage_mode   | git                                                                            |
+| type           | development                                                                    |
+| app_identifier | ["com.duytq.example.dev", "com.duytq.example"]                                 |
+| username       | duytq@gmail.com                                                                |
++----------------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------+--------------------------------------------------------------------------------+
+|                                                Summary for match 2.212.2                                                |
++----------------------------------------+--------------------------------------------------------------------------------+
+| type                                   | adhoc                                                                          |
+| app_identifier                         | ["com.duytq.example.dev"]                                                      |
+| readonly                               | true                                                                           |
+| generate_apple_certs                   | true                                                                           |
+| skip_provisioning_profiles             | false                                                                          |
+| username                               | duytq@gmail.com                                                                |
+| team_id                                | ABC2DEFGHT                                                                     |
+| storage_mode                           | git                                                                            |
+| git_url                                | git@gitlab.com:mobile-app-flutter-match.git                                    |
+| git_branch                             | master                                                                         |
+| shallow_clone                          | false                                                                          |
+| clone_branch_directly                  | false                                                                          |
+| skip_google_cloud_account_confirmation | false                                                                          |
+| keychain_name                          | fastlane_tmp_keychain                                                          |
+| force                                  | false                                                                          |
+| force_for_new_devices                  | false                                                                          |
+| include_mac_in_profiles                | false                                                                          |
+| include_all_certificates               | false                                                                          |
+| force_for_new_certificates             | false                                                                          |
+| skip_confirmation                      | false                                                                          |
+| safe_remove_certs                      | false                                                                          |
+| skip_docs                              | false                                                                          |
+| platform                               | ios                                                                            |
+| derive_catalyst_app_identifier         | false                                                                          |
+| fail_on_name_taken                     | false                                                                          |
+| skip_certificate_matching              | false                                                                          |
+| skip_set_partition_list                | false                                                                          |
+| verbose                                | false                                                                          |
++----------------------------------------+--------------------------------------------------------------------------------+
+
+[08:18:06]: Cloning remote git repo...
+[08:18:06]: If cloning the repo takes too long, you can use the `clone_branch_directly` option in match.
+[08:18:07]: Checking out branch master...
+[08:18:07]: 🔓  Successfully decrypted certificates repo
+[08:18:07]: Installing certificate...
+[08:18:07]: $ security find-certificate -a -c 'Apple Worldwide Developer Relations' -p /Users/distiller/Library/Keychains/fastlane_tmp_keychain-db
+[08:18:08]: There are no local code signing identities found.
+You can run `security find-identity -v -p codesigning fastlane_tmp_keychain` to get this output.
+This Stack Overflow thread has more information: https://stackoverflow.com/q/35390072/774.
+(Check in Keychain Access for an expired WWDR certificate: https://stackoverflow.com/a/35409835/774 has more info.)
+[08:18:08]: Setting key partition list... (this can take a minute if there are a lot of keys installed)
+[08:18:08]: security: SecItemCopyMatching: The specified item could not be found in the keychain.
+[08:18:08]: Setting key partition list... (this can take a minute if there are a lot of keys installed)
+
++-------------------+----------------------------------------------------+
+|                         Installed Certificate                          |
++-------------------+----------------------------------------------------+
+| User ID           | ABC2DEFGHT                                         |
+| Common Name       | Apple Distribution: Duy Pte Ltd (ABC2DEFGHT)       |
+| Organisation Unit | ABC2DEFGHT                                         |
+| Organisation      | Duy Pte Ltd                                        |
+| Country           | SG                                                 |
+| Start Datetime    | 2023-04-10 06:42:04 UTC                            |
+| End Datetime      | 2024-04-09 06:42:03 UTC                            |
++-------------------+----------------------------------------------------+
+
+[08:18:08]: Installing provisioning profile...
+
++---------------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+|                                                                                   Installed Provisioning Profile                                                                                   |
++---------------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| Parameter           | Environment Variable                                      | Value                                                                                                            |
++---------------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| App Identifier      |                                                           | com.duytq.example.dev                                                                                            |
+| Type                |                                                           | adhoc                                                                                                            |
+| Platform            |                                                           | ios                                                                                                              |
+| Profile UUID        | sigh_com.duytq.example.dev_adhoc                          | 29483bba-1abd-42e6-b32f-1d53872342af                                                                             |
+| Profile Name        | sigh_com.duytq.example.dev_adhoc_profile-name             | match AdHoc com.duytq.example.dev                                                                                |
+| Profile Path        | sigh_com.duytq.example.dev_adhoc_profile-path             | /Users/distiller/Library/MobileDevice/Provisioning Profiles/29483bba-1abd-42e6-b32f-1d53872342af.mobileprovision |
+| Development Team ID | sigh_com.duytq.example.dev_adhoc_team-id                  | ABC2DEFGHT                                                                                                       |
+| Certificate Name    | sigh_com.duytq.example.dev_adhoc_certificate-name         | Apple Distribution: Duy Pte Ltd (ABC2DEFGHT)                                                                     |
++---------------------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+
+[08:18:08]: All required keys, certificates and provisioning profiles are installed 🙌
+[08:18:08]: Setting Provisioning Profile type to 'ad-hoc'
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:18:08]: -----------------
+[08:18:08]: --- Step: gym ---
+[08:18:08]: -----------------
+[08:18:08]: Resolving Swift Package Manager dependencies...
+[08:18:08]: $ xcodebuild -resolvePackageDependencies -workspace ./Runner.xcworkspace -scheme dev
+[08:18:09]: ▸ Command line invocation:
+[08:18:09]: ▸     /Applications/Xcode-14.2.app/Contents/Developer/usr/bin/xcodebuild -resolvePackageDependencies -workspace ./Runner.xcworkspace -scheme dev
+[08:18:09]: ▸ User defaults from command line:
+[08:18:09]: ▸     IDEPackageSupportUseBuiltinSCM = YES
+[08:18:11]: ▸ --- xcodebuild: WARNING: Using the first of multiple matching destinations:
+[08:18:11]: ▸ { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+[08:18:11]: ▸ { platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+[08:18:11]: ▸ { platform:iOS Simulator, id:89572413-4FB7-4048-9205-8F533B1DC2D0, OS:15.5, name:iPad (9th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:BE3B5223-D9AF-412F-9A73-95F6CA5B5198, OS:16.2, name:iPad (10th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:81A624CA-10EF-4E7D-AF81-558CB315087F, OS:15.5, name:iPad Air (5th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:1096D066-4531-4174-9AF4-99AF5B10F814, OS:16.2, name:iPad Air (5th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:F5348267-FAD8-40E8-8D12-DE13971B63D6, OS:15.5, name:iPad Pro (9.7-inch) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:69A11FF3-D102-48B1-9A95-2CF77F8F69AE, OS:15.5, name:iPad Pro (11-inch) (3rd generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:3D01F8CE-F519-4295-83E8-D690358D829B, OS:16.2, name:iPad Pro (11-inch) (4th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:BB354921-4E7B-4691-82FD-491C8EDE4A4D, OS:15.5, name:iPad Pro (12.9-inch) (5th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:AAECFEEF-83B9-4964-896F-9DFA5D15647D, OS:16.2, name:iPad Pro (12.9-inch) (6th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:909D94E5-18C7-44FC-A68B-8C1543F2FFD8, OS:15.5, name:iPad mini (6th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:362D1B0F-D1DF-4337-9CC5-96570437E88B, OS:16.2, name:iPad mini (6th generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:63FF07F4-83BA-48CC-A7AB-6F6D7770DE1C, OS:15.5, name:iPhone 13 }
+[08:18:11]: ▸ { platform:iOS Simulator, id:2BF445C5-B223-4C5B-ABFB-B343FA686C00, OS:15.5, name:iPhone 13 Pro }
+[08:18:11]: ▸ { platform:iOS Simulator, id:8A4CFB1C-484A-459E-A08F-AA80A1BE72D8, OS:15.5, name:iPhone 13 Pro Max }
+[08:18:11]: ▸ { platform:iOS Simulator, id:9EF015E0-26E3-4CF0-8338-F4EB8E83C0BE, OS:15.5, name:iPhone 13 mini }
+[08:18:11]: ▸ { platform:iOS Simulator, id:56AE6AAE-7385-4453-AD41-112C369322A6, OS:16.2, name:iPhone 14 }
+[08:18:11]: ▸ { platform:iOS Simulator, id:21452B8C-7170-4BDF-ABDC-CC69123BC461, OS:16.2, name:iPhone 14 Plus }
+[08:18:11]: ▸ { platform:iOS Simulator, id:309CE2B6-45C8-4FE5-9B43-87A0A93C72E1, OS:16.2, name:iPhone 14 Pro }
+[08:18:11]: ▸ { platform:iOS Simulator, id:AFF1A48C-D8FA-4F9D-84F0-382F2FB9F1B0, OS:16.2, name:iPhone 14 Pro Max }
+[08:18:11]: ▸ { platform:iOS Simulator, id:27B987A2-631B-494C-B82B-9250DAB548B4, OS:15.5, name:iPhone SE (3rd generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:3AEDBC8B-C49E-48B4-9854-8096FA7D5595, OS:16.2, name:iPhone SE (3rd generation) }
+[08:18:11]: ▸ { platform:iOS Simulator, id:CF49EB86-AA50-45D7-8D46-D9DC3AE53211, OS:15.5, name:iPod touch (7th generation) }
+[08:18:11]: ▸ resolved source packages: 
+[08:18:11]: $ xcodebuild -showBuildSettings -workspace ./Runner.xcworkspace -scheme dev
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, id:89572413-4FB7-4048-9205-8F533B1DC2D0, OS:15.5, name:iPad (9th generation) }
+{ platform:iOS Simulator, id:BE3B5223-D9AF-412F-9A73-95F6CA5B5198, OS:16.2, name:iPad (10th generation) }
+{ platform:iOS Simulator, id:81A624CA-10EF-4E7D-AF81-558CB315087F, OS:15.5, name:iPad Air (5th generation) }
+{ platform:iOS Simulator, id:1096D066-4531-4174-9AF4-99AF5B10F814, OS:16.2, name:iPad Air (5th generation) }
+{ platform:iOS Simulator, id:F5348267-FAD8-40E8-8D12-DE13971B63D6, OS:15.5, name:iPad Pro (9.7-inch) }
+{ platform:iOS Simulator, id:69A11FF3-D102-48B1-9A95-2CF77F8F69AE, OS:15.5, name:iPad Pro (11-inch) (3rd generation) }
+{ platform:iOS Simulator, id:3D01F8CE-F519-4295-83E8-D690358D829B, OS:16.2, name:iPad Pro (11-inch) (4th generation) }
+{ platform:iOS Simulator, id:BB354921-4E7B-4691-82FD-491C8EDE4A4D, OS:15.5, name:iPad Pro (12.9-inch) (5th generation) }
+{ platform:iOS Simulator, id:AAECFEEF-83B9-4964-896F-9DFA5D15647D, OS:16.2, name:iPad Pro (12.9-inch) (6th generation) }
+{ platform:iOS Simulator, id:909D94E5-18C7-44FC-A68B-8C1543F2FFD8, OS:15.5, name:iPad mini (6th generation) }
+{ platform:iOS Simulator, id:362D1B0F-D1DF-4337-9CC5-96570437E88B, OS:16.2, name:iPad mini (6th generation) }
+{ platform:iOS Simulator, id:63FF07F4-83BA-48CC-A7AB-6F6D7770DE1C, OS:15.5, name:iPhone 13 }
+{ platform:iOS Simulator, id:2BF445C5-B223-4C5B-ABFB-B343FA686C00, OS:15.5, name:iPhone 13 Pro }
+{ platform:iOS Simulator, id:8A4CFB1C-484A-459E-A08F-AA80A1BE72D8, OS:15.5, name:iPhone 13 Pro Max }
+{ platform:iOS Simulator, id:9EF015E0-26E3-4CF0-8338-F4EB8E83C0BE, OS:15.5, name:iPhone 13 mini }
+{ platform:iOS Simulator, id:56AE6AAE-7385-4453-AD41-112C369322A6, OS:16.2, name:iPhone 14 }
+{ platform:iOS Simulator, id:21452B8C-7170-4BDF-ABDC-CC69123BC461, OS:16.2, name:iPhone 14 Plus }
+{ platform:iOS Simulator, id:309CE2B6-45C8-4FE5-9B43-87A0A93C72E1, OS:16.2, name:iPhone 14 Pro }
+{ platform:iOS Simulator, id:AFF1A48C-D8FA-4F9D-84F0-382F2FB9F1B0, OS:16.2, name:iPhone 14 Pro Max }
+{ platform:iOS Simulator, id:27B987A2-631B-494C-B82B-9250DAB548B4, OS:15.5, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, id:3AEDBC8B-C49E-48B4-9854-8096FA7D5595, OS:16.2, name:iPhone SE (3rd generation) }
+{ platform:iOS Simulator, id:CF49EB86-AA50-45D7-8D46-D9DC3AE53211, OS:15.5, name:iPod touch (7th generation) }
+2023-05-12 08:18:13.593 xcodebuild[6232:19653] Requested but did not find extension point with identifier Xcode.InterfaceBuilderBuildSupport.PlatformDefinition
+[08:18:13]: Detected provisioning profile mapping: {:"com.duytq.example.dev"=>"match AdHoc com.duytq.example.dev"}
+
++-------------------------------------------------------------------+--------------------------------------------------------------+
+|                                                     Summary for gym 2.212.2                                                      |
++-------------------------------------------------------------------+--------------------------------------------------------------+
+| scheme                                                            | dev                                                          |
+| export_method                                                     | ad-hoc                                                       |
+| output_directory                                                  | output                                                       |
+| export_options.provisioningProfiles.com.duytq.example.dev         | match AdHoc com.duytq.example.dev                            |
+| workspace                                                         | ./Runner.xcworkspace                                         |
+| clean                                                             | false                                                        |
+| output_name                                                       | Example                                                      |
+| silent                                                            | false                                                        |
+| skip_package_ipa                                                  | false                                                        |
+| skip_package_pkg                                                  | false                                                        |
+| build_path                                                        | /Users/distiller/Library/Developer/Xcode/Archives/2023-05-12 |
+| result_bundle                                                     | false                                                        |
+| buildlog_path                                                     | ~/Library/Logs/gym                                           |
+| destination                                                       | generic/platform=iOS                                         |
+| xcodebuild_formatter                                              | xcpretty                                                     |
+| build_timing_summary                                              | false                                                        |
+| skip_profile_detection                                            | false                                                        |
+| xcodebuild_command                                                | xcodebuild                                                   |
+| skip_package_dependencies_resolution                              | false                                                        |
+| disable_package_automatic_updates                                 | false                                                        |
+| use_system_scm                                                    | false                                                        |
+| xcode_path                                                        | /Applications/Xcode-14.2.app                                 |
++-------------------------------------------------------------------+--------------------------------------------------------------+
+
+[08:18:13]: $ set -o pipefail && xcodebuild -workspace ./Runner.xcworkspace -scheme dev -destination 'generic/platform=iOS' -archivePath /Users/distiller/Library/Developer/Xcode/Archives/2023-05-12/Example\ 2023-05-12\ 08.18.13.xcarchive archive | tee /Users/distiller/Library/Logs/gym/Example-dev.log | xcpretty
+[08:18:19]: ▸ Copying pb_encode.h
+[08:18:19]: ▸ Copying pb_decode.h
+[08:18:19]: ▸ Copying pb_common.h
+[08:18:19]: ▸ Copying pb.h
+[08:18:19]: ▸ Copying nanopb-umbrella.h
+[08:18:19]: ▸ Copying ReachabilitySwift-umbrella.h
+[08:18:19]: ▸ Processing nanopb-Info.plist
+[08:18:19]: ▸ Processing ReachabilitySwift-Info.plist
+[08:18:19]: ▸ Copying webview-umbrella.h
+[08:18:19]: ▸ Copying FWFWebsiteDataStoreHostApi.h
+[08:18:19]: ▸ Copying FWFWebViewHostApi.h
+[08:18:19]: ▸ Copying FWFWebViewFlutterWKWebViewExternalAPI.h
+[08:18:19]: ▸ Copying FWFUserContentControllerHostApi.h
+[08:18:19]: ▸ Copying FWFWebViewConfigurationHostApi.h
+[08:18:19]: ▸ Copying FWFURLHostApi.h
+[08:18:19]: ▸ Copying FWFUIViewHostApi.h
+[08:18:19]: ▸ Copying FWFUIDelegateHostApi.h
+[08:18:19]: ▸ Copying FWFScrollViewHostApi.h
+[08:18:19]: ▸ Copying FWFScriptMessageHandlerHostApi.h
+[08:18:19]: ▸ Copying FWFPreferencesHostApi.h
+[08:18:19]: ▸ Copying FWFObjectHostApi.h
+[08:18:19]: ▸ Copying FWFNavigationDelegateHostApi.h
+[08:18:19]: ▸ Copying FWFInstanceManager_Test.h
+[08:18:19]: ▸ Copying FWFInstanceManager.h
+[08:18:19]: ▸ Copying FWFHTTPCookieStoreHostApi.h
+[08:18:19]: ▸ Copying FWFGeneratedWebKitApis.h
+[08:18:19]: ▸ Copying FWFDataConverters.h
+[08:18:19]: ▸ Copying FLTWebViewFlutterPlugin.h
+[08:18:19]: ▸ Copying FBLPromisePrivate.h
+[08:18:19]: ▸ Copying PromisesObjC-umbrella.h
+[08:18:19]: ▸ Copying FBLPromises.h
+[08:18:19]: ▸ Copying FBLPromiseError.h
+[08:18:19]: ▸ Copying FBLPromise.h
+[08:18:19]: ▸ Copying FBLPromise+Wrap.h
+[08:18:19]: ▸ Copying FBLPromise+Validate.h
+[08:18:19]: ▸ Copying FBLPromise+Timeout.h
+[08:18:19]: ▸ Copying FBLPromise+Then.h
+[08:18:19]: ▸ Copying FBLPromise+Testing.h
+[08:18:19]: ▸ Copying FBLPromise+Retry.h
+[08:18:19]: ▸ Copying FBLPromise+Reduce.h
+[08:18:19]: ▸ Copying FBLPromise+Recover.h
+[08:18:19]: ▸ Copying FBLPromise+Race.h
+[08:18:19]: ▸ Copying FBLPromise+Do.h
+[08:18:19]: ▸ Copying FBLPromise+Delay.h
+[08:18:19]: ▸ Copying FBLPromise+Catch.h
+[08:18:19]: ▸ Copying FBLPromise+Await.h
+[08:18:19]: ▸ Copying FBLPromise+Async.h
+[08:18:19]: ▸ Copying FBLPromise+Any.h
+[08:18:19]: ▸ Copying FBLPromise+Always.h
+[08:18:19]: ▸ Copying FBLPromise+All.h
+[08:18:19]: ▸ Processing webview_flutter_wkwebview-Info.plist
+[08:18:19]: ▸ Compiling pb_encode.c
+[08:18:20]: ▸ Compiling pb_decode.c
+[08:18:20]: ▸ Compiling pb_common.c
+[08:18:20]: ▸ Compiling nanopb-dummy.m
+[08:18:22]: ▸ Copying video_player_avfoundation-umbrella.h
+[08:18:22]: ▸ Copying messages.g.h
+[08:18:22]: ▸ Copying FLTVideoPlayerPlugin.h
+[08:18:22]: ▸ Copying AVAssetTrackUtils.h
+[08:18:22]: ▸ Copying url_launcher_ios-umbrella.h
+[08:18:22]: ▸ Copying FLTURLLauncherPlugin.h
+[08:18:22]: ▸ Copying sign_in_with_apple-umbrella.h
+[08:18:22]: ▸ Copying SignInWithApplePlugin.h
+[08:18:22]: ▸ Copying shared_preferences_foundation-umbrella.h
+[08:18:22]: ▸ Compiling webview_flutter_wkwebview-dummy.m
+[08:18:22]: ▸ Copying messages.g.h
+[08:18:22]: ▸ Copying image_picker_ios-umbrella.h
+[08:18:22]: ▸ Copying FLTPHPickerSaveImageToPathOperation.h
+[08:18:22]: ▸ Copying FLTImagePickerPlugin_Test.h
+[08:18:22]: ▸ Copying FLTImagePickerPlugin.h
+[08:18:22]: ▸ Copying FLTImagePickerPhotoAssetUtil.h
+[08:18:22]: ▸ Copying FLTImagePickerMetaDataUtil.h
+[08:18:22]: ▸ Copying FLTImagePickerImageUtil.h
+[08:18:22]: ▸ Compiling webview_flutter_wkwebview_vers.c
+[08:18:22]: ▸ Compiling FWFWebsiteDataStoreHostApi.m
+[08:18:23]: ▸ Compiling FWFWebViewHostApi.m
+[08:18:23]: ▸ Compiling FWFWebViewFlutterWKWebViewExternalAPI.m
+[08:18:23]: ▸ Compiling FWFWebViewConfigurationHostApi.m
+[08:18:23]: ▸ Compiling FWFUserContentControllerHostApi.m
+[08:18:23]: ▸ Compiling FWFURLHostApi.m
+[08:18:23]: ▸ Compiling FWFUIViewHostApi.m
+[08:18:23]: ▸ Compiling FWFUIDelegateHostApi.m
+[08:18:23]: ▸ Compiling FWFScrollViewHostApi.m
+[08:18:23]: ▸ Compiling FWFScriptMessageHandlerHostApi.m
+[08:18:23]: ▸ Compiling FWFPreferencesHostApi.m
+[08:18:23]: ▸ Compiling FWFObjectHostApi.m
+[08:18:23]: ▸ Compiling FWFNavigationDelegateHostApi.m
+[08:18:23]: ▸ Compiling FWFInstanceManager.m
+[08:18:23]: ▸ Compiling FWFHTTPCookieStoreHostApi.m
+[08:18:23]: ▸ Compiling FWFGeneratedWebKitApis.m
+[08:18:24]: ▸ Compiling FWFDataConverters.m
+[08:18:24]: ▸ Compiling FLTWebViewFlutterPlugin.m
+[08:18:24]: ▸ Processing video_player_avfoundation-Info.plist
+[08:18:24]: ▸ Compiling video_player_avfoundation_vers.c
+[08:18:24]: ▸ Compiling video_player_avfoundation-dummy.m
+[08:18:24]: ▸ Compiling messages.g.m
+[08:18:24]: ▸ Compiling FLTVideoPlayerPlugin.m
+[08:18:25]: ▸ Compiling AVAssetTrackUtils.m
+[08:18:25]: ▸ Processing url_launcher_ios-Info.plist
+[08:18:25]: ▸ Compiling url_launcher_ios_vers.c
+[08:18:25]: ▸ Compiling url_launcher_ios-dummy.m
+[08:18:25]: ▸ Compiling FLTURLLauncherPlugin.m
+[08:18:25]: ▸ Linking webview_flutter_wkwebview
+[08:18:25]: ▸ Generating 'webview_flutter_wkwebview.framework.dSYM'
+[08:18:25]: ▸ Processing sign_in_with_apple-Info.plist
+[08:18:25]: ▸ Linking url_launcher_ios
+[08:18:29]: ▸ Generating 'url_launcher_ios.framework.dSYM'
+[08:18:29]: ▸ Touching webview_flutter_wkwebview.framework (in target 'webview_flutter_wkwebview' from project 'Pods')
+[08:18:29]: ▸ Processing shared_preferences_foundation-Info.plist
+[08:18:29]: ▸ Compiling nanopb_vers.c
+[08:18:29]: ▸ Linking nanopb
+[08:18:29]: ▸ Linking video_player_avfoundation
+[08:18:29]: ▸ Touching url_launcher_ios.framework (in target 'url_launcher_ios' from project 'Pods')
+[08:18:29]: ▸ Generating 'nanopb.framework.dSYM'
+[08:18:29]: ▸ Processing image_picker_ios-Info.plist
+[08:18:29]: ▸ Compiling messages.g.m
+[08:18:29]: ▸ Generating 'video_player_avfoundation.framework.dSYM'
+[08:18:29]: ▸ Compiling image_picker_ios_vers.c
+[08:18:29]: ▸ Compiling image_picker_ios-dummy.m
+[08:18:29]: ▸ Compiling FLTPHPickerSaveImageToPathOperation.m
+[08:18:29]: ▸ Compiling FLTImagePickerPlugin.m
+[08:18:29]: ▸ Compiling FLTImagePickerPhotoAssetUtil.m
+[08:18:29]: ▸ Touching nanopb.framework (in target 'nanopb' from project 'Pods')
+[08:18:29]: ▸ Compiling FLTImagePickerMetaDataUtil.m
+[08:18:29]: ▸ Compiling FLTImagePickerImageUtil.m
+[08:18:29]: ▸ Touching video_player_avfoundation.framework (in target 'video_player_avfoundation' from project 'Pods')
+[08:18:29]: ▸ Processing PromisesObjC-Info.plist
+[08:18:29]: ▸ Compiling PromisesObjC-dummy.m
+[08:18:29]: ▸ Compiling Reachability.swift
+[08:18:31]: ▸ Linking image_picker_ios
+[08:18:31]: ▸ Generating 'image_picker_ios.framework.dSYM'
+[08:18:31]: ▸ Compiling FBLPromises_vers.c
+[08:18:31]: ▸ Compiling FBLPromiseError.m
+[08:18:31]: ▸ Compiling FBLPromise.m
+[08:18:31]: ▸ Compiling FBLPromise+Wrap.m
+[08:18:31]: ▸ Compiling FBLPromise+Validate.m
+[08:18:31]: ▸ Compiling FBLPromise+Timeout.m
+[08:18:31]: ▸ Compiling shared_preferences_foundation_vers.c
+[08:18:31]: ▸ Compiling shared_preferences_foundation-dummy.m
+[08:18:31]: ▸ Compiling FBLPromise+Then.m
+[08:18:31]: ▸ Linking shared_preferences_foundation
+[08:18:31]: ▸ Compiling FBLPromise+Testing.m
+[08:18:31]: ▸ Touching image_picker_ios.framework (in target 'image_picker_ios' from project 'Pods')
+[08:18:31]: ▸ Compiling FBLPromise+Retry.m
+[08:18:31]: ▸ Compiling FBLPromise+Reduce.m
+[08:18:31]: ▸ Compiling FBLPromise+Recover.m
+[08:18:31]: ▸ Generating 'shared_preferences_foundation.framework.dSYM'
+[08:18:31]: ▸ Compiling sign_in_with_apple_vers.c
+[08:18:31]: ▸ Compiling sign_in_with_apple-dummy.m
+[08:18:31]: ▸ Compiling SignInWithApplePlugin.m
+[08:18:31]: ▸ Compiling FBLPromise+Race.m
+[08:18:31]: ▸ Compiling FBLPromise+Do.m
+[08:18:31]: ▸ Compiling FBLPromise+Delay.m
+[08:18:31]: ▸ Linking sign_in_with_apple
+[08:18:31]: ▸ Compiling FBLPromise+Catch.m
+[08:18:31]: ▸ Compiling FBLPromise+Await.m
+[08:18:31]: ▸ Compiling FBLPromise+Async.m
+[08:18:31]: ▸ Compiling FBLPromise+Any.m
+[08:18:31]: ▸ Compiling FBLPromise+Always.m
+[08:18:31]: ▸ Compiling FBLPromise+All.m
+[08:18:31]: ▸ Generating 'sign_in_with_apple.framework.dSYM'
+[08:18:31]: ▸ Touching shared_preferences_foundation.framework (in target 'shared_preferences_foundation' from project 'Pods')
+[08:18:31]: ▸ Copying GTMSessionUploadFetcher.h
+[08:18:31]: ▸ Copying GTMSessionFetcherService.h
+[08:18:31]: ▸ Copying GTMSessionFetcherLogging.h
+[08:18:31]: ▸ Copying GTMSessionFetcher.h
+[08:18:31]: ▸ Copying GTMSessionFetcher-umbrella.h
+[08:18:31]: ▸ Linking FBLPromises
+[08:18:31]: ▸ Processing GTMSessionFetcher-Info.plist
+[08:18:31]: ▸ Copying OIDURLSessionProvider.h
+[08:18:31]: ▸ Copying OIDURLQueryComponent.h
+[08:18:31]: ▸ Copying OIDTokenUtilities.h
+[08:18:31]: ▸ Copying OIDTokenResponse.h
+[08:18:31]: ▸ Copying OIDTokenRequest.h
+[08:18:31]: ▸ Copying OIDServiceDiscovery.h
+[08:18:31]: ▸ Copying OIDServiceConfiguration.h
+[08:18:31]: ▸ Copying OIDScopes.h
+[08:18:31]: ▸ Copying OIDScopeUtilities.h
+[08:18:31]: ▸ Copying OIDResponseTypes.h
+[08:18:31]: ▸ Copying OIDRegistrationResponse.h
+[08:18:31]: ▸ Copying OIDRegistrationRequest.h
+[08:18:31]: ▸ Copying OIDIDToken.h
+[08:18:31]: ▸ Copying OIDGrantTypes.h
+[08:18:31]: ▸ Copying OIDFieldMapping.h
+[08:18:31]: ▸ Copying OIDExternalUserAgentSession.h
+[08:18:31]: ▸ Copying OIDExternalUserAgentRequest.h
+[08:18:31]: ▸ Copying OIDExternalUserAgentIOSCustomBrowser.h
+[08:18:31]: ▸ Copying OIDExternalUserAgentIOS.h
+[08:18:31]: ▸ Copying OIDExternalUserAgentCatalyst.h
+[08:18:31]: ▸ Copying OIDExternalUserAgent.h
+[08:18:31]: ▸ Copying OIDErrorUtilities.h
+[08:18:31]: ▸ Copying OIDError.h
+[08:18:31]: ▸ Copying OIDEndSessionResponse.h
+[08:18:31]: ▸ Copying OIDEndSessionRequest.h
+[08:18:31]: ▸ Copying OIDDefines.h
+[08:18:31]: ▸ Copying OIDClientMetadataParameters.h
+[08:18:31]: ▸ Copying OIDAuthorizationService.h
+[08:18:31]: ▸ Copying OIDAuthorizationService+IOS.h
+[08:18:31]: ▸ Copying OIDAuthorizationResponse.h
+[08:18:31]: ▸ Copying OIDAuthorizationRequest.h
+[08:18:31]: ▸ Copying OIDAuthStateErrorDelegate.h
+[08:18:31]: ▸ Copying OIDAuthStateChangeDelegate.h
+[08:18:31]: ▸ Copying OIDAuthState.h
+[08:18:31]: ▸ Copying OIDAuthState+IOS.h
+[08:18:31]: ▸ Copying AppAuthCore.h
+[08:18:31]: ▸ Copying AppAuth.h
+[08:18:31]: ▸ Copying AppAuth-umbrella.h
+[08:18:31]: ▸ Compiling GTMSessionUploadFetcher.m
+[08:18:31]: ▸ Compiling GTMSessionFetcher_vers.c
+[08:18:31]: ▸ Compiling GTMSessionFetcherService.m
+[08:18:31]: ▸ Generating 'FBLPromises.framework.dSYM'
+[08:18:31]: ▸ Compiling GTMSessionFetcherLogging.m
+[08:18:31]: ▸ Touching sign_in_with_apple.framework (in target 'sign_in_with_apple' from project 'Pods')
+[08:18:31]: ▸ Compiling Reachability_vers.c
+[08:18:31]: ▸ Compiling ReachabilitySwift-dummy.m
+[08:18:33]: ▸ Compiling GTMSessionFetcher.m
+[08:18:33]: ▸ Compiling GTMSessionFetcher-dummy.m
+[08:18:33]: ▸ Processing AppAuth-Info.plist
+[08:18:33]: ▸ Compiling OIDURLSessionProvider.m
+[08:18:33]: ▸ Compiling OIDURLQueryComponent.m
+[08:18:33]: ▸ Compiling OIDTokenUtilities.m
+[08:18:33]: ▸ Compiling OIDTokenResponse.m
+[08:18:33]: ▸ Compiling OIDTokenRequest.m
+[08:18:33]: ▸ Touching FBLPromises.framework (in target 'PromisesObjC' from project 'Pods')
+[08:18:33]: ▸ Compiling OIDServiceDiscovery.m
+[08:18:33]: ▸ Compiling OIDServiceConfiguration.m
+[08:18:33]: ▸ Compiling OIDScopes.m
+[08:18:33]: ▸ Compiling OIDScopeUtilities.m
+[08:18:33]: ▸ Compiling OIDResponseTypes.m
+[08:18:33]: ▸ Linking GTMSessionFetcher
+[08:18:33]: ▸ Compiling OIDRegistrationResponse.m
+[08:18:33]: ▸ Compiling OIDRegistrationRequest.m
+[08:18:33]: ▸ Compiling OIDIDToken.m
+[08:18:33]: ▸ Compiling OIDGrantTypes.m
+[08:18:33]: ▸ Compiling OIDFieldMapping.m
+[08:18:33]: ▸ Copying PromisesSwift-umbrella.h
+[08:18:33]: ▸ Copying NSURLSession+GULPromises.h
+[08:18:33]: ▸ Copying GoogleUtilities-umbrella.h
+[08:18:33]: ▸ Copying GULUserDefaults.h
+[08:18:33]: ▸ Copying GULURLSessionDataResponse.h
+[08:18:33]: ▸ Copying GULSecureCoding.h
+[08:18:33]: ▸ Copying GULNetworkInfo.h
+[08:18:33]: ▸ Copying GULNSData+zlib.h
+[08:18:33]: ▸ Copying GULLoggerLevel.h
+[08:18:33]: ▸ Copying GULLogger.h
+[08:18:33]: ▸ Copying GULKeychainUtils.h
+[08:18:33]: ▸ Copying GULKeychainStorage.h
+[08:18:33]: ▸ Copying GULHeartbeatDateStorageUserDefaults.h
+[08:18:33]: ▸ Copying GULHeartbeatDateStorage.h
+[08:18:33]: ▸ Copying GULHeartbeatDateStorable.h
+[08:18:33]: ▸ Copying GULAppEnvironmentUtil.h
+[08:18:33]: ▸ Processing PromisesSwift-Info.plist
+[08:18:33]: ▸ Processing GoogleUtilities-Info.plist
+[08:18:33]: ▸ Compiling NSURLSession+GULPromises.m
+[08:18:35]: ▸ Compiling GoogleUtilities_vers.c
+[08:18:35]: ▸ Compiling GoogleUtilities-dummy.m
+[08:18:35]: ▸ Compiling GULUserDefaults.m
+[08:18:38]: ▸ Linking Reachability
+[08:18:38]: ▸ Compiling GULURLSessionDataResponse.m
+[08:18:38]: ▸ Compiling GULSecureCoding.m
+[08:18:38]: ▸ Compiling GULNetworkInfo.m
+[08:18:38]: ▸ Generating 'Reachability.framework.dSYM'
+[08:18:38]: ▸ Compiling GULNSData+zlib.m
+[08:18:38]: ▸ Compiling GULLogger.m
+[08:18:38]: ▸ Compiling GULKeychainUtils.m
+[08:18:38]: ▸ Compiling GULKeychainStorage.m
+[08:18:38]: ▸ Compiling GULHeartbeatDateStorageUserDefaults.m
+[08:18:38]: ▸ Compiling GULHeartbeatDateStorage.m
+[08:18:38]: ▸ Compiling GULAppEnvironmentUtil.m
+[08:18:38]: ▸ Generating 'GTMSessionFetcher.framework.dSYM'
+[08:18:38]: ▸ Compiling OIDExternalUserAgentIOSCustomBrowser.m
+[08:18:38]: ▸ Compiling OIDExternalUserAgentIOS.m
+[08:18:38]: ▸ Linking GoogleUtilities
+[08:18:38]: ▸ Touching Reachability.framework (in target 'ReachabilitySwift' from project 'Pods')
+[08:18:38]: ▸ Compiling OIDExternalUserAgentCatalyst.m
+[08:18:38]: ▸ Compiling OIDErrorUtilities.m
+[08:18:38]: ▸ Generating 'GoogleUtilities.framework.dSYM'
+[08:18:38]: ▸ Touching GTMSessionFetcher.framework (in target 'GTMSessionFetcher' from project 'Pods')
+[08:18:38]: ▸ Compiling OIDError.m
+[08:18:38]: ▸ Compiling OIDEndSessionResponse.m
+[08:18:38]: ▸ Compiling OIDEndSessionRequest.m
+[08:18:38]: ▸ Copying connectivity_plus-umbrella.h
+[08:18:38]: ▸ Copying ConnectivityPlusPlugin.h
+[08:18:38]: ▸ Processing connectivity_plus-Info.plist
+[08:18:38]: ▸ Compiling OIDClientMetadataParameters.m
+[08:18:38]: ▸ Compiling OIDAuthorizationService.m
+[08:18:38]: ▸ Touching GoogleUtilities.framework (in target 'GoogleUtilities' from project 'Pods')
+[08:18:38]: ▸ Compiling OIDAuthorizationService+IOS.m
+[08:18:38]: ▸ Compiling OIDAuthorizationResponse.m
+[08:18:38]: ▸ Compiling OIDAuthorizationRequest.m
+[08:18:38]: ▸ Compiling OIDAuthState.m
+[08:18:38]: ▸ Compiling OIDAuthState+IOS.m
+[08:18:38]: ▸ Copying GoogleDataTransport.h
+[08:18:38]: ▸ Copying GoogleDataTransport-umbrella.h
+[08:18:38]: ▸ Copying GDTCORTransport.h
+[08:18:38]: ▸ Copying GDTCORTargets.h
+[08:18:38]: ▸ Copying GDTCOREventTransformer.h
+[08:18:38]: ▸ Copying GDTCOREventDataObject.h
+[08:18:38]: ▸ Copying GDTCOREvent.h
+[08:18:38]: ▸ Copying GDTCOREndpoints.h
+[08:18:38]: ▸ Copying GDTCORConsoleLogger.h
+[08:18:38]: ▸ Copying GDTCORClock.h
+[08:18:38]: ▸ Processing GoogleDataTransport-Info.plist
+[08:18:38]: ▸ Compiling AppAuth_vers.c
+[08:18:38]: ▸ Compiling client_metrics.nanopb.c
+[08:18:38]: ▸ Compiling cct.nanopb.c
+[08:18:38]: ▸ Compiling GoogleDataTransport_vers.c
+[08:18:38]: ▸ Copying FirebaseCoreInternal-umbrella.h
+[08:18:38]: ▸ Compiling connectivity_plus_vers.c
+[08:18:38]: ▸ Compiling connectivity_plus-dummy.m
+[08:18:38]: ▸ Compiling ConnectivityPlusPlugin.m
+[08:18:38]: ▸ Compiling GoogleDataTransport-dummy.m
+[08:18:38]: ▸ Compiling GDTCORUploadCoordinator.m
+[08:18:39]: ▸ Linking connectivity_plus
+[08:18:39]: ▸ Compiling GDTCORUploadBatch.m
+[08:18:39]: ▸ Generating 'connectivity_plus.framework.dSYM'
+[08:18:39]: ▸ Compiling Promises_vers.c
+[08:18:39]: ▸ Compiling PromisesSwift-dummy.m
+[08:18:39]: ▸ Compiling GDTCORTransport.m
+[08:18:40]: ▸ Linking Promises
+[08:18:40]: ▸ Compiling GDTCORTransformer.m
+[08:18:40]: ▸ Compiling GDTCORStorageMetadata.m
+[08:18:40]: ▸ Generating 'Promises.framework.dSYM'
+[08:18:40]: ▸ Touching connectivity_plus.framework (in target 'connectivity_plus' from project 'Pods')
+[08:18:40]: ▸ Compiling GDTCORStorageEventSelector.m
+[08:18:40]: ▸ Compiling GDTCORRegistrar.m
+[08:18:40]: ▸ Compiling GDTCORReachability.m
+[08:18:40]: ▸ Compiling GDTCORPlatform.m
+[08:18:40]: ▸ Compiling GDTCORMetricsMetadata.m
+[08:18:40]: ▸ Compiling GDTCORMetricsController.m
+[08:18:40]: ▸ Compiling GDTCORMetrics.m
+[08:18:40]: ▸ Compiling GDTCORMetrics+GDTCCTSupport.m
+[08:18:40]: ▸ Compiling GDTCORLogSourceMetrics.m
+[08:18:40]: ▸ Compiling GDTCORLifecycle.m
+[08:18:40]: ▸ Compiling GDTCORFlatFileStorage.m
+[08:18:40]: ▸ Compiling GDTCORFlatFileStorage+Promises.m
+[08:18:40]: ▸ Compiling GDTCOREvent.m
+[08:18:40]: ▸ Compiling GDTCOREvent+GDTMetricsSupport.m
+[08:18:40]: ▸ Compiling GDTCOREvent+GDTCCTSupport.m
+[08:18:40]: ▸ Touching Promises.framework (in target 'PromisesSwift' from project 'Pods')
+[08:18:40]: ▸ Compiling GDTCOREndpoints.m
+[08:18:40]: ▸ Compiling GDTCORDirectorySizeTracker.m
+[08:18:40]: ▸ Compiling GDTCORConsoleLogger.m
+[08:18:40]: ▸ Compiling GDTCORClock.m
+[08:18:40]: ▸ Compiling GDTCORAssert.m
+[08:18:40]: ▸ Compiling GDTCCTUploader.m
+[08:18:40]: ▸ Compiling GDTCCTUploadOperation.m
+[08:18:40]: ▸ Compiling GDTCCTNanopbHelpers.m
+[08:18:40]: ▸ Compiling GDTCCTCompressionHelper.m
+[08:18:40]: ▸ Processing FirebaseCoreInternal-Info.plist
+[08:18:40]: ▸ Compiling AppAuth-dummy.m
+[08:18:40]: ▸ Linking AppAuth
+[08:18:46]: ▸ Linking GoogleDataTransport
+[08:18:46]: ▸ Generating 'AppAuth.framework.dSYM'
+[08:18:46]: ▸ Touching AppAuth.framework (in target 'AppAuth' from project 'Pods')
+[08:18:46]: ▸ Copying GTMOAuth2KeychainCompatibility.h
+[08:18:46]: ▸ Copying GTMKeychain.h
+[08:18:46]: ▸ Copying GTMAppAuthFetcherAuthorization.h
+[08:18:46]: ▸ Copying GTMAppAuthFetcherAuthorization+Keychain.h
+[08:18:46]: ▸ Copying GTMAppAuth.h
+[08:18:46]: ▸ Copying GTMAppAuth-umbrella.h
+[08:18:46]: ▸ Processing GTMAppAuth-Info.plist
+[08:18:46]: ▸ Compiling GTMOAuth2KeychainCompatibility.m
+[08:18:46]: ▸ Compiling GTMKeychain.m
+[08:18:46]: ▸ Generating 'GoogleDataTransport.framework.dSYM'
+[08:18:46]: ▸ Compiling GTMAppAuth_vers.c
+[08:18:46]: ▸ Compiling GTMAppAuthFetcherAuthorization.m
+[08:18:46]: ▸ Compiling GTMAppAuthFetcherAuthorization+Keychain.m
+[08:18:46]: ▸ Compiling GTMAppAuth-dummy.m
+[08:18:46]: ▸ Touching GoogleDataTransport.framework (in target 'GoogleDataTransport' from project 'Pods')
+[08:18:46]: ▸ Linking GTMAppAuth
+[08:18:46]: ▸ Generating 'GTMAppAuth.framework.dSYM'
+[08:18:46]: ▸ Touching GTMAppAuth.framework (in target 'GTMAppAuth' from project 'Pods')
+[08:18:46]: ▸ Processing ResourceBundle-GoogleSignIn-GoogleSignIn-Info.plist
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/zh_TW.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/zh_CN.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/vi.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/uk.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/tr.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/th.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/sv.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/sk.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ru.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ro.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pt_PT.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pt_BR.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pt.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pl.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/nl.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/nb.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ms.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ko.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ja.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/it.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/id.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/hu.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/hr.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/hi.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/he.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/fr_CA.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/fr.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/fi.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/es_MX.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/es.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/en_GB.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/en.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/el.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/de.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/da.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/cs.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ca.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ar.lproj
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/Roboto-Bold.ttf
+[08:18:46]: ▸ Touching GoogleSignIn.bundle (in target 'GoogleSignIn-GoogleSignIn' from project 'Pods')
+[08:18:46]: ▸ Copying GoogleSignIn.h
+[08:18:46]: ▸ Copying GoogleSignIn-umbrella.h
+[08:18:46]: ▸ Copying GIDSignInButton.h
+[08:18:46]: ▸ Copying GIDSignIn.h
+[08:18:46]: ▸ Copying GIDProfileData.h
+[08:18:46]: ▸ Copying GIDGoogleUser.h
+[08:18:46]: ▸ Copying GIDConfiguration.h
+[08:18:46]: ▸ Copying GIDAuthentication.h
+[08:18:46]: ▸ Processing GoogleSignIn-Info.plist
+[08:18:46]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.framework/GoogleSignIn.bundle
+[08:18:46]: ▸ Compiling NSBundle+GID3PAdditions.m
+[08:18:46]: ▸ Compiling GoogleSignIn_vers.c
+[08:18:46]: ▸ Compiling GoogleSignIn-dummy.m
+[08:18:46]: ▸ Compiling GIDSignInStrings.m
+[08:18:46]: ▸ Compiling GIDSignInPreferences.m
+[08:18:46]: ▸ Compiling GIDSignInInternalOptions.m
+[08:18:46]: ▸ Compiling GIDSignInCallbackSchemes.m
+[08:18:46]: ▸ Compiling GIDSignInButton.m
+[08:18:46]: ▸ Compiling GIDSignIn.m
+[08:18:46]: ▸ Compiling GIDScopes.m
+[08:18:46]: ▸ Compiling GIDProfileData.m
+[08:18:46]: ▸ Compiling GIDMDMPasscodeState.m
+[08:18:46]: ▸ Compiling GIDMDMPasscodeCache.m
+[08:18:46]: ▸ Compiling GIDGoogleUser.m
+[08:18:46]: ▸ Compiling GIDEMMErrorHandler.m
+[08:18:46]: ▸ Compiling GIDConfiguration.m
+[08:18:46]: ▸ Compiling GIDCallbackQueue.m
+[08:18:46]: ▸ Compiling GIDAuthentication.m
+[08:18:46]: ▸ Compiling GIDAuthStateMigration.m
+[08:18:46]: ▸ Compiling FirebaseCoreInternal_vers.c
+[08:18:46]: ▸ Compiling FirebaseCoreInternal-dummy.m
+[08:18:48]: ▸ Linking GoogleSignIn
+[08:18:48]: ▸ Generating 'GoogleSignIn.framework.dSYM'
+[08:18:48]: ▸ Touching GoogleSignIn.framework (in target 'GoogleSignIn' from project 'Pods')
+[08:18:48]: ▸ Copying google_sign_in_ios-umbrella.h
+[08:18:48]: ▸ Copying FLTGoogleSignInPlugin_Test.h
+[08:18:48]: ▸ Copying FLTGoogleSignInPlugin.h
+[08:18:48]: ▸ Processing google_sign_in_ios-Info.plist
+[08:18:48]: ▸ Compiling google_sign_in_ios-dummy.m
+[08:18:48]: ▸ Compiling FLTGoogleSignInPlugin.m
+[08:18:48]: ▸ Compiling google_sign_in_ios_vers.c
+[08:18:48]: ▸ Touching google_sign_in_ios.framework (in target 'google_sign_in_ios' from project 'Pods')
+[08:18:48]: ▸ Linking FirebaseCoreInternal
+[08:18:48]: ▸ Generating 'FirebaseCoreInternal.framework.dSYM'
+[08:18:48]: ▸ Touching FirebaseCoreInternal.framework (in target 'FirebaseCoreInternal' from project 'Pods')
+[08:18:49]: ▸ Copying FirebaseCore.h
+[08:18:49]: ▸ Copying FirebaseCore-umbrella.h
+[08:18:49]: ▸ Copying FIRVersion.h
+[08:18:49]: ▸ Copying FIROptions.h
+[08:18:49]: ▸ Copying FIRLoggerLevel.h
+[08:18:49]: ▸ Copying FIRConfiguration.h
+[08:18:49]: ▸ Copying FIRApp.h
+[08:18:49]: ▸ Processing FirebaseCore-Info.plist
+[08:18:49]: ▸ Compiling FirebaseCore-dummy.m
+[08:18:49]: ▸ Compiling FIRVersion.m
+[08:18:50]: ▸ Compiling FIROptions.m
+[08:18:50]: ▸ Compiling FIRLogger.m
+[08:18:52]: ▸ Compiling FirebaseCore_vers.c
+[08:18:52]: ▸ Compiling FIRHeartbeatLogger.m
+[08:18:52]: ▸ Compiling FIRFirebaseUserAgent.m
+[08:18:52]: ▸ Compiling FIRDependency.m
+[08:18:52]: ▸ Compiling FIRConfiguration.m
+[08:18:52]: ▸ Compiling FIRComponentType.m
+[08:18:52]: ▸ Compiling FIRComponentContainer.m
+[08:18:52]: ▸ Compiling FIRComponent.m
+[08:18:52]: ▸ Compiling FIRBundleUtil.m
+[08:18:52]: ▸ Compiling FIRApp.m
+[08:18:52]: ▸ Compiling FIRAnalyticsConfiguration.m
+[08:18:52]: ▸ Linking FirebaseCore
+[08:18:52]: ▸ Generating 'FirebaseCore.framework.dSYM'
+[08:18:52]: ▸ Touching FirebaseCore.framework (in target 'FirebaseCore' from project 'Pods')
+[08:18:52]: ▸ Copying FirebaseInstallations.h
+[08:18:52]: ▸ Copying FirebaseInstallations-umbrella.h
+[08:18:52]: ▸ Copying FIRInstallationsErrors.h
+[08:18:52]: ▸ Copying FIRInstallationsAuthTokenResult.h
+[08:18:52]: ▸ Copying FIRInstallations.h
+[08:18:52]: ▸ Processing FirebaseInstallations-Info.plist
+[08:18:52]: ▸ Copying FirebaseCoreInternal.h
+[08:18:52]: ▸ Copying FirebaseCoreExtension-umbrella.h
+[08:18:52]: ▸ Copying FIROptionsInternal.h
+[08:18:52]: ▸ Copying FIRLogger.h
+[08:18:52]: ▸ Copying FIRLibrary.h
+[08:18:52]: ▸ Copying FIRHeartbeatLogger.h
+[08:18:52]: ▸ Copying FIRDependency.h
+[08:18:52]: ▸ Copying FIRComponentType.h
+[08:18:52]: ▸ Copying FIRComponentContainer.h
+[08:18:52]: ▸ Copying FIRComponent.h
+[08:18:52]: ▸ Copying FIRAppInternal.h
+[08:18:52]: ▸ Compiling FirebaseInstallations-dummy.m
+[08:18:53]: ▸ Compiling FIRInstallationsStoredItem.m
+[08:18:55]: ▸ Compiling FIRInstallationsStoredAuthToken.m
+[08:18:55]: ▸ Compiling FIRInstallationsStore.m
+[08:18:55]: ▸ Compiling FirebaseInstallations_vers.c
+[08:18:55]: ▸ Compiling FIRInstallationsSingleOperationPromiseCache.m
+[08:18:55]: ▸ Compiling FIRInstallationsLogger.m
+[08:18:55]: ▸ Compiling FIRInstallationsItem.m
+[08:18:55]: ▸ Compiling FIRInstallationsItem+RegisterInstallationAPI.m
+[08:18:55]: ▸ Compiling FIRInstallationsIIDTokenStore.m
+[08:18:55]: ▸ Compiling FIRInstallationsIIDStore.m
+[08:18:55]: ▸ Compiling FIRInstallationsIDController.m
+[08:18:55]: ▸ Compiling FIRInstallationsHTTPError.m
+[08:18:55]: ▸ Compiling FIRInstallationsErrorUtil.m
+[08:18:55]: ▸ Compiling FIRInstallationsBackoffController.m
+[08:18:55]: ▸ Compiling FIRInstallationsAuthTokenResult.m
+[08:18:55]: ▸ Compiling FIRInstallationsAPIService.m
+[08:18:55]: ▸ Compiling FIRInstallations.m
+[08:18:55]: ▸ Compiling FIRCurrentDateProvider.m
+[08:18:55]: ▸ Processing FirebaseCoreExtension-Info.plist
+[08:18:55]: ▸ Compiling dummy.m
+[08:18:55]: ▸ Compiling FirebaseCoreExtension_vers.c
+[08:18:55]: ▸ Compiling FirebaseCoreExtension-dummy.m
+[08:18:55]: ▸ Linking FirebaseInstallations
+[08:18:55]: ▸ Linking FirebaseCoreExtension
+[08:18:55]: ▸ Generating 'FirebaseInstallations.framework.dSYM'
+[08:18:55]: ▸ Generating 'FirebaseCoreExtension.framework.dSYM'
+[08:18:55]: ▸ Touching FirebaseCoreExtension.framework (in target 'FirebaseCoreExtension' from project 'Pods')
+[08:18:55]: ▸ Touching FirebaseInstallations.framework (in target 'FirebaseInstallations' from project 'Pods')
+[08:18:55]: ▸ Copying sessions.nanopb.h
+[08:18:55]: ▸ Copying FirebaseSessions-umbrella.h
+[08:18:55]: ▸ Copying FIRSESNanoPBHelpers.h
+[08:18:55]: ▸ Processing FirebaseSessions-Info.plist
+[08:19:01]: ▸ Compiling sessions.nanopb.c
+[08:19:01]: ▸ Compiling FirebaseSessions_vers.c
+[08:19:01]: ▸ Compiling FirebaseSessions-dummy.m
+[08:19:02]: ▸ Compiling FIRSESNanoPBHelpers.m
+[08:19:03]: ▸ Linking FirebaseSessions
+[08:19:04]: ▸ Generating 'FirebaseSessions.framework.dSYM'
+[08:19:04]: ▸ Touching FirebaseSessions.framework (in target 'FirebaseSessions' from project 'Pods')
+[08:19:04]: ▸ Copying FirebaseCrashlytics.h
+[08:19:04]: ▸ Copying FirebaseCrashlytics-umbrella.h
+[08:19:04]: ▸ Copying FIRStackFrame.h
+[08:19:04]: ▸ Copying FIRExceptionModel.h
+[08:19:04]: ▸ Copying FIRCrashlyticsReport.h
+[08:19:04]: ▸ Copying FIRCrashlytics.h
+[08:19:04]: ▸ Processing FirebaseCrashlytics-Info.plist
+[08:19:04]: ▸ Compiling crashlytics.nanopb.c
+[08:19:04]: ▸ Compiling FirebaseCrashlytics-dummy.m
+[08:19:05]: ▸ Compiling FIRStackFrame.m
+[08:19:05]: ▸ Compiling FirebaseCrashlytics_vers.c
+[08:19:05]: ▸ Compiling FIRExceptionModel.m
+[08:19:05]: ▸ Compiling FIRCrashlyticsReport.m
+[08:19:05]: ▸ Compiling FIRCrashlytics.m
+[08:19:07]: ▸ Compiling FIRCLSdSYM.m
+[08:19:07]: ▸ Compiling FIRCLSUtility.m
+[08:19:07]: ▸ Compiling FIRCLSUserLogging.m
+[08:19:07]: ▸ Compiling FIRCLSUserDefaults.m
+[08:19:07]: ▸ Compiling FIRCLSUnwind_x86.c
+[08:19:07]: ▸ Compiling FIRCLSUnwind_arm.c
+[08:19:07]: ▸ Compiling FIRCLSUnwind.c
+[08:19:07]: ▸ Compiling FIRCLSUUID.m
+[08:19:07]: ▸ Compiling FIRCLSURLBuilder.m
+[08:19:07]: ▸ Compiling FIRCLSThreadState.c
+[08:19:07]: ▸ Compiling FIRCLSThreadArrayOperation.m
+[08:19:07]: ▸ Compiling FIRCLSSymbolicationOperation.m
+[08:19:07]: ▸ Compiling FIRCLSSymbolResolver.m
+[08:19:07]: ▸ Compiling FIRCLSSignal.c
+[08:19:07]: ▸ Compiling FIRCLSSettingsManager.m
+[08:19:07]: ▸ Compiling FIRCLSSettings.m
+[08:19:07]: ▸ Compiling FIRCLSSerializeSymbolicatedFramesOperation.m
+[08:19:07]: ▸ Compiling FIRCLSReportUploader.m
+[08:19:07]: ▸ Compiling FIRCLSReportManager.m
+[08:19:07]: ▸ Compiling FIRCLSReportAdapter.m
+[08:19:07]: ▸ Compiling FIRCLSRecordIdentity.m
+[08:19:07]: ▸ Compiling FIRCLSRecordHost.m
+[08:19:07]: ▸ Compiling FIRCLSRecordBase.m
+[08:19:07]: ▸ Compiling FIRCLSRecordApplication.m
+[08:19:07]: ▸ Compiling FIRCLSProfiling.c
+[08:19:07]: ▸ Compiling FIRCLSProcessReportOperation.m
+[08:19:07]: ▸ Compiling FIRCLSProcess.c
+[08:19:07]: ▸ Compiling FIRCLSOnDemandModel.m
+[08:19:07]: ▸ Compiling FIRCLSNotificationManager.m
+[08:19:07]: ▸ Compiling FIRCLSNetworkResponseHandler.m
+[08:19:07]: ▸ Compiling FIRCLSNetworkOperation.m
+[08:19:07]: ▸ Compiling FIRCLSMultipartMimeStreamEncoder.m
+[08:19:07]: ▸ Compiling FIRCLSMetricKitManager.m
+[08:19:07]: ▸ Compiling FIRCLSManagerData.m
+[08:19:07]: ▸ Compiling FIRCLSMachOSlice.m
+[08:19:07]: ▸ Compiling FIRCLSMachOBinary.m
+[08:19:07]: ▸ Compiling FIRCLSMachO.m
+[08:19:07]: ▸ Compiling FIRCLSMachException.c
+[08:19:07]: ▸ Compiling FIRCLSLogger.m
+[08:19:07]: ▸ Compiling FIRCLSLaunchMarkerModel.m
+[08:19:07]: ▸ Compiling FIRCLSInternalReport.m
+[08:19:08]: ▸ Compiling FIRCLSInternalLogging.c
+[08:19:08]: ▸ Compiling FIRCLSInstallIdentifierModel.m
+[08:19:08]: ▸ Compiling FIRCLSHost.m
+[08:19:08]: ▸ Compiling FIRCLSHandler.m
+[08:19:08]: ▸ Compiling FIRCLSFileManager.m
+[08:19:08]: ▸ Compiling FIRCLSFile.m
+[08:19:08]: ▸ Compiling FIRCLSFABNetworkClient.m
+[08:19:08]: ▸ Compiling FIRCLSFABHost.m
+[08:19:08]: ▸ Compiling FIRCLSFABAsyncOperation.m
+[08:19:08]: ▸ Compiling FIRCLSExistingReportManager.m
+[08:19:08]: ▸ Compiling FIRCLSExecutionIdentifierModel.m
+[08:19:08]: ▸ Compiling FIRCLSException.mm
+[08:19:09]: ▸ Compiling FIRCLSDwarfUnwind.c
+[08:19:09]: ▸ Compiling FIRCLSDwarfExpressionMachine.c
+[08:19:09]: ▸ Compiling FIRCLSDownloadAndSaveSettingsOperation.m
+[08:19:09]: ▸ Compiling FIRCLSDemangleOperation.mm
+[08:19:09]: ▸ Compiling FIRCLSDataParsing.c
+[08:19:09]: ▸ Compiling FIRCLSDataCollectionToken.m
+[08:19:09]: ▸ Compiling FIRCLSDataCollectionArbiter.m
+[08:19:09]: ▸ Compiling FIRCLSCrashedMarkerFile.c
+[08:19:09]: ▸ Compiling FIRCLSContextManager.m
+[08:19:09]: ▸ Compiling FIRCLSContext.m
+[08:19:09]: ▸ Compiling FIRCLSConstants.m
+[08:19:09]: ▸ Compiling FIRCLSCompoundOperation.m
+[08:19:09]: ▸ Compiling FIRCLSCompactUnwind.c
+[08:19:09]: ▸ Compiling FIRCLSCodeMapping.m
+[08:19:09]: ▸ Compiling FIRCLSCallStackTree.m
+[08:19:09]: ▸ Compiling FIRCLSByteUtility.m
+[08:19:09]: ▸ Compiling FIRCLSBinaryImage.m
+[08:19:09]: ▸ Compiling FIRCLSAsyncOperation.m
+[08:19:09]: ▸ Compiling FIRCLSApplicationIdentifierModel.m
+[08:19:09]: ▸ Compiling FIRCLSApplication.m
+[08:19:09]: ▸ Compiling FIRCLSAnalyticsManager.m
+[08:19:09]: ▸ Compiling FIRCLSAllocate.c
+[08:19:09]: ▸ Linking FirebaseCrashlytics
+[08:19:09]: ▸ Generating 'FirebaseCrashlytics.framework.dSYM'
+[08:19:09]: ▸ Touching FirebaseCrashlytics.framework (in target 'FirebaseCrashlytics' from project 'Pods')
+[08:19:09]: ▸ Copying messages.g.h
+[08:19:09]: ▸ Copying firebase_core-umbrella.h
+[08:19:09]: ▸ Copying FLTFirebasePluginRegistry.h
+[08:19:09]: ▸ Copying FLTFirebasePlugin.h
+[08:19:09]: ▸ Copying FLTFirebaseCorePlugin.h
+[08:19:09]: ▸ Processing firebase_core-Info.plist
+[08:19:09]: ▸ Compiling messages.g.m
+[08:19:12]: ▸ Compiling firebase_core-dummy.m
+[08:19:12]: ▸ Compiling FLTFirebasePluginRegistry.m
+[08:19:12]: ▸ Compiling FLTFirebasePlugin.m
+[08:19:12]: ▸ Compiling firebase_core_vers.c
+[08:19:12]: ▸ Compiling FLTFirebaseCorePlugin.m
+[08:19:12]: ▸ ⚠️  /Users/distiller/development/flutter/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:64:42: 'trackingID' is deprecated [-Wdeprecated-declarations]
+[08:19:12]: ▸   pigeonOptions.trackingId = (id)options.trackingID ?: [NSNull null];
+[08:19:12]: ▸                                          ^
+[08:19:12]: ▸ ⚠️  /Users/distiller/development/flutter/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:66:47: 'androidClientID' is deprecated [-Wdeprecated-declarations]
+[08:19:12]: ▸   pigeonOptions.androidClientId = (id)options.androidClientID ?: [NSNull null];
+[08:19:12]: ▸                                                            ^
+[08:19:12]: ▸ ⚠️  /Users/distiller/development/flutter/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:142:13: 'trackingID' is deprecated [-Wdeprecated-declarations]
+[08:19:12]: ▸     options.trackingID = initializeAppRequest.trackingId;
+[08:19:12]: ▸                                                            ^
+[08:19:12]: ▸ ⚠️  /Users/distiller/development/flutter/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:152:13: 'androidClientID' is deprecated [-Wdeprecated-declarations]
+[08:19:12]: ▸     options.androidClientID = initializeAppRequest.androidClientId;
+[08:19:12]: ▸                                                            ^
+[08:19:12]: ▸ Touching firebase_core.framework (in target 'firebase_core' from project 'Pods')
+[08:19:12]: ▸ Copying firebase_crashlytics-umbrella.h
+[08:19:12]: ▸ Copying FLTFirebaseCrashlyticsPlugin.h
+[08:19:12]: ▸ Copying ExceptionModel_Platform.h
+[08:19:12]: ▸ Copying Crashlytics_Platform.h
+[08:19:12]: ▸ Processing firebase_crashlytics-Info.plist
+[08:19:12]: ▸ Compiling firebase_crashlytics-dummy.m
+[08:19:15]: ▸ Compiling FLTFirebaseCrashlyticsPlugin.m
+[08:19:15]: ▸ Compiling firebase_crashlytics_vers.c
+[08:19:15]: ▸ Touching firebase_crashlytics.framework (in target 'firebase_crashlytics' from project 'Pods')
+[08:19:15]: ▸ Copying Pods-Runner-umbrella.h
+[08:19:15]: ▸ Processing Pods-Runner-Info.plist
+[08:19:15]: ▸ Compiling Pods-Runner-dummy.m
+[08:19:17]: ▸ Compiling Pods_Runner_vers.c
+[08:19:17]: ▸ Touching Pods_Runner.framework (in target 'Pods-Runner' from project 'Pods')
+[08:19:17]: ▸     Run script build phase 'Handle mutiple GoogleService-Info' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'Runner' from project 'Runner')
+[08:19:17]: ▸     Run script build phase '[firebase_crashlytics] Crashlytics Upload Symbols' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'Runner' from project 'Runner')
+[08:19:17]: ▸ Running script '[CP] Check Pods Manifest.lock'
+[08:19:17]: ▸ Running script 'Run Script'
+[08:20:16]: ▸ Compiling AppDelegate.swift
+[08:20:16]: ▸ Compiling GeneratedPluginRegistrant.m
+[08:20:22]: ▸ Compiling Example\ Dev_vers.c
+[08:20:22]: ▸ Linking Example\
+[08:20:23]: ▸ Running script 'Handle mutiple GoogleService-Info'
+[08:20:23]: ▸ Copying /Users/distiller/Library/Developer/Xcode/DerivedData/Runner-gxqijsvgrrorpceyqfglwnknrvli/Build/Intermediates.noindex/ArchiveIntermediates/dev/InstallationBuildProductsLocation/Applications/Example\ Dev.app/config
+[08:20:23]: ▸ Copying AppFrameworkInfo.plist
+[08:20:23]: ▸ Compiling LaunchScreen.storyboard
+[08:20:25]: ▸ Compiling Main.storyboard
+[08:20:26]: ▸ Processing Info.plist
+[08:20:26]: ▸ Running script 'Thin Binary'
+[08:20:26]: ▸ Generating 'Example\ Dev.app.dSYM'
+[08:20:26]: ▸ Running script '[CP] Embed Pods Frameworks'
+[08:20:27]: ▸ Running script '[firebase_crashlytics] Crashlytics Upload Symbols'
+[08:20:31]: ▸ Touching Example\ Dev.app (in target 'Runner' from project 'Runner')
+[08:20:32]: ▸ Archive Succeeded
+[08:20:32]: Generated plist file with the following values:
+[08:20:32]: ▸ -----------------------------------------
+[08:20:32]: ▸ {
+[08:20:32]: ▸   "provisioningProfiles": {
+[08:20:32]: ▸     "com.duytq.example.dev": "match AdHoc com.duytq.example.dev"
+[08:20:32]: ▸   },
+[08:20:32]: ▸   "method": "ad-hoc",
+[08:20:32]: ▸   "signingStyle": "manual"
+[08:20:32]: ▸ }
+[08:20:32]: ▸ -----------------------------------------
+[08:20:32]: $ /usr/bin/xcrun /Users/distiller/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/gems/fastlane-2.212.2/gym/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/bl/wbxjgtzx7j5_mjsmfr3ynlc00000gp/T/gym_config20230512-5823-xhncb1.plist' -archivePath /Users/distiller/Library/Developer/Xcode/Archives/2023-05-12/Example\ 2023-05-12\ 08.18.13.xcarchive -exportPath '/var/folders/bl/wbxjgtzx7j5_mjsmfr3ynlc00000gp/T/gym_output20230512-5823-7mncsq' 
+[08:20:40]: Compressing 25 dSYM(s)
+[08:20:40]: $ cd '/Users/distiller/Library/Developer/Xcode/Archives/2023-05-12/Example 2023-05-12 08.18.13.xcarchive/dSYMs' && zip -r '/Users/distiller/project/ios/output/Example.app.dSYM.zip' *.dSYM
+[08:20:42]: ▸   adding: App.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: App.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: App.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: App.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: App.framework.dSYM/Contents/Resources/DWARF/App (deflated 66%)
+[08:20:42]: ▸   adding: AppAuth.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: AppAuth.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: AppAuth.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: AppAuth.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: AppAuth.framework.dSYM/Contents/Resources/DWARF/AppAuth (deflated 63%)
+[08:20:42]: ▸   adding: AppAuth.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: Example Dev.app.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: Example Dev.app.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: Example Dev.app.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: Example Dev.app.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: Example Dev.app.dSYM/Contents/Resources/DWARF/Example Dev (deflated 57%)
+[08:20:42]: ▸   adding: Example Dev.app.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: FBLPromises.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: FBLPromises.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: FBLPromises.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: FBLPromises.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: FBLPromises.framework.dSYM/Contents/Resources/DWARF/FBLPromises (deflated 63%)
+[08:20:42]: ▸   adding: FBLPromises.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: FirebaseCore.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCore.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCore.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCore.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCore.framework.dSYM/Contents/Resources/DWARF/FirebaseCore (deflated 61%)
+[08:20:42]: ▸   adding: FirebaseCore.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: FirebaseCoreExtension.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreExtension.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreExtension.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreExtension.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreExtension.framework.dSYM/Contents/Resources/DWARF/FirebaseCoreExtension (deflated 87%)
+[08:20:42]: ▸   adding: FirebaseCoreExtension.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: FirebaseCoreInternal.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreInternal.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreInternal.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreInternal.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCoreInternal.framework.dSYM/Contents/Resources/DWARF/FirebaseCoreInternal (deflated 64%)
+[08:20:42]: ▸   adding: FirebaseCoreInternal.framework.dSYM/Contents/Info.plist (deflated 51%)
+[08:20:42]: ▸   adding: FirebaseCrashlytics.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCrashlytics.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCrashlytics.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCrashlytics.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseCrashlytics.framework.dSYM/Contents/Resources/DWARF/FirebaseCrashlytics (deflated 64%)
+[08:20:42]: ▸   adding: FirebaseCrashlytics.framework.dSYM/Contents/Info.plist (deflated 51%)
+[08:20:42]: ▸   adding: FirebaseInstallations.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseInstallations.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseInstallations.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseInstallations.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseInstallations.framework.dSYM/Contents/Resources/DWARF/FirebaseInstallations (deflated 63%)
+[08:20:42]: ▸   adding: FirebaseInstallations.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: FirebaseSessions.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseSessions.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseSessions.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseSessions.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: FirebaseSessions.framework.dSYM/Contents/Resources/DWARF/FirebaseSessions (deflated 60%)
+[08:20:42]: ▸   adding: FirebaseSessions.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: GTMAppAuth.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: GTMAppAuth.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: GTMAppAuth.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: GTMAppAuth.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: GTMAppAuth.framework.dSYM/Contents/Resources/DWARF/GTMAppAuth (deflated 61%)
+[08:20:42]: ▸   adding: GTMAppAuth.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: GTMSessionFetcher.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: GTMSessionFetcher.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: GTMSessionFetcher.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: GTMSessionFetcher.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: GTMSessionFetcher.framework.dSYM/Contents/Resources/DWARF/GTMSessionFetcher (deflated 63%)
+[08:20:42]: ▸   adding: GTMSessionFetcher.framework.dSYM/Contents/Info.plist (deflated 51%)
+[08:20:42]: ▸   adding: GoogleDataTransport.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleDataTransport.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleDataTransport.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleDataTransport.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleDataTransport.framework.dSYM/Contents/Resources/DWARF/GoogleDataTransport (deflated 62%)
+[08:20:42]: ▸   adding: GoogleDataTransport.framework.dSYM/Contents/Info.plist (deflated 51%)
+[08:20:42]: ▸   adding: GoogleSignIn.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleSignIn.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleSignIn.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleSignIn.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleSignIn.framework.dSYM/Contents/Resources/DWARF/GoogleSignIn (deflated 62%)
+[08:20:42]: ▸   adding: GoogleSignIn.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: GoogleUtilities.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleUtilities.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleUtilities.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleUtilities.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: GoogleUtilities.framework.dSYM/Contents/Resources/DWARF/GoogleUtilities (deflated 61%)
+[08:20:42]: ▸   adding: GoogleUtilities.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: Promises.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: Promises.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: Promises.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: Promises.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: Promises.framework.dSYM/Contents/Resources/DWARF/Promises (deflated 62%)
+[08:20:42]: ▸   adding: Promises.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: Reachability.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: Reachability.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: Reachability.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: Reachability.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: Reachability.framework.dSYM/Contents/Resources/DWARF/Reachability (deflated 62%)
+[08:20:42]: ▸   adding: Reachability.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: connectivity_plus.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: connectivity_plus.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: connectivity_plus.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: connectivity_plus.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: connectivity_plus.framework.dSYM/Contents/Resources/DWARF/connectivity_plus (deflated 59%)
+[08:20:42]: ▸   adding: connectivity_plus.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: image_picker_ios.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: image_picker_ios.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: image_picker_ios.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: image_picker_ios.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: image_picker_ios.framework.dSYM/Contents/Resources/DWARF/image_picker_ios (deflated 62%)
+[08:20:42]: ▸   adding: image_picker_ios.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: nanopb.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: nanopb.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: nanopb.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: nanopb.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: nanopb.framework.dSYM/Contents/Resources/DWARF/nanopb (deflated 58%)
+[08:20:42]: ▸   adding: nanopb.framework.dSYM/Contents/Info.plist (deflated 51%)
+[08:20:42]: ▸   adding: shared_preferences_foundation.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: shared_preferences_foundation.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: shared_preferences_foundation.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: shared_preferences_foundation.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: shared_preferences_foundation.framework.dSYM/Contents/Resources/DWARF/shared_preferences_foundation (deflated 61%)
+[08:20:42]: ▸   adding: shared_preferences_foundation.framework.dSYM/Contents/Info.plist (deflated 51%)
+[08:20:42]: ▸   adding: sign_in_with_apple.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: sign_in_with_apple.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: sign_in_with_apple.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: sign_in_with_apple.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: sign_in_with_apple.framework.dSYM/Contents/Resources/DWARF/sign_in_with_apple (deflated 59%)
+[08:20:42]: ▸   adding: sign_in_with_apple.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: url_launcher_ios.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: url_launcher_ios.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: url_launcher_ios.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: url_launcher_ios.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: url_launcher_ios.framework.dSYM/Contents/Resources/DWARF/url_launcher_ios (deflated 60%)
+[08:20:42]: ▸   adding: url_launcher_ios.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: video_player_avfoundation.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: video_player_avfoundation.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: video_player_avfoundation.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: video_player_avfoundation.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: video_player_avfoundation.framework.dSYM/Contents/Resources/DWARF/video_player_avfoundation (deflated 61%)
+[08:20:42]: ▸   adding: video_player_avfoundation.framework.dSYM/Contents/Info.plist (deflated 52%)
+[08:20:42]: ▸   adding: webview_flutter_wkwebview.framework.dSYM/ (stored 0%)
+[08:20:42]: ▸   adding: webview_flutter_wkwebview.framework.dSYM/Contents/ (stored 0%)
+[08:20:42]: ▸   adding: webview_flutter_wkwebview.framework.dSYM/Contents/Resources/ (stored 0%)
+[08:20:42]: ▸   adding: webview_flutter_wkwebview.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[08:20:42]: ▸   adding: webview_flutter_wkwebview.framework.dSYM/Contents/Resources/DWARF/webview_flutter_wkwebview (deflated 65%)
+[08:20:42]: ▸   adding: webview_flutter_wkwebview.framework.dSYM/Contents/Info.plist (deflated 52%)
+
+[08:20:42]: Successfully exported and compressed dSYM file
+[08:20:42]: Successfully exported and signed the ipa file:
+[08:20:42]: /Users/distiller/project/ios/output/Example.ipa
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:20:42]: -------------------
+[08:20:42]: --- Step: is_ci ---
+[08:20:42]: -------------------
+tput: No value for $TERM and no -T specified
+tput: No value for $TERM and no -T specified
+[08:20:42]: ---------------------------------------
+[08:20:42]: --- Step: firebase_app_distribution ---
+[08:20:42]: ---------------------------------------
+[08:20:42]: 🔐 Authenticating with FIREBASE_TOKEN environment variable
+[08:20:42]: ⌛ Uploading the IPA.
+[08:20:51]: ✅ Uploaded IPA successfully and created release 1.0.0 (1).
+[08:20:51]: ✅ Posted release notes.
+[08:20:51]: ✅ Added testers/groups.
+[08:20:51]: 🎉 App Distribution upload finished successfully. Setting Actions.lane_context[SharedValues::FIREBASE_APP_DISTRO_RELEASE] to the uploaded release.
+[08:20:51]: 🔗 View this release in the Firebase console: https://console.firebase.google.com/project/bright-proxy-337209/appdistribution/app/ios:com.duytq.example.dev/releases/4rurr2qqihm4o?utm_source=fastlane
+[08:20:51]: 🔗 Share this release with testers who have access: https://appdistribution.firebase.google.com/testerapps/1:497869998462:ios:b30502bdbfa8f791b34b2f/releases/4rurr2qqihm4o?utm_source=fastlane
+[08:20:51]: 🔗 Download the release binary (link expires in 1 hour): https://firebaseappdistribution.googleapis.com/app-binary-downloads/projects/497869998462/apps/1:497869998462:ios:b30502bdbfa8f791b34b2f/releases/4rurr2qqihm4o/binaries/8324d7ff98e5083fd97e904c374a11b7a0fb481940fc3fd1aa73d5f27ca0f2a3/app.ipa?utm_source=fastlane&token=AFb1MRwAAAAAZF4E83npTl1sY7jf2KBreo5rd4Gk0HzMyOO9E2rF2huABkDN45_Axqe8GX0AnyDA5oKUrr3Ui_CZjqS5mlZWXKE7B6nBjES6QaxJcIEqxGDwrvyekO4swJHhR85tyNVfQELBEajS2xFrswDozQOpKa6npVsrWtfBDwEtT7MtB3TWpAoG1sIOToUOiW3xybI-CVWcvEeeh8VrIlhG8xsqVf7WAI4OycejdsWIakozvmSWtDh3JMNQKcOD2IA3kXtgCDJeP49Z3I7IgWUEcHLy2tsLd8b9Q7qRpdQUXsf_lXphZkXGOrp8OmM_jFC4t5-F5y5h7Hna2h5grC6FgMF_x0m0Tx8
+
++------+---------------------------+-------------+
+|                fastlane summary                |
++------+---------------------------+-------------+
+| Step | Action                    | Time (in s) |
++------+---------------------------+-------------+
+| 1    | default_platform          | 0           |
+| 2    | is_ci                     | 0           |
+| 3    | setup_circle_ci           | 0           |
+| 4    | is_ci                     | 0           |
+| 5    | match                     | 2           |
+| 6    | gym                       | 153         |
+| 7    | is_ci                     | 0           |
+| 8    | firebase_app_distribution | 9           |
++------+---------------------------+-------------+
+
+[08:20:51]: fastlane.tools finished successfully 🎉

@@ -1,0 +1,49 @@
+default_platform(:android)
+
+platform :android do
+
+  desc "Build adhoc and send to Firebase"
+  lane :adhoc do
+    gradle(
+      task: 'assemble',
+      build_type: 'Release',
+      flavor: 'dev',
+      flags: "-Ptarget=lib/app/main_dev.dart"
+    )
+    if is_ci
+      firebase_app_distribution(
+        app: "1:497869998462:android:0deaff1de7075c36b34b2f",
+        release_notes: "Upload to Firebase",
+        groups: "testers",
+        android_artifact_path: "../build/app/outputs/flutter-apk/app-dev-release.apk"
+      )
+    end
+  end
+
+  desc "Build and upload to Internal Testing on Google Play"
+  lane :beta do
+    current_version_code = google_play_track_version_codes(
+      track: "internal"
+    )[0]
+    new_version_code = current_version_code + 1
+
+    gradle(
+      task: 'bundle',
+      build_type: 'Release',
+      flavor: 'prod',
+      flags: "-Ptarget=lib/app/main.dart",
+      properties: {
+        "versionCode" => new_version_code
+      }
+    )
+    if is_ci
+      supply(
+        track: 'internal',
+        release_status: 'draft',
+        aab: '../build/app/outputs/bundle/prodRelease/app-prod-release.aab',
+        skip_upload_changelogs: true
+      )
+    end
+    
+  end
+end

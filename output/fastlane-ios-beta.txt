@@ -1,0 +1,1229 @@
+[✔] 🚀 
+[21:54:07]: fastlane detected a Gemfile in the current directory
+[21:54:07]: However, it seems like you didn't use `bundle exec`
+[21:54:07]: To launch fastlane faster, please use
+[21:54:07]: 
+[21:54:07]: $ bundle exec fastlane beta
+[21:54:07]: 
+[21:54:07]: Get started using a Gemfile for fastlane https://docs.fastlane.tools/getting-started/ios/setup/#use-a-gemfile
++-------------------------------------------+---------+--------------------------------------------------------------------+
+|                                                       Used plugins                                                       |
++-------------------------------------------+---------+--------------------------------------------------------------------+
+| Plugin                                    | Version | Action                                                             |
++-------------------------------------------+---------+--------------------------------------------------------------------+
+| fastlane-plugin-firebase_app_distribution | 0.5.0   | firebase_app_distribution, firebase_app_distribution_add_testers,  |
+|                                           |         | firebase_app_distribution_get_latest_release,                      |
+|                                           |         | firebase_app_distribution_get_udids,                               |
+|                                           |         | firebase_app_distribution_remove_testers                           |
++-------------------------------------------+---------+--------------------------------------------------------------------+
+
+[21:54:07]: ------------------------------
+[21:54:07]: --- Step: default_platform ---
+[21:54:07]: ------------------------------
+[21:54:07]: Driving the lane 'ios beta' 🚀
+[21:54:07]: -------------------
+[21:54:07]: --- Step: is_ci ---
+[21:54:07]: -------------------
+[21:54:07]: ---------------------------------------
+[21:54:07]: --- Step: app_store_connect_api_key ---
+[21:54:07]: ---------------------------------------
+[21:54:07]: --------------------------------
+[21:54:07]: --- Step: get_version_number ---
+[21:54:07]: --------------------------------
+[21:54:07]: --------------------------------------------
+[21:54:07]: --- Step: latest_testflight_build_number ---
+[21:54:07]: --------------------------------------------
+[21:54:07]: Using existing authorization token for App Store Connect API
+[21:54:08]: Fetching the latest build number for version 1.0.0
+[21:54:09]: Latest upload for version 1.0.0 on ios platform is build: 5
+[21:54:09]: ------------------------------------
+[21:54:09]: --- Step: increment_build_number ---
+[21:54:09]: ------------------------------------
+Current version of project Runner is: 
+    6
+
+/Users/duytran/Documents/mobile-app-flutter/ios
+[21:54:10]: $ cd /Users/duytran/Documents/mobile-app-flutter/ios && agvtool new-version -all 6 && cd -
+[21:54:10]: ▸ Setting version of project Runner to:
+[21:54:10]: ▸ 6.
+[21:54:11]: ▸ Also setting CFBundleVersion key (assuming it exists)
+[21:54:11]: ▸ Updating CFBundleVersion in Info.plist(s)...
+[21:54:11]: ▸ Updated CFBundleVersion in "Runner.xcodeproj/../Runner/Info.plist" to 6
+[21:54:11]: ▸ /Users/duytran/Documents/mobile-app-flutter/ios
+[21:54:11]: -------------------
+[21:54:11]: --- Step: match ---
+[21:54:11]: -------------------
+[21:54:11]: Successfully loaded '/Users/duytran/Documents/mobile-app-flutter/ios/fastlane/Matchfile' 📄
+
++----------------+--------------------------------------------------------------------------------+
+|                           Detected Values from './fastlane/Matchfile'                           |
++----------------+--------------------------------------------------------------------------------+
+| git_url        | git@gitlab.com:mobile-app-flutter-match.git                                    |
+| storage_mode   | git                                                                            |
+| type           | development                                                                    |
+| app_identifier | ["com.duytq.example.dev", "com.duytq.example"]                                 |
+| username       | duytq@gmail.com                                                                |
++----------------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------+--------------------------------------------------------------------------------+
+|                                                Summary for match 2.212.2                                                |
++----------------------------------------+--------------------------------------------------------------------------------+
+| type                                   | appstore                                                                       |
+| app_identifier                         | ["com.duytq.example"]                                                          |
+| readonly                               | true                                                                           |
+| api_key                                | ********                                                                       |
+| generate_apple_certs                   | true                                                                           |
+| skip_provisioning_profiles             | false                                                                          |
+| username                               | duytq@gmail.com                                                                |
+| team_id                                | ABC2DEFGHT                                                                     |
+| storage_mode                           | git                                                                            |
+| git_url                                | git@gitlab.com:mobile-app-flutter-match.git                                    |
+| git_branch                             | master                                                                         |
+| shallow_clone                          | false                                                                          |
+| clone_branch_directly                  | false                                                                          |
+| skip_google_cloud_account_confirmation | false                                                                          |
+| keychain_name                          | login.keychain                                                                 |
+| force                                  | false                                                                          |
+| force_for_new_devices                  | false                                                                          |
+| include_mac_in_profiles                | false                                                                          |
+| include_all_certificates               | false                                                                          |
+| force_for_new_certificates             | false                                                                          |
+| skip_confirmation                      | false                                                                          |
+| safe_remove_certs                      | false                                                                          |
+| skip_docs                              | false                                                                          |
+| platform                               | ios                                                                            |
+| derive_catalyst_app_identifier         | false                                                                          |
+| fail_on_name_taken                     | false                                                                          |
+| skip_certificate_matching              | false                                                                          |
+| skip_set_partition_list                | false                                                                          |
+| verbose                                | false                                                                          |
++----------------------------------------+--------------------------------------------------------------------------------+
+
+[21:54:11]: Cloning remote git repo...
+[21:54:11]: If cloning the repo takes too long, you can use the `clone_branch_directly` option in match.
+[21:54:15]: Checking out branch master...
+[21:54:15]: 🔓  Successfully decrypted certificates repo
+[21:54:15]: Installing certificate...
+[21:54:15]: $ security find-certificate -a -c 'Apple Worldwide Developer Relations' -p /Users/duytran/Library/Keychains/login.keychain-db
+[21:54:15]: ▸ -----BEGIN CERTIFICATE-----
+[21:54:15]: ▸ MIIEIjCCAwqgAwIBAgIIAd68xDltoBAwDQYJKoZIhvcNAQEFBQAwYjELMAkGA1UE
+[21:54:15]: ▸ BhMCVVMxEzARBgNVBAoTCkFwcGxlIEluYy4xJjAkBgNVBAsTHUFwcGxlIENlcnRp
+[21:54:15]: ▸ ZmljYXRpb24gQXV0aG9yaXR5MRYwFAYDVQQDEw1BcHBsZSBSb290IENBMB4XDTEz
+[21:54:15]: ▸ MDIwNzIxNDg0N1oXDTIzMDIwNzIxNDg0N1owgZYxCzAJBgNVBAYTAlVTMRMwEQYD
+[21:54:15]: ▸ VQQKDApBcHBsZSBJbmMuMSwwKgYDVQQLDCNBcHBsZSBXb3JsZHdpZGUgRGV2ZWxv
+[21:54:15]: ▸ cGVyIFJlbGF0aW9uczFEMEIGA1UEAww7QXBwbGUgV29ybGR3aWRlIERldmVsb3Bl
+[21:54:15]: ▸ ciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwggEiMA0GCSqGSIb3
+[21:54:15]: ▸ DQEBAQUAA4IBDwAwggEKAoIBAQDKOFSmy1aqyCQ5SOmM7uxfuH8mkbw0U3rOfGOA
+[21:54:15]: ▸ YXdkXqUHI7Y5/lAtFVZYcC1+xG7BSoU+L/DehBqhV8mvexj/avoVEkkVCBmsqtsq
+[21:54:15]: ▸ Mu2WY2hSFT2Miuy/axiV4AOsAX2XBWfODoWVN2rtCbauZ81RZJ/GXNG8V25nNYB2
+[21:54:15]: ▸ NqSHgW44j9grFU57Jdhav06DwY3Sk9UacbVgnJ0zTlX5ElgMhrgWDcHld0WNUEi6
+[21:54:15]: ▸ Ky3klIXh6MSdxmilsKP8Z35wugJZS3dCkTm59c3hTO/AO0iMpuUhXf1qarunFjVg
+[21:54:15]: ▸ 0uat80YpyejDi+l5wGphZxWy8P3laLxiX27Pmd3vG2P+kmWrAgMBAAGjgaYwgaMw
+[21:54:15]: ▸ HQYDVR0OBBYEFIgnFwmpthhgi+zruvZHWcVSVKO3MA8GA1UdEwEB/wQFMAMBAf8w
+[21:54:15]: ▸ HwYDVR0jBBgwFoAUK9BpR5R2Cf70a40uQKb3R01/CF4wLgYDVR0fBCcwJTAjoCGg
+[21:54:15]: ▸ H4YdaHR0cDovL2NybC5hcHBsZS5jb20vcm9vdC5jcmwwDgYDVR0PAQH/BAQDAgGG
+[21:54:15]: ▸ MBAGCiqGSIb3Y2QGAgEEAgUAMA0GCSqGSIb3DQEBBQUAA4IBAQBPz+9Zviz1smwv
+[21:54:15]: ▸ j+4ThzLoBTWobot9yWkMudkXvHcs1Gfi/ZptOllc34MBvbKuKmFysa/Nw0Uwj6OD
+[21:54:15]: ▸ Dc4dR7Txk4qjdJukw5hyhzs+r0ULklS5MruQGFNrCk4QttkdUGwhgAqJTleMa1s8
+[21:54:15]: ▸ Pab93vcNIx0LSiaHP7qRkkykGRIZbVf1eliHe2iK5IaMSuviSRSqpd1VAKmuu0sw
+[21:54:15]: ▸ ruGgsbwpgOYJd+W+NKIByn/c4grmO7i77LpilfMFY0GCzQ87HUyVpNur+cmV6U/k
+[21:54:15]: ▸ TecmmYHpvPm0KdIBembhLoz2IYrF+Hjhga6/05Cdqa3zr/04GpZnMBxRpVzscYqC
+[21:54:15]: ▸ tGwPDBUf
+[21:54:15]: ▸ -----END CERTIFICATE-----
+[21:54:15]: ▸ -----BEGIN CERTIFICATE-----
+[21:54:15]: ▸ MIIEUTCCAzmgAwIBAgIQfK9pCiW3Of57m0R6wXjF7jANBgkqhkiG9w0BAQsFADBi
+[21:54:15]: ▸ MQswCQYDVQQGEwJVUzETMBEGA1UEChMKQXBwbGUgSW5jLjEmMCQGA1UECxMdQXBw
+[21:54:15]: ▸ bGUgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkxFjAUBgNVBAMTDUFwcGxlIFJvb3Qg
+[21:54:15]: ▸ Q0EwHhcNMjAwMjE5MTgxMzQ3WhcNMzAwMjIwMDAwMDAwWjB1MUQwQgYDVQQDDDtB
+[21:54:15]: ▸ cHBsZSBXb3JsZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9ucyBDZXJ0aWZpY2F0aW9u
+[21:54:15]: ▸ IEF1dGhvcml0eTELMAkGA1UECwwCRzMxEzARBgNVBAoMCkFwcGxlIEluYy4xCzAJ
+[21:54:15]: ▸ BgNVBAYTAlVTMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2PWJ/KhZ
+[21:54:15]: ▸ C4fHTJEuLVaQ03gdpDDppUjvC0O/LYT7JF1FG+XrWTYSXFRknmxiLbTGl8rMPPbW
+[21:54:15]: ▸ BpH85QKmHGq0edVny6zpPwcR4YS8Rx1mjjmi6LRJ7TrS4RBgeo6TjMrA2gzAg9Dj
+[21:54:15]: ▸ +ZHWp4zIwXPirkbRYp2SqJBgN31ols2N4Pyb+ni743uvLRfdW/6AWSN1F7gSwe0b
+[21:54:15]: ▸ 5TTO/iK1nkmw5VW/j4SiPKi6xYaVFuQAyZ8D0MyzOhZ71gVcnetHrg21LYwOaU1A
+[21:54:15]: ▸ 0EtMOwSejSGxrC5DVDDOwYqGlJhL32oNP/77HK6XF8J4CjDgXx9UO0m3JQAaN4LS
+[21:54:15]: ▸ VpelUkl8YDib7wIDAQABo4HvMIHsMBIGA1UdEwEB/wQIMAYBAf8CAQAwHwYDVR0j
+[21:54:15]: ▸ BBgwFoAUK9BpR5R2Cf70a40uQKb3R01/CF4wRAYIKwYBBQUHAQEEODA2MDQGCCsG
+[21:54:15]: ▸ AQUFBzABhihodHRwOi8vb2NzcC5hcHBsZS5jb20vb2NzcDAzLWFwcGxlcm9vdGNh
+[21:54:15]: ▸ MC4GA1UdHwQnMCUwI6AhoB+GHWh0dHA6Ly9jcmwuYXBwbGUuY29tL3Jvb3QuY3Js
+[21:54:15]: ▸ MB0GA1UdDgQWBBQJ/sAVkPmvZAqSErkmKGMMl+ynsjAOBgNVHQ8BAf8EBAMCAQYw
+[21:54:15]: ▸ EAYKKoZIhvdjZAYCAQQCBQAwDQYJKoZIhvcNAQELBQADggEBAK1lE+j24IF3RAJH
+[21:54:15]: ▸ Qr5fpTkg6mKp/cWQyXMT1Z6b0KoPjY3L7QHPbChAW8dVJEH4/M/BtSPp3Ozxb8qA
+[21:54:15]: ▸ HXfCxGFJJWevD8o5Ja3T43rMMygNDi6hV0Bz+uZcrgZRKe3jhQxPYdwyFot30ETK
+[21:54:15]: ▸ XXIDMUacrptAGvr04NM++i+MZp+XxFRZ79JI9AeZSWBZGcfdlNHAwWx/eCHvDOs7
+[21:54:15]: ▸ bJmCS1JgOLU5gm3sUjFTvg+RTElJdI+mUcuER04ddSduvfnSXPN/wmwLCTbiZOTC
+[21:54:15]: ▸ NwMUGdXqapSqqdv+9poIZ4vvK7iqF0mDr8/LvOnP6pVxsLRFoszlh6oKw0E6eVza
+[21:54:15]: ▸ UDSdlTs=
+[21:54:15]: ▸ -----END CERTIFICATE-----
+[21:54:15]: ▸ -----BEGIN CERTIFICATE-----
+[21:54:15]: ▸ MIIC9zCCAnygAwIBAgIIb+/Y9emjp+4wCgYIKoZIzj0EAwIwZzEbMBkGA1UEAwwS
+[21:54:15]: ▸ QXBwbGUgUm9vdCBDQSAtIEczMSYwJAYDVQQLDB1BcHBsZSBDZXJ0aWZpY2F0aW9u
+[21:54:15]: ▸ IEF1dGhvcml0eTETMBEGA1UECgwKQXBwbGUgSW5jLjELMAkGA1UEBhMCVVMwHhcN
+[21:54:15]: ▸ MTQwNTA2MjM0MzI0WhcNMjkwNTA2MjM0MzI0WjCBgDE0MDIGA1UEAwwrQXBwbGUg
+[21:54:15]: ▸ V29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ0EgLSBHMjEmMCQGA1UECwwd
+[21:54:15]: ▸ QXBwbGUgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkxEzARBgNVBAoMCkFwcGxlIElu
+[21:54:15]: ▸ Yy4xCzAJBgNVBAYTAlVTMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE3fC3BkvP
+[21:54:15]: ▸ 3XMEE8RDiQOTgPte9nStQmFSWAImUxnIYyIHCVJhysTZV+9tJmiLdJGMxPmAaCj8
+[21:54:15]: ▸ CWjwENrp0C7JGqOB9zCB9DBGBggrBgEFBQcBAQQ6MDgwNgYIKwYBBQUHMAGGKmh0
+[21:54:15]: ▸ dHA6Ly9vY3NwLmFwcGxlLmNvbS9vY3NwMDQtYXBwbGVyb290Y2FnMzAdBgNVHQ4E
+[21:54:15]: ▸ FgQUhLaEzDqGYnIWWZToGqO9SN863wswDwYDVR0TAQH/BAUwAwEB/zAfBgNVHSME
+[21:54:15]: ▸ GDAWgBS7sN6hWDOImqSKmd6+veuv2sskqzA3BgNVHR8EMDAuMCygKqAohiZodHRw
+[21:54:15]: ▸ Oi8vY3JsLmFwcGxlLmNvbS9hcHBsZXJvb3RjYWczLmNybDAOBgNVHQ8BAf8EBAMC
+[21:54:15]: ▸ AQYwEAYKKoZIhvdjZAYCDwQCBQAwCgYIKoZIzj0EAwIDaQAwZgIxANmxxzHGI/ZP
+[21:54:15]: ▸ TdDZR8V9GGkRh3En02it4Jtlmr5s3z9GppAJvm6hOyywUYlBPIfSvwIxAPxkUolL
+[21:54:15]: ▸ PF2/axzCiZgvcq61m6oaCyNUd1ToFUOixRLal1BzfF7QbrJcYlDXUfE6Wg==
+[21:54:15]: ▸ -----END CERTIFICATE-----
+[21:54:15]: ▸ -----BEGIN CERTIFICATE-----
+[21:54:15]: ▸ MIIEVTCCAz2gAwIBAgIUE9x3lVJx5T3GMujM/+Uh88zFztIwDQYJKoZIhvcNAQEL
+[21:54:15]: ▸ BQAwYjELMAkGA1UEBhMCVVMxEzARBgNVBAoTCkFwcGxlIEluYy4xJjAkBgNVBAsT
+[21:54:15]: ▸ HUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MRYwFAYDVQQDEw1BcHBsZSBS
+[21:54:15]: ▸ b290IENBMB4XDTIwMTIxNjE5MzYwNFoXDTMwMTIxMDAwMDAwMFowdTFEMEIGA1UE
+[21:54:15]: ▸ Aww7QXBwbGUgV29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNh
+[21:54:15]: ▸ dGlvbiBBdXRob3JpdHkxCzAJBgNVBAsMAkc0MRMwEQYDVQQKDApBcHBsZSBJbmMu
+[21:54:15]: ▸ MQswCQYDVQQGEwJVUzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANAf
+[21:54:15]: ▸ eKp6JzKwRl/nF3bYoJ0OKY6tPTKlxGs3yeRBkWq3eXFdDDQEYHX3rkOPR8SGHgjo
+[21:54:15]: ▸ v9Y5Ui8eZ/xx8YJtPH4GUnadLLzVQ+mxtLxAOnhRXVGhJeG+bJGdayFZGEHVD41t
+[21:54:15]: ▸ QSo5SiHgkJ9OE0/QjJoyuNdqkh4laqQyziIZhQVg3AJK8lrrd3kCfcCXVGySjnYB
+[21:54:15]: ▸ 5kaP5eYq+6KwrRitbTOFOCOL6oqW7Z+uZk+jDEAnbZXQYojZQykn/e2kv1MukBVl
+[21:54:15]: ▸ PNkuYmQzHWxq3Y4hqqRfFcYw7V/mjDaSlLfcOQIA+2SM1AyB8j/VNJeHdSbCb64D
+[21:54:15]: ▸ YyEMe9QbsWLFApy9/a8CAwEAAaOB7zCB7DASBgNVHRMBAf8ECDAGAQH/AgEAMB8G
+[21:54:15]: ▸ A1UdIwQYMBaAFCvQaUeUdgn+9GuNLkCm90dNfwheMEQGCCsGAQUFBwEBBDgwNjA0
+[21:54:15]: ▸ BggrBgEFBQcwAYYoaHR0cDovL29jc3AuYXBwbGUuY29tL29jc3AwMy1hcHBsZXJv
+[21:54:15]: ▸ b3RjYTAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vY3JsLmFwcGxlLmNvbS9yb290
+[21:54:15]: ▸ LmNybDAdBgNVHQ4EFgQUW9n6HeeaGgujmXYiUIY+kchbd6gwDgYDVR0PAQH/BAQD
+[21:54:15]: ▸ AgEGMBAGCiqGSIb3Y2QGAgEEAgUAMA0GCSqGSIb3DQEBCwUAA4IBAQA/Vj2e5bbD
+[21:54:15]: ▸ eeZFIGi9v3OLLBKeAuOugCKMBB7DUshwgKj7zqew1UJEggOCTwb8O0kU+9h0UoWv
+[21:54:15]: ▸ p50h5wESA5/NQFjQAde/MoMrU1goPO6cn1R2PWQnxn6NHThNLa6B5rmluJyJlPef
+[21:54:15]: ▸ x4elUWY0GzlxOSTjh2fvpbFoe4zuPfeutnvi0v/fYcZqdUmVIkSoBPyUuAsuORFJ
+[21:54:15]: ▸ EtHlgepZAE9bPFo22noicwkJac3AfOriJP6YRLj477JxPxpd1F1+M02cHSS+APCQ
+[21:54:15]: ▸ A1iZQT0xWmJArzmoUUOSqwSonMJNsUvSq3xKX+udO7xPiEAGE/+QF4oIRynoYpgp
+[21:54:15]: ▸ pU8RBWk6z/Kf
+[21:54:15]: ▸ -----END CERTIFICATE-----
+[21:54:15]: ▸ -----BEGIN CERTIFICATE-----
+[21:54:15]: ▸ MIIEVTCCAz2gAwIBAgIUO36ACu7TAqHm7NuX2cqsKJzxaZQwDQYJKoZIhvcNAQEL
+[21:54:15]: ▸ BQAwYjELMAkGA1UEBhMCVVMxEzARBgNVBAoTCkFwcGxlIEluYy4xJjAkBgNVBAsT
+[21:54:15]: ▸ HUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MRYwFAYDVQQDEw1BcHBsZSBS
+[21:54:15]: ▸ b290IENBMB4XDTIwMTIxNjE5Mzg1NloXDTMwMTIxMDAwMDAwMFowdTFEMEIGA1UE
+[21:54:15]: ▸ Aww7QXBwbGUgV29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNh
+[21:54:15]: ▸ dGlvbiBBdXRob3JpdHkxCzAJBgNVBAsMAkc1MRMwEQYDVQQKDApBcHBsZSBJbmMu
+[21:54:15]: ▸ MQswCQYDVQQGEwJVUzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ9d
+[21:54:15]: ▸ 2h/7+rzQSyI8x9Ym+hf39J8ePmQRZprvXr6rNL2qLCFu1h6UIYUsdMEOEGGqPGNK
+[21:54:15]: ▸ fkrjyHXWz8KcCEh7arkpsclm/ciKFtGyBDyCuoBs4v8Kcuus/jtvSL6eixFNlX2y
+[21:54:15]: ▸ e5AvAhxO/Em+12+1T754xtress3J2WYRO1rpCUVziVDUTuJoBX7adZxLAa7a489t
+[21:54:15]: ▸ dE3eU9DVGjiCOtCd410pe7GB6iknC/tgfIYS+/BiTwbnTNEf2W2e7XPaeCENnXDZ
+[21:54:15]: ▸ RleQX2eEwXN3CqhiYraucIa7dSOJrXn25qTU/YMmMgo7JJJbIKGc0S+AGJvdPAvn
+[21:54:15]: ▸ tf3sgFcPF54/K4cnu/cCAwEAAaOB7zCB7DASBgNVHRMBAf8ECDAGAQH/AgEAMB8G
+[21:54:15]: ▸ A1UdIwQYMBaAFCvQaUeUdgn+9GuNLkCm90dNfwheMEQGCCsGAQUFBwEBBDgwNjA0
+[21:54:15]: ▸ BggrBgEFBQcwAYYoaHR0cDovL29jc3AuYXBwbGUuY29tL29jc3AwMy1hcHBsZXJv
+[21:54:15]: ▸ b3RjYTAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vY3JsLmFwcGxlLmNvbS9yb290
+[21:54:15]: ▸ LmNybDAdBgNVHQ4EFgQUGYuXjUpbYXhX9KVcNRKKOQjjsHUwDgYDVR0PAQH/BAQD
+[21:54:15]: ▸ AgEGMBAGCiqGSIb3Y2QGAgEEAgUAMA0GCSqGSIb3DQEBCwUAA4IBAQBaxDWi2eYK
+[21:54:15]: ▸ nlKiAIIid81yL5D5Iq8UJcyqCkJgksK9dR3rTMoV5X5rQBBe+1tFdA3wen2Ikc7e
+[21:54:15]: ▸ Y4tCidIY30GzWJ4GCIdI3UCvI9Xt6yxg5eukfxzpnIPWlF9MYjmKTq4TjX1DuNxe
+[21:54:15]: ▸ rL4YQPLmDyxdE5Pxe2WowmhI3v+0lpsM+zI2np4NlV84CouW0hJst4sLjtc+7G8B
+[21:54:15]: ▸ qs5NRWDbhHFmYuUZZTDNiv9FU/tu+4h3Q8NIY/n3UbNyXnniVs+8u4S5OFp4rhFI
+[21:54:15]: ▸ UrsNNYuU3sx0mmj1SWCUrPKosxWGkNDMMEOG0+VwAlG0gcCol9Tq6rCMCUDvOJOy
+[21:54:15]: ▸ zSID62dDZchF
+[21:54:15]: ▸ -----END CERTIFICATE-----
+[21:54:15]: ▸ -----BEGIN CERTIFICATE-----
+[21:54:15]: ▸ MIIDFjCCApygAwIBAgIUIsGhRwp0c2nvU4YSycafPTjzbNcwCgYIKoZIzj0EAwMw
+[21:54:15]: ▸ ZzEbMBkGA1UEAwwSQXBwbGUgUm9vdCBDQSAtIEczMSYwJAYDVQQLDB1BcHBsZSBD
+[21:54:15]: ▸ ZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTETMBEGA1UECgwKQXBwbGUgSW5jLjELMAkG
+[21:54:15]: ▸ A1UEBhMCVVMwHhcNMjEwMzE3MjAzNzEwWhcNMzYwMzE5MDAwMDAwWjB1MUQwQgYD
+[21:54:15]: ▸ VQQDDDtBcHBsZSBXb3JsZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9ucyBDZXJ0aWZp
+[21:54:15]: ▸ Y2F0aW9uIEF1dGhvcml0eTELMAkGA1UECwwCRzYxEzARBgNVBAoMCkFwcGxlIElu
+[21:54:15]: ▸ Yy4xCzAJBgNVBAYTAlVTMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEbsQKC94PrlWm
+[21:54:15]: ▸ ZXnXgtxzdVJL8T0SGYngDRGpngn3N6PT8JMEb7FDi4bBmPhCnZ3/sq6PF/cGcKXW
+[21:54:15]: ▸ sL5vOteRhyJ45x3ASP7cOB+aao90fcpxSv/EZFbniAbNgZGhIhpIo4H6MIH3MBIG
+[21:54:15]: ▸ A1UdEwEB/wQIMAYBAf8CAQAwHwYDVR0jBBgwFoAUu7DeoVgziJqkipnevr3rr9rL
+[21:54:15]: ▸ JKswRgYIKwYBBQUHAQEEOjA4MDYGCCsGAQUFBzABhipodHRwOi8vb2NzcC5hcHBs
+[21:54:15]: ▸ ZS5jb20vb2NzcDAzLWFwcGxlcm9vdGNhZzMwNwYDVR0fBDAwLjAsoCqgKIYmaHR0
+[21:54:15]: ▸ cDovL2NybC5hcHBsZS5jb20vYXBwbGVyb290Y2FnMy5jcmwwHQYDVR0OBBYEFD8v
+[21:54:15]: ▸ lCNR01DJmig97bB85c+lkGKZMA4GA1UdDwEB/wQEAwIBBjAQBgoqhkiG92NkBgIB
+[21:54:15]: ▸ BAIFADAKBggqhkjOPQQDAwNoADBlAjBAXhSq5IyKogMCPtw490BaB677CaEGJXuf
+[21:54:15]: ▸ QB/EqZGd6CSjiCtOnuMTbXVXmxxcxfkCMQDTSPxarZXvNrkxU3TkUMI33yzvFVVR
+[21:54:15]: ▸ T4wxWJC994OsdcZ4+RGNsYDyR5gmdr0nDGg=
+[21:54:15]: ▸ -----END CERTIFICATE-----
+
++-------------------+----------------------------------------------------+
+|                         Installed Certificate                          |
++-------------------+----------------------------------------------------+
+| User ID           | ABC2DEFGHT                                         |
+| Common Name       | Apple Distribution: EYC Media Pte Ltd (ABC2DEFGHT) |
+| Organisation Unit | ABC2DEFGHT                                         |
+| Organisation      | EYC Media Pte Ltd                                  |
+| Country           | SG                                                 |
+| Start Datetime    | 2023-04-10 06:42:04 UTC                            |
+| End Datetime      | 2024-04-09 06:42:03 UTC                            |
++-------------------+----------------------------------------------------+
+
+[21:54:15]: Installing provisioning profile...
+
++---------------------+------------------------------------------------------+---------------------------------------------------------------+
+|                                                       Installed Provisioning Profile                                                       |
++---------------------+------------------------------------------------------+---------------------------------------------------------------+
+| Parameter           | Environment Variable                                 | Value                                                         |
++---------------------+------------------------------------------------------+---------------------------------------------------------------+
+| App Identifier      |                                                      | com.duytq.example                                             |
+| Type                |                                                      | appstore                                                      |
+| Platform            |                                                      | ios                                                           |
+| Profile UUID        | sigh_com.duytq.example_appstore                      | c1841e91-122f-49f1-8d96-742082466776                          |
+| Profile Name        | sigh_com.duytq.example_appstore_profile-name         | match AppStore com.duytq.example                              |
+| Profile Path        | sigh_com.duytq.example_appstore_profile-path         | /Users/duytran/Library/MobileDevice/Provisioning              |
+|                     |                                                      | Profiles/c1841e91-122f-49f1-8d96-742082466776.mobileprovision |
+| Development Team ID | sigh_com.duytq.example_appstore_team-id              | ABC2DEFGHT                                                    |
+| Certificate Name    | sigh_com.duytq.example_appstore_certificate-name     | Apple Distribution: EYC Media Pte Ltd (ABC2DEFGHT)            |
++---------------------+------------------------------------------------------+---------------------------------------------------------------+
+
+[21:54:15]: All required keys, certificates and provisioning profiles are installed 🙌
+[21:54:15]: Setting Provisioning Profile type to 'app-store'
+[21:54:15]: -----------------
+[21:54:15]: --- Step: gym ---
+[21:54:15]: -----------------
+[21:54:15]: Resolving Swift Package Manager dependencies...
+[21:54:15]: $ xcodebuild -resolvePackageDependencies -workspace ./Runner.xcworkspace -scheme prod
+[21:54:16]: ▸ Command line invocation:
+[21:54:16]: ▸     /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -resolvePackageDependencies -workspace ./Runner.xcworkspace -scheme prod
+[21:54:16]: ▸ User defaults from command line:
+[21:54:16]: ▸     IDEPackageSupportUseBuiltinSCM = YES
+[21:54:16]: ▸ --- xcodebuild: WARNING: Using the first of multiple matching destinations:
+[21:54:16]: ▸ { platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008103-0012655621A0801E }
+[21:54:16]: ▸ { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+[21:54:16]: ▸ { platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+[21:54:16]: ▸ { platform:iOS Simulator, id:9E50EDB4-828C-41F4-93E9-07F32110C792, OS:16.2, name:iPhone 14 Pro }
+[21:54:16]: ▸ resolved source packages: 
+[21:54:16]: $ xcodebuild -showBuildSettings -workspace ./Runner.xcworkspace -scheme prod
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008103-0012655621A0801E }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, id:9E50EDB4-828C-41F4-93E9-07F32110C792, OS:16.2, name:iPhone 14 Pro }
+[21:54:19]: Command timed out after 3 seconds on try 1 of 4, trying again with a 6 second timeout...
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008103-0012655621A0801E }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, id:9E50EDB4-828C-41F4-93E9-07F32110C792, OS:16.2, name:iPhone 14 Pro }
+2023-05-14 21:54:22.008 xcodebuild[16567:276280] Requested but did not find extension point with identifier Xcode.InterfaceBuilderBuildSupport.PlatformDefinition
+2023-05-14 21:54:23.861 xcodebuild[16574:276353] Requested but did not find extension point with identifier Xcode.InterfaceBuilderBuildSupport.PlatformDefinition
+[21:54:23]: Detected provisioning profile mapping: {:"com.duytq.example"=>"match AppStore com.duytq.example"}
+
++-----------------------------------------------------------+------------------------------------------------------------+
+|                                                Summary for gym 2.212.2                                                 |
++-----------------------------------------------------------+------------------------------------------------------------+
+| scheme                                                    | prod                                                       |
+| export_method                                             | app-store                                                  |
+| export_options.provisioningProfiles.com.duytq.example     | match AppStore com.duytq.example                           |
+| workspace                                                 | ./Runner.xcworkspace                                       |
+| clean                                                     | false                                                      |
+| output_directory                                          | .                                                          |
+| output_name                                               | Example                                                    |
+| silent                                                    | false                                                      |
+| skip_package_ipa                                          | false                                                      |
+| skip_package_pkg                                          | false                                                      |
+| build_path                                                | /Users/duytran/Library/Developer/Xcode/Archives/2023-05-14 |
+| result_bundle                                             | false                                                      |
+| buildlog_path                                             | ~/Library/Logs/gym                                         |
+| destination                                               | generic/platform=iOS                                       |
+| xcodebuild_formatter                                      | xcpretty                                                   |
+| build_timing_summary                                      | false                                                      |
+| skip_profile_detection                                    | false                                                      |
+| xcodebuild_command                                        | xcodebuild                                                 |
+| skip_package_dependencies_resolution                      | false                                                      |
+| disable_package_automatic_updates                         | false                                                      |
+| use_system_scm                                            | false                                                      |
+| xcode_path                                                | /Applications/Xcode.app                                    |
++-----------------------------------------------------------+------------------------------------------------------------+
+
+[21:54:23]: $ set -o pipefail && xcodebuild -workspace ./Runner.xcworkspace -scheme prod -destination 'generic/platform=iOS' -archivePath /Users/duytran/Library/Developer/Xcode/Archives/2023-05-14/Example\ 2023-05-14\ 21.54.23.xcarchive archive | tee /Users/duytran/Library/Logs/gym/Example-prod.log | xcpretty
+[21:54:29]: ▸ Copying webview-umbrella.h
+[21:54:29]: ▸ Copying FWFWebsiteDataStoreHostApi.h
+[21:54:29]: ▸ Copying FWFWebViewHostApi.h
+[21:54:29]: ▸ Copying FWFWebViewFlutterWKWebViewExternalAPI.h
+[21:54:29]: ▸ Copying FWFWebViewConfigurationHostApi.h
+[21:54:29]: ▸ Copying FWFUserContentControllerHostApi.h
+[21:54:29]: ▸ Copying FWFURLHostApi.h
+[21:54:29]: ▸ Copying FWFUIViewHostApi.h
+[21:54:29]: ▸ Copying FWFUIDelegateHostApi.h
+[21:54:29]: ▸ Copying FWFScrollViewHostApi.h
+[21:54:29]: ▸ Copying FWFScriptMessageHandlerHostApi.h
+[21:54:29]: ▸ Copying FWFPreferencesHostApi.h
+[21:54:29]: ▸ Copying FWFObjectHostApi.h
+[21:54:29]: ▸ Copying FWFNavigationDelegateHostApi.h
+[21:54:29]: ▸ Copying FWFInstanceManager_Test.h
+[21:54:29]: ▸ Copying FWFInstanceManager.h
+[21:54:29]: ▸ Copying FWFHTTPCookieStoreHostApi.h
+[21:54:29]: ▸ Copying FWFGeneratedWebKitApis.h
+[21:54:29]: ▸ Copying FWFDataConverters.h
+[21:54:29]: ▸ Copying FLTWebViewFlutterPlugin.h
+[21:54:29]: ▸ Copying video_player_avfoundation-umbrella.h
+[21:54:29]: ▸ Copying messages.g.h
+[21:54:29]: ▸ Copying FLTVideoPlayerPlugin.h
+[21:54:29]: ▸ Copying AVAssetTrackUtils.h
+[21:54:29]: ▸ Copying pb_encode.h
+[21:54:29]: ▸ Copying pb_decode.h
+[21:54:29]: ▸ Copying pb_common.h
+[21:54:29]: ▸ Copying pb.h
+[21:54:29]: ▸ Copying nanopb-umbrella.h
+[21:54:29]: ▸ Copying messages.g.h
+[21:54:29]: ▸ Copying image_picker_ios-umbrella.h
+[21:54:29]: ▸ Copying FLTPHPickerSaveImageToPathOperation.h
+[21:54:29]: ▸ Copying FLTImagePickerPlugin_Test.h
+[21:54:29]: ▸ Copying FLTImagePickerPlugin.h
+[21:54:29]: ▸ Copying FLTImagePickerPhotoAssetUtil.h
+[21:54:29]: ▸ Copying FLTImagePickerMetaDataUtil.h
+[21:54:29]: ▸ Copying FLTImagePickerImageUtil.h
+[21:54:29]: ▸ Copying ReachabilitySwift-umbrella.h
+[21:54:29]: ▸ Copying FBLPromisePrivate.h
+[21:54:29]: ▸ Copying PromisesObjC-umbrella.h
+[21:54:29]: ▸ Copying FBLPromises.h
+[21:54:29]: ▸ Copying FBLPromiseError.h
+[21:54:29]: ▸ Copying FBLPromise.h
+[21:54:29]: ▸ Copying FBLPromise+Wrap.h
+[21:54:29]: ▸ Copying FBLPromise+Validate.h
+[21:54:29]: ▸ Copying FBLPromise+Timeout.h
+[21:54:29]: ▸ Copying FBLPromise+Then.h
+[21:54:29]: ▸ Copying FBLPromise+Testing.h
+[21:54:29]: ▸ Copying FBLPromise+Retry.h
+[21:54:29]: ▸ Copying FBLPromise+Reduce.h
+[21:54:29]: ▸ Copying FBLPromise+Recover.h
+[21:54:29]: ▸ Copying FBLPromise+Race.h
+[21:54:29]: ▸ Copying FBLPromise+Do.h
+[21:54:29]: ▸ Copying FBLPromise+Delay.h
+[21:54:29]: ▸ Copying FBLPromise+Catch.h
+[21:54:29]: ▸ Copying FBLPromise+Await.h
+[21:54:29]: ▸ Copying FBLPromise+Async.h
+[21:54:29]: ▸ Copying FBLPromise+Any.h
+[21:54:29]: ▸ Copying FBLPromise+Always.h
+[21:54:29]: ▸ Copying FBLPromise+All.h
+[21:54:29]: ▸ Copying GTMSessionUploadFetcher.h
+[21:54:29]: ▸ Copying GTMSessionFetcherService.h
+[21:54:29]: ▸ Copying GTMSessionFetcherLogging.h
+[21:54:29]: ▸ Copying GTMSessionFetcher.h
+[21:54:29]: ▸ Copying GTMSessionFetcher-umbrella.h
+[21:54:29]: ▸ Copying OIDURLSessionProvider.h
+[21:54:29]: ▸ Copying OIDURLQueryComponent.h
+[21:54:29]: ▸ Copying OIDTokenUtilities.h
+[21:54:29]: ▸ Copying OIDTokenResponse.h
+[21:54:29]: ▸ Copying OIDTokenRequest.h
+[21:54:29]: ▸ Copying OIDServiceDiscovery.h
+[21:54:29]: ▸ Copying OIDServiceConfiguration.h
+[21:54:29]: ▸ Copying OIDScopes.h
+[21:54:29]: ▸ Copying OIDScopeUtilities.h
+[21:54:29]: ▸ Copying OIDResponseTypes.h
+[21:54:29]: ▸ Copying OIDRegistrationResponse.h
+[21:54:29]: ▸ Copying OIDRegistrationRequest.h
+[21:54:29]: ▸ Copying OIDIDToken.h
+[21:54:29]: ▸ Copying OIDGrantTypes.h
+[21:54:29]: ▸ Copying OIDFieldMapping.h
+[21:54:29]: ▸ Copying OIDExternalUserAgentSession.h
+[21:54:29]: ▸ Copying OIDExternalUserAgentRequest.h
+[21:54:29]: ▸ Copying OIDExternalUserAgentIOSCustomBrowser.h
+[21:54:29]: ▸ Copying OIDExternalUserAgentIOS.h
+[21:54:29]: ▸ Copying OIDExternalUserAgentCatalyst.h
+[21:54:29]: ▸ Copying OIDExternalUserAgent.h
+[21:54:29]: ▸ Copying OIDErrorUtilities.h
+[21:54:29]: ▸ Copying OIDError.h
+[21:54:29]: ▸ Copying OIDEndSessionResponse.h
+[21:54:29]: ▸ Copying OIDEndSessionRequest.h
+[21:54:29]: ▸ Copying OIDDefines.h
+[21:54:29]: ▸ Copying OIDClientMetadataParameters.h
+[21:54:29]: ▸ Copying OIDAuthorizationService.h
+[21:54:29]: ▸ Copying OIDAuthorizationService+IOS.h
+[21:54:29]: ▸ Copying OIDAuthorizationResponse.h
+[21:54:29]: ▸ Copying OIDAuthorizationRequest.h
+[21:54:29]: ▸ Copying OIDAuthStateErrorDelegate.h
+[21:54:29]: ▸ Copying OIDAuthStateChangeDelegate.h
+[21:54:29]: ▸ Copying OIDAuthState.h
+[21:54:29]: ▸ Copying OIDAuthState+IOS.h
+[21:54:29]: ▸ Copying AppAuthCore.h
+[21:54:29]: ▸ Copying AppAuth.h
+[21:54:29]: ▸ Copying AppAuth-umbrella.h
+[21:54:29]: ▸ Processing webview_flutter_wkwebview-Info.plist
+[21:54:29]: ▸ Processing video_player_avfoundation-Info.plist
+[21:54:29]: ▸ Processing nanopb-Info.plist
+[21:54:29]: ▸ Processing image_picker_ios-Info.plist
+[21:54:29]: ▸ Processing ReachabilitySwift-Info.plist
+[21:54:29]: ▸ Processing PromisesObjC-Info.plist
+[21:54:29]: ▸ Processing GTMSessionFetcher-Info.plist
+[21:54:29]: ▸ Processing AppAuth-Info.plist
+[21:54:29]: ▸ Copying url_launcher_ios-umbrella.h
+[21:54:29]: ▸ Copying FLTURLLauncherPlugin.h
+[21:54:29]: ▸ Copying sign_in_with_apple-umbrella.h
+[21:54:29]: ▸ Copying SignInWithApplePlugin.h
+[21:54:29]: ▸ Processing url_launcher_ios-Info.plist
+[21:54:29]: ▸ Processing sign_in_with_apple-Info.plist
+[21:54:29]: ▸ Copying shared_preferences_foundation-umbrella.h
+[21:54:29]: ▸ Compiling webview_flutter_wkwebview-dummy.m
+[21:54:30]: ▸ Compiling FWFWebsiteDataStoreHostApi.m
+[21:54:30]: ▸ Compiling FWFWebViewHostApi.m
+[21:54:30]: ▸ Compiling FWFWebViewFlutterWKWebViewExternalAPI.m
+[21:54:30]: ▸ Compiling FWFWebViewConfigurationHostApi.m
+[21:54:30]: ▸ Compiling FWFUserContentControllerHostApi.m
+[21:54:30]: ▸ Compiling FWFURLHostApi.m
+[21:54:30]: ▸ Compiling FWFUIViewHostApi.m
+[21:54:30]: ▸ Compiling webview_flutter_wkwebview_vers.c
+[21:54:30]: ▸ Compiling FWFUIDelegateHostApi.m
+[21:54:30]: ▸ Compiling FWFScrollViewHostApi.m
+[21:54:30]: ▸ Compiling FWFScriptMessageHandlerHostApi.m
+[21:54:30]: ▸ Compiling FWFPreferencesHostApi.m
+[21:54:30]: ▸ Compiling FWFObjectHostApi.m
+[21:54:30]: ▸ Compiling FWFNavigationDelegateHostApi.m
+[21:54:30]: ▸ Compiling FWFInstanceManager.m
+[21:54:30]: ▸ Compiling FWFHTTPCookieStoreHostApi.m
+[21:54:30]: ▸ Compiling FWFGeneratedWebKitApis.m
+[21:54:30]: ▸ Compiling FWFDataConverters.m
+[21:54:30]: ▸ Compiling FLTWebViewFlutterPlugin.m
+[21:54:30]: ▸ Compiling video_player_avfoundation-dummy.m
+[21:54:30]: ▸ Compiling video_player_avfoundation_vers.c
+[21:54:30]: ▸ Compiling messages.g.m
+[21:54:30]: ▸ Compiling FLTVideoPlayerPlugin.m
+[21:54:30]: ▸ Compiling AVAssetTrackUtils.m
+[21:54:30]: ▸ Compiling url_launcher_ios-dummy.m
+[21:54:30]: ▸ Compiling url_launcher_ios_vers.c
+[21:54:30]: ▸ Compiling FLTURLLauncherPlugin.m
+[21:54:30]: ▸ Processing shared_preferences_foundation-Info.plist
+[21:54:30]: ▸ Compiling pb_encode.c
+[21:54:30]: ▸ Compiling pb_decode.c
+[21:54:30]: ▸ Compiling pb_common.c
+[21:54:30]: ▸ Compiling nanopb_vers.c
+[21:54:31]: ▸ Linking url_launcher_ios
+[21:54:31]: ▸ Compiling nanopb-dummy.m
+[21:54:31]: ▸ Compiling messages.g.m
+[21:54:31]: ▸ Compiling image_picker_ios_vers.c
+[21:54:31]: ▸ Compiling image_picker_ios-dummy.m
+[21:54:31]: ▸ Compiling FLTPHPickerSaveImageToPathOperation.m
+[21:54:31]: ▸ Compiling FLTImagePickerPlugin.m
+[21:54:31]: ▸ Linking video_player_avfoundation
+[21:54:31]: ▸ Linking nanopb
+[21:54:31]: ▸ Generating 'url_launcher_ios.framework.dSYM'
+[21:54:31]: ▸ Compiling FLTImagePickerPhotoAssetUtil.m
+[21:54:31]: ▸ Compiling FLTImagePickerMetaDataUtil.m
+[21:54:31]: ▸ Linking webview_flutter_wkwebview
+[21:54:31]: ▸ Generating 'nanopb.framework.dSYM'
+[21:54:31]: ▸ Generating 'video_player_avfoundation.framework.dSYM'
+[21:54:31]: ▸ Compiling FLTImagePickerImageUtil.m
+[21:54:31]: ▸ Touching url_launcher_ios.framework (in target 'url_launcher_ios' from project 'Pods')
+[21:54:31]: ▸ Compiling PromisesObjC-dummy.m
+[21:54:31]: ▸ Compiling FBLPromiseError.m
+[21:54:31]: ▸ Compiling FBLPromises_vers.c
+[21:54:31]: ▸ Touching nanopb.framework (in target 'nanopb' from project 'Pods')
+[21:54:31]: ▸ Compiling Reachability.swift
+[21:54:32]: ▸ Compiling FBLPromise.m
+[21:54:32]: ▸ Generating 'webview_flutter_wkwebview.framework.dSYM'
+[21:54:32]: ▸ Linking image_picker_ios
+[21:54:32]: ▸ Touching video_player_avfoundation.framework (in target 'video_player_avfoundation' from project 'Pods')
+[21:54:32]: ▸ Compiling FBLPromise+Wrap.m
+[21:54:32]: ▸ Compiling FBLPromise+Validate.m
+[21:54:32]: ▸ Compiling FBLPromise+Timeout.m
+[21:54:32]: ▸ Compiling FBLPromise+Then.m
+[21:54:32]: ▸ Compiling FBLPromise+Testing.m
+[21:54:32]: ▸ Compiling FBLPromise+Retry.m
+[21:54:32]: ▸ Compiling FBLPromise+Reduce.m
+[21:54:32]: ▸ Compiling FBLPromise+Recover.m
+[21:54:32]: ▸ Compiling FBLPromise+Race.m
+[21:54:32]: ▸ Touching webview_flutter_wkwebview.framework (in target 'webview_flutter_wkwebview' from project 'Pods')
+[21:54:32]: ▸ Generating 'image_picker_ios.framework.dSYM'
+[21:54:32]: ▸ Compiling FBLPromise+Do.m
+[21:54:32]: ▸ Compiling FBLPromise+Delay.m
+[21:54:32]: ▸ Compiling FBLPromise+Catch.m
+[21:54:32]: ▸ Compiling FBLPromise+Await.m
+[21:54:32]: ▸ Compiling FBLPromise+Async.m
+[21:54:32]: ▸ Compiling FBLPromise+Any.m
+[21:54:32]: ▸ Compiling FBLPromise+Always.m
+[21:54:32]: ▸ Compiling FBLPromise+All.m
+[21:54:32]: ▸ Compiling shared_preferences_foundation_vers.c
+[21:54:32]: ▸ Compiling shared_preferences_foundation-dummy.m
+[21:54:32]: ▸ Compiling GTMSessionUploadFetcher.m
+[21:54:32]: ▸ Compiling GTMSessionFetcher_vers.c
+[21:54:32]: ▸ Compiling GTMSessionFetcherService.m
+[21:54:32]: ▸ Compiling GTMSessionFetcherLogging.m
+[21:54:32]: ▸ Compiling GTMSessionFetcher.m
+[21:54:32]: ▸ Linking FBLPromises
+[21:54:32]: ▸ Linking shared_preferences_foundation
+[21:54:32]: ▸ Compiling GTMSessionFetcher-dummy.m
+[21:54:32]: ▸ Touching image_picker_ios.framework (in target 'image_picker_ios' from project 'Pods')
+[21:54:32]: ▸ Generating 'FBLPromises.framework.dSYM'
+[21:54:32]: ▸ Compiling OIDURLSessionProvider.m
+[21:54:32]: ▸ Compiling OIDURLQueryComponent.m
+[21:54:32]: ▸ Generating 'shared_preferences_foundation.framework.dSYM'
+[21:54:32]: ▸ Compiling OIDTokenUtilities.m
+[21:54:32]: ▸ Compiling OIDTokenResponse.m
+[21:54:32]: ▸ Compiling OIDTokenRequest.m
+[21:54:32]: ▸ Touching FBLPromises.framework (in target 'PromisesObjC' from project 'Pods')
+[21:54:32]: ▸ Touching shared_preferences_foundation.framework (in target 'shared_preferences_foundation' from project 'Pods')
+[21:54:32]: ▸ Compiling OIDServiceDiscovery.m
+[21:54:32]: ▸ Compiling OIDServiceConfiguration.m
+[21:54:32]: ▸ Copying PromisesSwift-umbrella.h
+[21:54:32]: ▸ Copying NSURLSession+GULPromises.h
+[21:54:32]: ▸ Copying GoogleUtilities-umbrella.h
+[21:54:32]: ▸ Copying GULUserDefaults.h
+[21:54:32]: ▸ Copying GULURLSessionDataResponse.h
+[21:54:32]: ▸ Copying GULSecureCoding.h
+[21:54:32]: ▸ Copying GULNetworkInfo.h
+[21:54:32]: ▸ Copying GULNSData+zlib.h
+[21:54:32]: ▸ Copying GULLoggerLevel.h
+[21:54:32]: ▸ Copying GULLogger.h
+[21:54:32]: ▸ Copying GULKeychainUtils.h
+[21:54:32]: ▸ Copying GULKeychainStorage.h
+[21:54:32]: ▸ Copying GULHeartbeatDateStorageUserDefaults.h
+[21:54:32]: ▸ Copying GULHeartbeatDateStorage.h
+[21:54:32]: ▸ Copying GULHeartbeatDateStorable.h
+[21:54:32]: ▸ Copying GULAppEnvironmentUtil.h
+[21:54:32]: ▸ Compiling sign_in_with_apple_vers.c
+[21:54:32]: ▸ Compiling sign_in_with_apple-dummy.m
+[21:54:32]: ▸ Compiling SignInWithApplePlugin.m
+[21:54:32]: ▸ Processing PromisesSwift-Info.plist
+[21:54:32]: ▸ Processing GoogleUtilities-Info.plist
+[21:54:32]: ▸ Compiling NSURLSession+GULPromises.m
+[21:54:32]: ▸ Compiling GoogleUtilities_vers.c
+[21:54:32]: ▸ Compiling GoogleUtilities-dummy.m
+[21:54:32]: ▸ Compiling GULUserDefaults.m
+[21:54:32]: ▸ Compiling GULURLSessionDataResponse.m
+[21:54:32]: ▸ Compiling GULSecureCoding.m
+[21:54:33]: ▸ Linking sign_in_with_apple
+[21:54:33]: ▸ Compiling GULNetworkInfo.m
+[21:54:33]: ▸ Compiling GULNSData+zlib.m
+[21:54:33]: ▸ Compiling GULLogger.m
+[21:54:33]: ▸ Compiling GULKeychainUtils.m
+[21:54:33]: ▸ Compiling GULKeychainStorage.m
+[21:54:33]: ▸ Compiling GULHeartbeatDateStorageUserDefaults.m
+[21:54:33]: ▸ Compiling GULHeartbeatDateStorage.m
+[21:54:33]: ▸ Compiling GULAppEnvironmentUtil.m
+[21:54:33]: ▸ Compiling OIDScopes.m
+[21:54:33]: ▸ Linking GTMSessionFetcher
+[21:54:33]: ▸ Compiling Reachability_vers.c
+[21:54:33]: ▸ Compiling ReachabilitySwift-dummy.m
+[21:54:33]: ▸ Generating 'sign_in_with_apple.framework.dSYM'
+[21:54:33]: ▸ Compiling OIDScopeUtilities.m
+[21:54:33]: ▸ Compiling OIDResponseTypes.m
+[21:54:33]: ▸ Compiling OIDRegistrationResponse.m
+[21:54:33]: ▸ Linking Reachability
+[21:54:33]: ▸ Compiling OIDRegistrationRequest.m
+[21:54:33]: ▸ Linking GoogleUtilities
+[21:54:33]: ▸ Compiling OIDIDToken.m
+[21:54:33]: ▸ Compiling OIDGrantTypes.m
+[21:54:33]: ▸ Generating 'GTMSessionFetcher.framework.dSYM'
+[21:54:33]: ▸ Compiling OIDFieldMapping.m
+[21:54:33]: ▸ Compiling OIDExternalUserAgentIOSCustomBrowser.m
+[21:54:33]: ▸ Compiling OIDExternalUserAgentIOS.m
+[21:54:33]: ▸ Compiling OIDExternalUserAgentCatalyst.m
+[21:54:33]: ▸ Touching sign_in_with_apple.framework (in target 'sign_in_with_apple' from project 'Pods')
+[21:54:33]: ▸ Generating 'Reachability.framework.dSYM'
+[21:54:33]: ▸ Generating 'GoogleUtilities.framework.dSYM'
+[21:54:33]: ▸ Compiling OIDErrorUtilities.m
+[21:54:33]: ▸ Compiling OIDError.m
+[21:54:33]: ▸ Compiling OIDEndSessionResponse.m
+[21:54:33]: ▸ Touching GTMSessionFetcher.framework (in target 'GTMSessionFetcher' from project 'Pods')
+[21:54:33]: ▸ Compiling OIDEndSessionRequest.m
+[21:54:33]: ▸ Compiling OIDClientMetadataParameters.m
+[21:54:33]: ▸ Compiling OIDAuthorizationService.m
+[21:54:33]: ▸ Compiling OIDAuthorizationService+IOS.m
+[21:54:33]: ▸ Compiling OIDAuthorizationResponse.m
+[21:54:33]: ▸ Touching Reachability.framework (in target 'ReachabilitySwift' from project 'Pods')
+[21:54:33]: ▸ Touching GoogleUtilities.framework (in target 'GoogleUtilities' from project 'Pods')
+[21:54:33]: ▸ Compiling OIDAuthorizationRequest.m
+[21:54:33]: ▸ Compiling OIDAuthState.m
+[21:54:33]: ▸ Compiling OIDAuthState+IOS.m
+[21:54:33]: ▸ Copying connectivity_plus-umbrella.h
+[21:54:33]: ▸ Copying ConnectivityPlusPlugin.h
+[21:54:33]: ▸ Processing connectivity_plus-Info.plist
+[21:54:33]: ▸ Compiling AppAuth_vers.c
+[21:54:33]: ▸ Compiling AppAuth-dummy.m
+[21:54:33]: ▸ Copying GoogleDataTransport.h
+[21:54:33]: ▸ Copying GoogleDataTransport-umbrella.h
+[21:54:33]: ▸ Copying GDTCORTransport.h
+[21:54:33]: ▸ Copying GDTCORTargets.h
+[21:54:33]: ▸ Copying GDTCOREventTransformer.h
+[21:54:33]: ▸ Copying GDTCOREventDataObject.h
+[21:54:33]: ▸ Copying GDTCOREvent.h
+[21:54:33]: ▸ Copying GDTCOREndpoints.h
+[21:54:33]: ▸ Copying GDTCORConsoleLogger.h
+[21:54:33]: ▸ Copying GDTCORClock.h
+[21:54:33]: ▸ Processing GoogleDataTransport-Info.plist
+[21:54:33]: ▸ Compiling client_metrics.nanopb.c
+[21:54:33]: ▸ Compiling cct.nanopb.c
+[21:54:33]: ▸ Compiling GoogleDataTransport_vers.c
+[21:54:33]: ▸ Compiling GoogleDataTransport-dummy.m
+[21:54:33]: ▸ Compiling GDTCORUploadCoordinator.m
+[21:54:33]: ▸ Compiling GDTCORUploadBatch.m
+[21:54:33]: ▸ Compiling GDTCORTransport.m
+[21:54:33]: ▸ Compiling GDTCORTransformer.m
+[21:54:33]: ▸ Compiling GDTCORStorageMetadata.m
+[21:54:33]: ▸ Compiling GDTCORStorageEventSelector.m
+[21:54:33]: ▸ Compiling GDTCORRegistrar.m
+[21:54:33]: ▸ Compiling GDTCORReachability.m
+[21:54:33]: ▸ Compiling GDTCORPlatform.m
+[21:54:33]: ▸ Linking AppAuth
+[21:54:33]: ▸ Compiling GDTCORMetricsMetadata.m
+[21:54:33]: ▸ Compiling GDTCORMetricsController.m
+[21:54:33]: ▸ Compiling GDTCORMetrics.m
+[21:54:33]: ▸ Compiling GDTCORMetrics+GDTCCTSupport.m
+[21:54:33]: ▸ Compiling GDTCORLogSourceMetrics.m
+[21:54:33]: ▸ Compiling GDTCORLifecycle.m
+[21:54:33]: ▸ Compiling GDTCORFlatFileStorage.m
+[21:54:33]: ▸ Compiling GDTCORFlatFileStorage+Promises.m
+[21:54:33]: ▸ Compiling GDTCOREvent.m
+[21:54:33]: ▸ Compiling Promises_vers.c
+[21:54:33]: ▸ Compiling PromisesSwift-dummy.m
+[21:54:33]: ▸ Compiling GDTCOREvent+GDTMetricsSupport.m
+[21:54:33]: ▸ Compiling GDTCOREvent+GDTCCTSupport.m
+[21:54:33]: ▸ Compiling GDTCOREndpoints.m
+[21:54:33]: ▸ Compiling GDTCORDirectorySizeTracker.m
+[21:54:33]: ▸ Compiling GDTCORConsoleLogger.m
+[21:54:33]: ▸ Compiling GDTCORClock.m
+[21:54:33]: ▸ Linking Promises
+[21:54:33]: ▸ Compiling GDTCORAssert.m
+[21:54:33]: ▸ Compiling GDTCCTUploader.m
+[21:54:33]: ▸ Compiling GDTCCTUploadOperation.m
+[21:54:34]: ▸ Compiling GDTCCTNanopbHelpers.m
+[21:54:34]: ▸ Compiling GDTCCTCompressionHelper.m
+[21:54:34]: ▸ Generating 'AppAuth.framework.dSYM'
+[21:54:34]: ▸ Compiling connectivity_plus_vers.c
+[21:54:34]: ▸ Compiling connectivity_plus-dummy.m
+[21:54:34]: ▸ Compiling ConnectivityPlusPlugin.m
+[21:54:34]: ▸ Copying FirebaseCoreInternal-umbrella.h
+[21:54:34]: ▸ Processing FirebaseCoreInternal-Info.plist
+[21:54:34]: ▸ Touching AppAuth.framework (in target 'AppAuth' from project 'Pods')
+[21:54:34]: ▸ Copying GTMOAuth2KeychainCompatibility.h
+[21:54:34]: ▸ Copying GTMKeychain.h
+[21:54:34]: ▸ Copying GTMAppAuthFetcherAuthorization.h
+[21:54:34]: ▸ Copying GTMAppAuthFetcherAuthorization+Keychain.h
+[21:54:34]: ▸ Copying GTMAppAuth.h
+[21:54:34]: ▸ Copying GTMAppAuth-umbrella.h
+[21:54:34]: ▸ Processing GTMAppAuth-Info.plist
+[21:54:35]: ▸ Generating 'Promises.framework.dSYM'
+[21:54:35]: ▸ Compiling GTMOAuth2KeychainCompatibility.m
+[21:54:35]: ▸ Compiling GTMKeychain.m
+[21:54:35]: ▸ Compiling GTMAppAuth_vers.c
+[21:54:35]: ▸ Compiling GTMAppAuthFetcherAuthorization.m
+[21:54:35]: ▸ Linking connectivity_plus
+[21:54:35]: ▸ Compiling GTMAppAuthFetcherAuthorization+Keychain.m
+[21:54:35]: ▸ Compiling GTMAppAuth-dummy.m
+[21:54:35]: ▸ Linking GoogleDataTransport
+[21:54:35]: ▸ Touching Promises.framework (in target 'PromisesSwift' from project 'Pods')
+[21:54:35]: ▸ Generating 'GoogleDataTransport.framework.dSYM'
+[21:54:35]: ▸ Generating 'connectivity_plus.framework.dSYM'
+[21:54:35]: ▸ Linking GTMAppAuth
+[21:54:35]: ▸ Touching GoogleDataTransport.framework (in target 'GoogleDataTransport' from project 'Pods')
+[21:54:35]: ▸ Touching connectivity_plus.framework (in target 'connectivity_plus' from project 'Pods')
+[21:54:35]: ▸ Generating 'GTMAppAuth.framework.dSYM'
+[21:54:35]: ▸ Touching GTMAppAuth.framework (in target 'GTMAppAuth' from project 'Pods')
+[21:54:35]: ▸ Processing ResourceBundle-GoogleSignIn-GoogleSignIn-Info.plist
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/zh_TW.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/zh_CN.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/vi.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/uk.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/th.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/tr.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/sv.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/sk.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pt_PT.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ru.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ro.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pt_BR.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pt.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/pl.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/nl.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/nb.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ms.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ko.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ja.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/id.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/it.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/hu.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/hr.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/hi.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/he.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/fr_CA.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/fr.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/fi.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/es.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/en_GB.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/es_MX.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/en.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/el.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/de.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/da.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/cs.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ca.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/ar.lproj
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.bundle/Roboto-Bold.ttf
+[21:54:35]: ▸ Touching GoogleSignIn.bundle (in target 'GoogleSignIn-GoogleSignIn' from project 'Pods')
+[21:54:35]: ▸ Copying GoogleSignIn.h
+[21:54:35]: ▸ Copying GoogleSignIn-umbrella.h
+[21:54:35]: ▸ Copying GIDSignInButton.h
+[21:54:35]: ▸ Copying GIDSignIn.h
+[21:54:35]: ▸ Copying GIDProfileData.h
+[21:54:35]: ▸ Copying GIDGoogleUser.h
+[21:54:35]: ▸ Copying GIDConfiguration.h
+[21:54:35]: ▸ Copying GIDAuthentication.h
+[21:54:35]: ▸ Processing GoogleSignIn-Info.plist
+[21:54:35]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/GoogleSignIn.framework/GoogleSignIn.bundle
+[21:54:35]: ▸ Compiling GIDSignInStrings.m
+[21:54:35]: ▸ Compiling NSBundle+GID3PAdditions.m
+[21:54:35]: ▸ Compiling GoogleSignIn-dummy.m
+[21:54:35]: ▸ Compiling GIDSignInPreferences.m
+[21:54:35]: ▸ Compiling GIDSignInInternalOptions.m
+[21:54:35]: ▸ Compiling GIDSignInCallbackSchemes.m
+[21:54:35]: ▸ Compiling GoogleSignIn_vers.c
+[21:54:35]: ▸ Compiling GIDSignInButton.m
+[21:54:35]: ▸ Compiling GIDSignIn.m
+[21:54:35]: ▸ Compiling GIDScopes.m
+[21:54:35]: ▸ Compiling GIDProfileData.m
+[21:54:35]: ▸ Compiling GIDMDMPasscodeState.m
+[21:54:35]: ▸ Compiling GIDMDMPasscodeCache.m
+[21:54:35]: ▸ Compiling GIDGoogleUser.m
+[21:54:35]: ▸ Compiling GIDEMMErrorHandler.m
+[21:54:35]: ▸ Compiling GIDConfiguration.m
+[21:54:35]: ▸ Compiling GIDCallbackQueue.m
+[21:54:35]: ▸ Compiling GIDAuthentication.m
+[21:54:35]: ▸ Compiling GIDAuthStateMigration.m
+[21:54:35]: ▸ Linking GoogleSignIn
+[21:54:35]: ▸ Generating 'GoogleSignIn.framework.dSYM'
+[21:54:35]: ▸ Touching GoogleSignIn.framework (in target 'GoogleSignIn' from project 'Pods')
+[21:54:35]: ▸ Copying google_sign_in_ios-umbrella.h
+[21:54:35]: ▸ Copying FLTGoogleSignInPlugin_Test.h
+[21:54:35]: ▸ Copying FLTGoogleSignInPlugin.h
+[21:54:35]: ▸ Processing google_sign_in_ios-Info.plist
+[21:54:35]: ▸ Compiling google_sign_in_ios-dummy.m
+[21:54:35]: ▸ Compiling FLTGoogleSignInPlugin.m
+[21:54:35]: ▸ Compiling google_sign_in_ios_vers.c
+[21:54:35]: ▸ Touching google_sign_in_ios.framework (in target 'google_sign_in_ios' from project 'Pods')
+[21:54:35]: ▸ Compiling FirebaseCoreInternal-dummy.m
+[21:54:35]: ▸ Compiling FirebaseCoreInternal_vers.c
+[21:54:35]: ▸ Linking FirebaseCoreInternal
+[21:54:35]: ▸ Generating 'FirebaseCoreInternal.framework.dSYM'
+[21:54:35]: ▸ Touching FirebaseCoreInternal.framework (in target 'FirebaseCoreInternal' from project 'Pods')
+[21:54:35]: ▸ Copying FirebaseCore.h
+[21:54:35]: ▸ Copying FirebaseCore-umbrella.h
+[21:54:35]: ▸ Copying FIRVersion.h
+[21:54:35]: ▸ Copying FIROptions.h
+[21:54:35]: ▸ Copying FIRLoggerLevel.h
+[21:54:35]: ▸ Copying FIRConfiguration.h
+[21:54:35]: ▸ Copying FIRApp.h
+[21:54:35]: ▸ Processing FirebaseCore-Info.plist
+[21:54:35]: ▸ Compiling FirebaseCore-dummy.m
+[21:54:35]: ▸ Compiling FIRVersion.m
+[21:54:35]: ▸ Compiling FIRLogger.m
+[21:54:36]: ▸ Compiling FIROptions.m
+[21:54:36]: ▸ Compiling FIRHeartbeatLogger.m
+[21:54:36]: ▸ Compiling FIRFirebaseUserAgent.m
+[21:54:36]: ▸ Compiling FIRDependency.m
+[21:54:36]: ▸ Compiling FirebaseCore_vers.c
+[21:54:36]: ▸ Compiling FIRConfiguration.m
+[21:54:36]: ▸ Compiling FIRComponentType.m
+[21:54:36]: ▸ Compiling FIRComponentContainer.m
+[21:54:36]: ▸ Compiling FIRComponent.m
+[21:54:36]: ▸ Compiling FIRBundleUtil.m
+[21:54:36]: ▸ Compiling FIRApp.m
+[21:54:36]: ▸ Compiling FIRAnalyticsConfiguration.m
+[21:54:36]: ▸ Linking FirebaseCore
+[21:54:36]: ▸ Generating 'FirebaseCore.framework.dSYM'
+[21:54:36]: ▸ Touching FirebaseCore.framework (in target 'FirebaseCore' from project 'Pods')
+[21:54:36]: ▸ Copying FirebaseInstallations.h
+[21:54:36]: ▸ Copying FirebaseInstallations-umbrella.h
+[21:54:36]: ▸ Copying FIRInstallationsErrors.h
+[21:54:36]: ▸ Copying FIRInstallationsAuthTokenResult.h
+[21:54:36]: ▸ Copying FIRInstallations.h
+[21:54:36]: ▸ Processing FirebaseInstallations-Info.plist
+[21:54:36]: ▸ Copying FirebaseCoreInternal.h
+[21:54:36]: ▸ Copying FirebaseCoreExtension-umbrella.h
+[21:54:36]: ▸ Copying FIROptionsInternal.h
+[21:54:36]: ▸ Copying FIRLogger.h
+[21:54:36]: ▸ Copying FIRLibrary.h
+[21:54:36]: ▸ Copying FIRHeartbeatLogger.h
+[21:54:36]: ▸ Copying FIRDependency.h
+[21:54:36]: ▸ Copying FIRComponentType.h
+[21:54:36]: ▸ Copying FIRComponentContainer.h
+[21:54:36]: ▸ Copying FIRComponent.h
+[21:54:36]: ▸ Copying FIRAppInternal.h
+[21:54:36]: ▸ Processing FirebaseCoreExtension-Info.plist
+[21:54:36]: ▸ Compiling FIRInstallationsStoredItem.m
+[21:54:36]: ▸ Compiling FirebaseInstallations-dummy.m
+[21:54:36]: ▸ Compiling FIRInstallationsStoredAuthToken.m
+[21:54:36]: ▸ Compiling FIRInstallationsStore.m
+[21:54:36]: ▸ Compiling FIRInstallationsSingleOperationPromiseCache.m
+[21:54:36]: ▸ Compiling FIRInstallationsLogger.m
+[21:54:36]: ▸ Compiling FIRInstallationsItem.m
+[21:54:36]: ▸ Compiling FIRInstallationsItem+RegisterInstallationAPI.m
+[21:54:36]: ▸ Compiling FirebaseInstallations_vers.c
+[21:54:36]: ▸ Compiling FIRInstallationsIIDTokenStore.m
+[21:54:36]: ▸ Compiling FIRInstallationsIIDStore.m
+[21:54:36]: ▸ Compiling FIRInstallationsIDController.m
+[21:54:36]: ▸ Compiling FIRInstallationsHTTPError.m
+[21:54:36]: ▸ Compiling FIRInstallationsErrorUtil.m
+[21:54:36]: ▸ Compiling FIRInstallationsBackoffController.m
+[21:54:36]: ▸ Compiling FIRInstallationsAuthTokenResult.m
+[21:54:36]: ▸ Compiling FIRInstallationsAPIService.m
+[21:54:36]: ▸ Compiling FIRInstallations.m
+[21:54:36]: ▸ Compiling FIRCurrentDateProvider.m
+[21:54:36]: ▸ Compiling dummy.m
+[21:54:36]: ▸ Compiling FirebaseCoreExtension_vers.c
+[21:54:36]: ▸ Compiling FirebaseCoreExtension-dummy.m
+[21:54:36]: ▸ Linking FirebaseCoreExtension
+[21:54:36]: ▸ Linking FirebaseInstallations
+[21:54:36]: ▸ Generating 'FirebaseCoreExtension.framework.dSYM'
+[21:54:36]: ▸ Touching FirebaseCoreExtension.framework (in target 'FirebaseCoreExtension' from project 'Pods')
+[21:54:36]: ▸ Generating 'FirebaseInstallations.framework.dSYM'
+[21:54:36]: ▸ Touching FirebaseInstallations.framework (in target 'FirebaseInstallations' from project 'Pods')
+[21:54:36]: ▸ Copying sessions.nanopb.h
+[21:54:36]: ▸ Copying FirebaseSessions-umbrella.h
+[21:54:36]: ▸ Copying FIRSESNanoPBHelpers.h
+[21:54:36]: ▸ Processing FirebaseSessions-Info.plist
+[21:54:38]: ▸ Compiling sessions.nanopb.c
+[21:54:38]: ▸ Compiling FirebaseSessions_vers.c
+[21:54:38]: ▸ Compiling FirebaseSessions-dummy.m
+[21:54:38]: ▸ Compiling FIRSESNanoPBHelpers.m
+[21:54:38]: ▸ Linking FirebaseSessions
+[21:54:38]: ▸ Generating 'FirebaseSessions.framework.dSYM'
+[21:54:38]: ▸ Touching FirebaseSessions.framework (in target 'FirebaseSessions' from project 'Pods')
+[21:54:38]: ▸ Copying FirebaseCrashlytics.h
+[21:54:38]: ▸ Copying FirebaseCrashlytics-umbrella.h
+[21:54:38]: ▸ Copying FIRStackFrame.h
+[21:54:38]: ▸ Copying FIRExceptionModel.h
+[21:54:38]: ▸ Copying FIRCrashlytics.h
+[21:54:38]: ▸ Processing FirebaseCrashlytics-Info.plist
+[21:54:38]: ▸ Copying FIRCrashlyticsReport.h
+[21:54:38]: ▸ Compiling FirebaseCrashlytics-dummy.m
+[21:54:38]: ▸ Compiling FIRExceptionModel.m
+[21:54:38]: ▸ Compiling FIRCrashlyticsReport.m
+[21:54:38]: ▸ Compiling FIRStackFrame.m
+[21:54:38]: ▸ Compiling crashlytics.nanopb.c
+[21:54:38]: ▸ Compiling FIRCLSdSYM.m
+[21:54:38]: ▸ Compiling FIRCrashlytics.m
+[21:54:39]: ▸ Compiling FirebaseCrashlytics_vers.c
+[21:54:39]: ▸ Compiling FIRCLSUtility.m
+[21:54:39]: ▸ Compiling FIRCLSUserLogging.m
+[21:54:39]: ▸ Compiling FIRCLSUserDefaults.m
+[21:54:39]: ▸ Compiling FIRCLSUnwind_x86.c
+[21:54:39]: ▸ Compiling FIRCLSUnwind_arm.c
+[21:54:39]: ▸ Compiling FIRCLSUnwind.c
+[21:54:39]: ▸ Compiling FIRCLSUUID.m
+[21:54:39]: ▸ Compiling FIRCLSURLBuilder.m
+[21:54:39]: ▸ Compiling FIRCLSThreadState.c
+[21:54:39]: ▸ Compiling FIRCLSThreadArrayOperation.m
+[21:54:39]: ▸ Compiling FIRCLSSymbolicationOperation.m
+[21:54:39]: ▸ Compiling FIRCLSSymbolResolver.m
+[21:54:39]: ▸ Compiling FIRCLSSignal.c
+[21:54:39]: ▸ Compiling FIRCLSSettingsManager.m
+[21:54:39]: ▸ Compiling FIRCLSSettings.m
+[21:54:39]: ▸ Compiling FIRCLSSerializeSymbolicatedFramesOperation.m
+[21:54:39]: ▸ Compiling FIRCLSReportUploader.m
+[21:54:39]: ▸ Compiling FIRCLSReportManager.m
+[21:54:39]: ▸ Compiling FIRCLSReportAdapter.m
+[21:54:39]: ▸ Compiling FIRCLSRecordIdentity.m
+[21:54:39]: ▸ Compiling FIRCLSRecordHost.m
+[21:54:39]: ▸ Compiling FIRCLSRecordBase.m
+[21:54:39]: ▸ Compiling FIRCLSRecordApplication.m
+[21:54:39]: ▸ Compiling FIRCLSProfiling.c
+[21:54:39]: ▸ Compiling FIRCLSProcessReportOperation.m
+[21:54:39]: ▸ Compiling FIRCLSProcess.c
+[21:54:39]: ▸ Compiling FIRCLSOnDemandModel.m
+[21:54:39]: ▸ Compiling FIRCLSNotificationManager.m
+[21:54:39]: ▸ Compiling FIRCLSNetworkResponseHandler.m
+[21:54:39]: ▸ Compiling FIRCLSNetworkOperation.m
+[21:54:39]: ▸ Compiling FIRCLSMultipartMimeStreamEncoder.m
+[21:54:39]: ▸ Compiling FIRCLSMetricKitManager.m
+[21:54:39]: ▸ Compiling FIRCLSManagerData.m
+[21:54:39]: ▸ Compiling FIRCLSMachOSlice.m
+[21:54:39]: ▸ Compiling FIRCLSMachOBinary.m
+[21:54:39]: ▸ Compiling FIRCLSMachO.m
+[21:54:39]: ▸ Compiling FIRCLSMachException.c
+[21:54:39]: ▸ Compiling FIRCLSLogger.m
+[21:54:39]: ▸ Compiling FIRCLSLaunchMarkerModel.m
+[21:54:39]: ▸ Compiling FIRCLSInternalReport.m
+[21:54:39]: ▸ Compiling FIRCLSInternalLogging.c
+[21:54:39]: ▸ Compiling FIRCLSInstallIdentifierModel.m
+[21:54:39]: ▸ Compiling FIRCLSHost.m
+[21:54:39]: ▸ Compiling FIRCLSHandler.m
+[21:54:39]: ▸ Compiling FIRCLSFileManager.m
+[21:54:39]: ▸ Compiling FIRCLSFile.m
+[21:54:39]: ▸ Compiling FIRCLSFABNetworkClient.m
+[21:54:39]: ▸ Compiling FIRCLSFABHost.m
+[21:54:39]: ▸ Compiling FIRCLSFABAsyncOperation.m
+[21:54:39]: ▸ Compiling FIRCLSExistingReportManager.m
+[21:54:39]: ▸ Compiling FIRCLSExecutionIdentifierModel.m
+[21:54:39]: ▸ Compiling FIRCLSException.mm
+[21:54:40]: ▸ Compiling FIRCLSDwarfUnwind.c
+[21:54:40]: ▸ Compiling FIRCLSDwarfExpressionMachine.c
+[21:54:40]: ▸ Compiling FIRCLSDownloadAndSaveSettingsOperation.m
+[21:54:40]: ▸ Compiling FIRCLSDemangleOperation.mm
+[21:54:40]: ▸ Compiling FIRCLSDataParsing.c
+[21:54:40]: ▸ Compiling FIRCLSDataCollectionToken.m
+[21:54:40]: ▸ Compiling FIRCLSDataCollectionArbiter.m
+[21:54:40]: ▸ Compiling FIRCLSCrashedMarkerFile.c
+[21:54:40]: ▸ Compiling FIRCLSContextManager.m
+[21:54:40]: ▸ Compiling FIRCLSContext.m
+[21:54:40]: ▸ Compiling FIRCLSConstants.m
+[21:54:40]: ▸ Compiling FIRCLSCompoundOperation.m
+[21:54:40]: ▸ Compiling FIRCLSCompactUnwind.c
+[21:54:40]: ▸ Compiling FIRCLSCodeMapping.m
+[21:54:40]: ▸ Compiling FIRCLSCallStackTree.m
+[21:54:40]: ▸ Compiling FIRCLSByteUtility.m
+[21:54:40]: ▸ Compiling FIRCLSBinaryImage.m
+[21:54:40]: ▸ Compiling FIRCLSAsyncOperation.m
+[21:54:40]: ▸ Compiling FIRCLSApplicationIdentifierModel.m
+[21:54:40]: ▸ Compiling FIRCLSApplication.m
+[21:54:40]: ▸ Compiling FIRCLSAnalyticsManager.m
+[21:54:40]: ▸ Compiling FIRCLSAllocate.c
+[21:54:40]: ▸ Linking FirebaseCrashlytics
+[21:54:40]: ▸ Generating 'FirebaseCrashlytics.framework.dSYM'
+[21:54:40]: ▸ Touching FirebaseCrashlytics.framework (in target 'FirebaseCrashlytics' from project 'Pods')
+[21:54:40]: ▸ Copying messages.g.h
+[21:54:40]: ▸ Copying firebase_core-umbrella.h
+[21:54:40]: ▸ Copying FLTFirebasePluginRegistry.h
+[21:54:40]: ▸ Copying FLTFirebasePlugin.h
+[21:54:40]: ▸ Copying FLTFirebaseCorePlugin.h
+[21:54:40]: ▸ Processing firebase_core-Info.plist
+[21:54:40]: ▸ Compiling FLTFirebasePlugin.m
+[21:54:40]: ▸ Compiling messages.g.m
+[21:54:40]: ▸ Compiling FLTFirebaseCorePlugin.m
+[21:54:40]: ▸ ⚠️  /Users/duytran/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:64:42: 'trackingID' is deprecated [-Wdeprecated-declarations]
+[21:54:40]: ▸   pigeonOptions.trackingId = (id)options.trackingID ?: [NSNull null];
+[21:54:40]: ▸                                          ^
+[21:54:40]: ▸ ⚠️  /Users/duytran/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:66:47: 'androidClientID' is deprecated [-Wdeprecated-declarations]
+[21:54:40]: ▸   pigeonOptions.androidClientId = (id)options.androidClientID ?: [NSNull null];
+[21:54:40]: ▸                                                            ^
+[21:54:40]: ▸ ⚠️  /Users/duytran/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:142:13: 'trackingID' is deprecated [-Wdeprecated-declarations]
+[21:54:40]: ▸     options.trackingID = initializeAppRequest.trackingId;
+[21:54:40]: ▸                                                            ^
+[21:54:40]: ▸ ⚠️  /Users/duytran/.pub-cache/hosted/pub.dev/firebase_core-2.9.0/ios/Classes/FLTFirebaseCorePlugin.m:152:13: 'androidClientID' is deprecated [-Wdeprecated-declarations]
+[21:54:40]: ▸     options.androidClientID = initializeAppRequest.androidClientId;
+[21:54:40]: ▸                                                            ^
+[21:54:40]: ▸ Compiling FLTFirebasePluginRegistry.m
+[21:54:40]: ▸ Compiling firebase_core-dummy.m
+[21:54:40]: ▸ Compiling firebase_core_vers.c
+[21:54:40]: ▸ Touching firebase_core.framework (in target 'firebase_core' from project 'Pods')
+[21:54:40]: ▸ Copying firebase_crashlytics-umbrella.h
+[21:54:40]: ▸ Copying FLTFirebaseCrashlyticsPlugin.h
+[21:54:40]: ▸ Copying ExceptionModel_Platform.h
+[21:54:40]: ▸ Copying Crashlytics_Platform.h
+[21:54:40]: ▸ Processing firebase_crashlytics-Info.plist
+[21:54:40]: ▸ Compiling firebase_crashlytics-dummy.m
+[21:54:40]: ▸ Compiling FLTFirebaseCrashlyticsPlugin.m
+[21:54:40]: ▸ Compiling firebase_crashlytics_vers.c
+[21:54:40]: ▸ Touching firebase_crashlytics.framework (in target 'firebase_crashlytics' from project 'Pods')
+[21:54:40]: ▸ Copying Pods-Runner-umbrella.h
+[21:54:40]: ▸ Processing Pods-Runner-Info.plist
+[21:54:40]: ▸ Compiling Pods-Runner-dummy.m
+[21:54:40]: ▸ Compiling Pods_Runner_vers.c
+[21:54:40]: ▸ Touching Pods_Runner.framework (in target 'Pods-Runner' from project 'Pods')
+[21:54:40]: ▸     Run script build phase 'Handle mutiple GoogleService-Info' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'Runner' from project 'Runner')
+[21:54:40]: ▸     Run script build phase '[firebase_crashlytics] Crashlytics Upload Symbols' will be run during every build because it does not specify any outputs. To address this warning, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'Runner' from project 'Runner')
+[21:54:40]: ▸ Running script '[CP] Check Pods Manifest.lock'
+[21:54:41]: ▸ Running script 'Run Script'
+[21:54:58]: ▸ Compiling AppDelegate.swift
+[21:54:58]: ▸ Compiling GeneratedPluginRegistrant.m
+[21:54:59]: ▸ Compiling Example_vers.c
+[21:54:59]: ▸ Linking Example
+[21:54:59]: ▸ Running script 'Handle mutiple GoogleService-Info'
+[21:54:59]: ▸ Copying /Users/duytran/Library/Developer/Xcode/DerivedData/Runner-ahdjtavgeidbhvdsaxmvfxmoexct/Build/Intermediates.noindex/ArchiveIntermediates/prod/InstallationBuildProductsLocation/Applications/Example.app/config
+[21:54:59]: ▸ Copying AppFrameworkInfo.plist
+[21:55:01]: ▸ Compiling Main.storyboard
+[21:55:01]: ▸ Compiling LaunchScreen.storyboard
+[21:55:01]: ▸ Processing Info.plist
+[21:55:01]: ▸ Running script 'Thin Binary'
+[21:55:01]: ▸ Generating 'Example.app.dSYM'
+[21:55:01]: ▸ Running script '[CP] Embed Pods Frameworks'
+[21:55:02]: ▸ Running script '[firebase_crashlytics] Crashlytics Upload Symbols'
+[21:55:08]: ▸ Touching Example.app (in target 'Runner' from project 'Runner')
+[21:55:08]: ▸ Archive Succeeded
+[21:55:08]: Generated plist file with the following values:
+[21:55:08]: ▸ -----------------------------------------
+[21:55:08]: ▸ {
+[21:55:08]: ▸   "provisioningProfiles": {
+[21:55:08]: ▸     "com.duytq.example": "match AppStore com.duytq.example"
+[21:55:08]: ▸   },
+[21:55:08]: ▸   "method": "app-store",
+[21:55:08]: ▸   "signingStyle": "manual"
+[21:55:08]: ▸ }
+[21:55:08]: ▸ -----------------------------------------
+[21:55:08]: $ /usr/bin/xcrun /opt/homebrew/Cellar/fastlane/2.212.2/libexec/gems/fastlane-2.212.2/gym/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/1d/m8xtt3dj62vfdjb3wft4smv40000gn/T/gym_config20230514-16465-m0gc5x.plist' -archivePath /Users/duytran/Library/Developer/Xcode/Archives/2023-05-14/Example\ 2023-05-14\ 21.54.23.xcarchive -exportPath '/var/folders/1d/m8xtt3dj62vfdjb3wft4smv40000gn/T/gym_output20230514-16465-16sp1o' 
+[21:55:33]: Compressing 25 dSYM(s)
+[21:55:33]: $ cd '/Users/duytran/Library/Developer/Xcode/Archives/2023-05-14/Example 2023-05-14 21.54.23.xcarchive/dSYMs' && zip -r '/Users/duytran/Documents/mobile-app-flutter/ios/Example.app.dSYM.zip' *.dSYM
+[21:55:34]: ▸ updating: App.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: App.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: App.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: App.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: App.framework.dSYM/Contents/Resources/DWARF/App (deflated 66%)
+[21:55:34]: ▸ updating: AppAuth.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: AppAuth.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: AppAuth.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: AppAuth.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: AppAuth.framework.dSYM/Contents/Resources/DWARF/AppAuth (deflated 64%)
+[21:55:34]: ▸ updating: AppAuth.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: Example.app.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: Example.app.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: Example.app.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: Example.app.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: Example.app.dSYM/Contents/Resources/DWARF/Example (deflated 57%)
+[21:55:34]: ▸ updating: Example.app.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: FBLPromises.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: FBLPromises.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: FBLPromises.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: FBLPromises.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: FBLPromises.framework.dSYM/Contents/Resources/DWARF/FBLPromises (deflated 63%)
+[21:55:34]: ▸ updating: FBLPromises.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: FirebaseCore.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCore.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCore.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCore.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCore.framework.dSYM/Contents/Resources/DWARF/FirebaseCore (deflated 61%)
+[21:55:34]: ▸ updating: FirebaseCore.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: FirebaseCoreExtension.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreExtension.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreExtension.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreExtension.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreExtension.framework.dSYM/Contents/Resources/DWARF/FirebaseCoreExtension (deflated 87%)
+[21:55:34]: ▸ updating: FirebaseCoreExtension.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: FirebaseCoreInternal.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreInternal.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreInternal.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreInternal.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCoreInternal.framework.dSYM/Contents/Resources/DWARF/FirebaseCoreInternal (deflated 64%)
+[21:55:34]: ▸ updating: FirebaseCoreInternal.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: FirebaseCrashlytics.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCrashlytics.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCrashlytics.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCrashlytics.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseCrashlytics.framework.dSYM/Contents/Resources/DWARF/FirebaseCrashlytics (deflated 64%)
+[21:55:34]: ▸ updating: FirebaseCrashlytics.framework.dSYM/Contents/Info.plist (deflated 51%)
+[21:55:34]: ▸ updating: FirebaseInstallations.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseInstallations.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseInstallations.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseInstallations.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseInstallations.framework.dSYM/Contents/Resources/DWARF/FirebaseInstallations (deflated 63%)
+[21:55:34]: ▸ updating: FirebaseInstallations.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: FirebaseSessions.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseSessions.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseSessions.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseSessions.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: FirebaseSessions.framework.dSYM/Contents/Resources/DWARF/FirebaseSessions (deflated 60%)
+[21:55:34]: ▸ updating: FirebaseSessions.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: GTMAppAuth.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: GTMAppAuth.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: GTMAppAuth.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: GTMAppAuth.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: GTMAppAuth.framework.dSYM/Contents/Resources/DWARF/GTMAppAuth (deflated 61%)
+[21:55:34]: ▸ updating: GTMAppAuth.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: GTMSessionFetcher.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: GTMSessionFetcher.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: GTMSessionFetcher.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: GTMSessionFetcher.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: GTMSessionFetcher.framework.dSYM/Contents/Resources/DWARF/GTMSessionFetcher (deflated 63%)
+[21:55:34]: ▸ updating: GTMSessionFetcher.framework.dSYM/Contents/Info.plist (deflated 51%)
+[21:55:34]: ▸ updating: GoogleDataTransport.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleDataTransport.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleDataTransport.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleDataTransport.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleDataTransport.framework.dSYM/Contents/Resources/DWARF/GoogleDataTransport (deflated 62%)
+[21:55:34]: ▸ updating: GoogleDataTransport.framework.dSYM/Contents/Info.plist (deflated 51%)
+[21:55:34]: ▸ updating: GoogleSignIn.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleSignIn.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleSignIn.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleSignIn.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleSignIn.framework.dSYM/Contents/Resources/DWARF/GoogleSignIn (deflated 62%)
+[21:55:34]: ▸ updating: GoogleSignIn.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: GoogleUtilities.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleUtilities.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleUtilities.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleUtilities.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: GoogleUtilities.framework.dSYM/Contents/Resources/DWARF/GoogleUtilities (deflated 61%)
+[21:55:34]: ▸ updating: GoogleUtilities.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: Promises.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: Promises.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: Promises.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: Promises.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: Promises.framework.dSYM/Contents/Resources/DWARF/Promises (deflated 62%)
+[21:55:34]: ▸ updating: Promises.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: Reachability.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: Reachability.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: Reachability.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: Reachability.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: Reachability.framework.dSYM/Contents/Resources/DWARF/Reachability (deflated 62%)
+[21:55:34]: ▸ updating: Reachability.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: connectivity_plus.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: connectivity_plus.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: connectivity_plus.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: connectivity_plus.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: connectivity_plus.framework.dSYM/Contents/Resources/DWARF/connectivity_plus (deflated 59%)
+[21:55:34]: ▸ updating: connectivity_plus.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: image_picker_ios.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: image_picker_ios.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: image_picker_ios.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: image_picker_ios.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: image_picker_ios.framework.dSYM/Contents/Resources/DWARF/image_picker_ios (deflated 62%)
+[21:55:34]: ▸ updating: image_picker_ios.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: nanopb.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: nanopb.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: nanopb.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: nanopb.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: nanopb.framework.dSYM/Contents/Resources/DWARF/nanopb (deflated 58%)
+[21:55:34]: ▸ updating: nanopb.framework.dSYM/Contents/Info.plist (deflated 51%)
+[21:55:34]: ▸ updating: shared_preferences_foundation.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: shared_preferences_foundation.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: shared_preferences_foundation.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: shared_preferences_foundation.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: shared_preferences_foundation.framework.dSYM/Contents/Resources/DWARF/shared_preferences_foundation (deflated 61%)
+[21:55:34]: ▸ updating: shared_preferences_foundation.framework.dSYM/Contents/Info.plist (deflated 51%)
+[21:55:34]: ▸ updating: sign_in_with_apple.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: sign_in_with_apple.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: sign_in_with_apple.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: sign_in_with_apple.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: sign_in_with_apple.framework.dSYM/Contents/Resources/DWARF/sign_in_with_apple (deflated 59%)
+[21:55:34]: ▸ updating: sign_in_with_apple.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: url_launcher_ios.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: url_launcher_ios.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: url_launcher_ios.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: url_launcher_ios.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: url_launcher_ios.framework.dSYM/Contents/Resources/DWARF/url_launcher_ios (deflated 60%)
+[21:55:34]: ▸ updating: url_launcher_ios.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: video_player_avfoundation.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: video_player_avfoundation.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: video_player_avfoundation.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: video_player_avfoundation.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: video_player_avfoundation.framework.dSYM/Contents/Resources/DWARF/video_player_avfoundation (deflated 61%)
+[21:55:34]: ▸ updating: video_player_avfoundation.framework.dSYM/Contents/Info.plist (deflated 52%)
+[21:55:34]: ▸ updating: webview_flutter_wkwebview.framework.dSYM/ (stored 0%)
+[21:55:34]: ▸ updating: webview_flutter_wkwebview.framework.dSYM/Contents/ (stored 0%)
+[21:55:34]: ▸ updating: webview_flutter_wkwebview.framework.dSYM/Contents/Resources/ (stored 0%)
+[21:55:34]: ▸ updating: webview_flutter_wkwebview.framework.dSYM/Contents/Resources/DWARF/ (stored 0%)
+[21:55:34]: ▸ updating: webview_flutter_wkwebview.framework.dSYM/Contents/Resources/DWARF/webview_flutter_wkwebview (deflated 65%)
+[21:55:34]: ▸ updating: webview_flutter_wkwebview.framework.dSYM/Contents/Info.plist (deflated 52%)
+
+[21:55:34]: Successfully exported and compressed dSYM file
+[21:55:34]: Successfully exported and signed the ipa file:
+[21:55:34]: /Users/duytran/Documents/mobile-app-flutter/ios/Example.ipa
+[21:55:34]: -------------------
+[21:55:34]: --- Step: pilot ---
+[21:55:34]: -------------------
+[21:55:34]: Creating authorization token for App Store Connect API
+[21:55:35]: Ready to upload new build to TestFlight (App: 6446920639)...
+[21:55:36]: Going to upload updated app to App Store Connect
+[21:55:36]: This might take a few minutes. Please don't interrupt the script.
+[21:56:57]: ------------------------------------------------------------------------------------------------------------------
+[21:56:57]: --- Successfully uploaded package to App Store Connect. It might take a few minutes until it's visible online. ---
+[21:56:57]: ------------------------------------------------------------------------------------------------------------------
+[21:56:57]: Successfully uploaded the new binary to App Store Connect
+[21:56:57]: `skip_waiting_for_build_processing` used and no `changelog` supplied - skipping waiting for build processing
+
++------+--------------------------------+-------------+
+|                  fastlane summary                   |
++------+--------------------------------+-------------+
+| Step | Action                         | Time (in s) |
++------+--------------------------------+-------------+
+| 1    | default_platform               | 0           |
+| 2    | is_ci                          | 0           |
+| 3    | app_store_connect_api_key      | 0           |
+| 4    | get_version_number             | 0           |
+| 5    | latest_testflight_build_number | 1           |
+| 6    | increment_build_number         | 1           |
+| 7    | match                          | 4           |
+| 8    | gym                            | 78          |
+| 9    | pilot                          | 82          |
++------+--------------------------------+-------------+
+
+[21:56:57]: fastlane.tools finished successfully 🎉

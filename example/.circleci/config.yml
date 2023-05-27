@@ -1,0 +1,106 @@
+executors:
+  android:
+    docker:
+      - image: cimg/android:2022.06
+  default:
+    docker:
+      - image: cimg/base:stable
+  macos:
+    macos:
+      xcode: 14.2.0
+    resource_class: macos.x86.medium.gen2
+
+jobs:
+  # ------------ Android ------------
+  build-adhoc-android:
+    executor: android
+    steps:
+      - checkout
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - run:
+          command: bundle install
+          working_directory: android
+      - run:
+          command: bundle exec fastlane adhoc
+          working_directory: android
+
+  build-internal-testing-android:
+    executor: android
+    steps:
+      - checkout
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - run:
+          command: bundle install
+          working_directory: android
+      - run:
+          command: bundle exec fastlane beta
+          working_directory: android
+
+  # ------------ iOS ------------
+  build-testflight-ios:
+    executor: macos
+    steps:
+      - checkout
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - add_ssh_keys:
+          fingerprints:
+            - "1e:aa:ca:d0:51:51:c1:1b:e0:f1:b8:e2:31:b0:0d:f1"
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - run:
+          command: bundle install && pod install
+          working_directory: ios
+      - run:
+          command: bundle exec fastlane beta
+          working_directory: ios
+
+  build-adhoc-ios:
+    executor: macos
+    steps:
+      - checkout
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - add_ssh_keys:
+          fingerprints:
+            - "1e:aa:ca:d0:51:51:c1:1b:e0:f1:b8:e2:31:b0:0d:f1"
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - run:
+          command: bundle install && pod install
+          working_directory: ios
+      - run:
+          command: bundle exec fastlane adhoc
+          working_directory: ios
+
+orbs:
+  flutter-orb: circleci/flutter@1.1.0
+
+version: 2.1
+
+workflows:
+  build-app:
+    jobs:
+      - build-internal-testing-android:
+          filters:
+            branches:
+              only:
+                - main
+      - build-adhoc-android:
+          filters:
+            branches:
+              only:
+                - dev
+
+      - build-testflight-ios:
+          filters:
+            branches:
+              only:
+                - main
+      - build-adhoc-ios:
+          filters:
+            branches:
+              only:
+                - dev

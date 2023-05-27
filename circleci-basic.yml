@@ -1,0 +1,61 @@
+executors:
+  android:
+    docker:
+      - image: cimg/android:2022.06
+  default:
+    docker:
+      - image: cimg/base:stable
+  macos:
+    macos:
+      xcode: 14.2.0
+
+jobs:
+  build-android:
+    executor: android
+    steps:
+      - checkout
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - run:
+          name: Build APK
+          command: flutter build apk --flavor=dev -t lib/app/main_dev.dart
+      - store_artifacts:
+          path: build/app/outputs/flutter-apk/
+
+  build-ios:
+    executor: macos
+    steps:
+      - checkout
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - run:
+          name: Build IPA
+          command: flutter build ios --no-codesign --flavor=dev -t lib/app/main_dev.dart
+      - store_artifacts:
+          path: build/ios/iphoneos/
+
+  tests:
+    executor: android
+    steps:
+      - checkout
+      - flutter-orb/install_sdk_and_pub:
+          flutter_version: 3.7.5
+      - run:
+          name: Run unit test
+          command: flutter test
+
+orbs:
+  flutter-orb: circleci/flutter@1.1.0
+
+version: 2.1
+
+workflows:
+  main:
+    jobs:
+      - tests
+      - build-android:
+          requires:
+            - tests
+      - build-ios:
+          requires:
+            - tests

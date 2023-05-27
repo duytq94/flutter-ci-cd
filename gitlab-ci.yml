@@ -1,0 +1,65 @@
+image: cirrusci/flutter:3.7.5
+
+variables:
+  FLAVOR: "dev"
+
+stages:
+  - test
+  - build
+
+before_script:
+  - export PATH="$PATH":"$HOME/.flutter-sdk/.pub-cache/bin"
+  - flutter pub get
+
+test:
+  stage: test
+  script:
+    - flutter test
+
+android:debug:
+  stage: build
+  before_script:
+    - flutter packages get
+    - flutter clean
+  script:
+    - flutter build apk --debug --flavor ${FLAVOR} -t lib/main/main_dev.dart
+  artifacts:
+    paths:
+      - "**/**/**/**/**/**/*.apk"
+    expire_in: 1 day
+
+android:release:
+  stage: build
+  before_script:
+    - flutter packages get
+    - flutter clean
+  script:
+    - flutter build apk --release --flavor ${FLAVOR} -t lib/main/main_dev.dart
+  artifacts:
+    paths:
+      - "**/**/**/**/**/**/*.apk"
+    expire_in: 1 day
+
+ios:debug:
+  stage: build
+  before_script:
+    - flutter packages get
+    - flutter clean
+  script:
+    - flutter build ios --no-codesign --flavor dev -t lib/main/main_dev.dart
+  artifacts:
+    paths:
+      - "artifact/*.ipa"
+    expire_in: 1 day
+
+ios:release:
+  stage: build
+  before_script:
+    - flutter packages get
+    - flutter clean
+  script:
+    - flutter build ios --no-codesign --flavor prod -t lib/main/main_dev.dart
+  artifacts:
+    paths:
+      - "artifact/*.ipa"
+    expire_in: 1 day

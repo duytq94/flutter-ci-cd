@@ -1,0 +1,8 @@
+git_url("git@gitlab.com:duytq/example-flutter-match.git")
+
+storage_mode("git")
+
+type("development")
+
+app_identifier(["com.duytq.example.dev", "com.duytq.example"])
+username("duytq@gmail.com")

@@ -1,0 +1,595 @@
+[⠋] 🚀 [⠙] 🚀 [⠹] 🚀 [⠸] 🚀 [⠼] 🚀 [⠴] 🚀 [✔] 🚀 
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                    Used plugins                                                                                                                     |
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Plugin                                    | Version | Action                                                                                                                                                                                        |
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| fastlane-plugin-firebase_app_distribution | 0.5.0   | firebase_app_distribution, firebase_app_distribution_add_testers, firebase_app_distribution_get_latest_release, firebase_app_distribution_get_udids, firebase_app_distribution_remove_testers |
++-------------------------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[08:15:35]: Sending anonymous analytics information
+[08:15:35]: Learn more at https://docs.fastlane.tools/#metrics
+[08:15:35]: No personal or sensitive data is sent.
+[08:15:35]: You can disable this by adding `opt_out_usage` at the top of your Fastfile
+[08:15:35]: ------------------------------
+[08:15:35]: --- Step: default_platform ---
+[08:15:35]: ------------------------------
+[08:15:35]: Driving the lane 'android adhoc' 🚀
+[08:15:35]: ------------------------------------
+[08:15:35]: --- Step: assembledevRelease ---
+[08:15:35]: ------------------------------------
+[08:15:35]: $ /home/circleci/project/android/gradlew assembledevRelease -p . -Ptarget=lib/app/main_dev.dart
+[08:15:36]: ▸ Downloading https://services.gradle.org/distributions/gradle-7.5-all.zip
+[08:15:37]: ▸ ..............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+[08:15:37]: ▸ Unzipping /home/circleci/.gradle/wrapper/dists/gradle-7.5-all/6qsw290k5lz422uaf8jf6m7co/gradle-7.5-all.zip to /home/circleci/.gradle/wrapper/dists/gradle-7.5-all/6qsw290k5lz422uaf8jf6m7co
+[08:15:39]: ▸ Set executable permissions for: /home/circleci/.gradle/wrapper/dists/gradle-7.5-all/6qsw290k5lz422uaf8jf6m7co/gradle-7.5/bin/gradle
+[08:15:39]: ▸ Welcome to Gradle 7.5!
+[08:15:39]: ▸ Here are the highlights of this release:
+[08:15:39]: ▸ - Support for Java 18
+[08:15:39]: ▸ - Support for building with Groovy 4
+[08:15:39]: ▸ - Much more responsive continuous builds
+[08:15:39]: ▸ - Improved diagnostics for dependency resolution
+[08:15:39]: ▸ For more details see https://docs.gradle.org/7.5/release-notes.html
+[08:15:39]: ▸ Starting a Gradle Daemon (subsequent builds will be faster)
+[08:17:09]: ▸ WARNING:We recommend using a newer Android Gradle plugin to use compileSdk = 33
+[08:17:09]: ▸ This Android Gradle plugin (7.2.0) was tested up to compileSdk = 32
+[08:17:09]: ▸ This warning can be suppressed by adding
+[08:17:09]: ▸ android.suppressUnsupportedCompileSdk=33
+[08:17:09]: ▸ to this project's gradle.properties
+[08:17:09]: ▸ The build will continue, but you are strongly encouraged to update your project to
+[08:17:09]: ▸ use a newer Android Gradle Plugin that has been tested with compileSdk = 33
+[08:17:09]: ▸ Checking the license for package Android SDK Build-Tools 30.0.3 in /home/circleci/android-sdk/licenses
+[08:17:09]: ▸ License for package Android SDK Build-Tools 30.0.3 accepted.
+[08:17:09]: ▸ Preparing "Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)".
+[08:17:10]: ▸ "Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" ready.
+[08:17:10]: ▸ Installing Android SDK Build-Tools 30.0.3 in /home/circleci/android-sdk/build-tools/30.0.3
+[08:17:10]: ▸ "Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" complete.
+[08:17:10]: ▸ "Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" finished.
+[08:17:11]: ▸ > Task :shared_preferences_android:preBuild UP-TO-DATE
+[08:17:11]: ▸ > Task :shared_preferences_android:preReleaseBuild UP-TO-DATE
+[08:17:11]: ▸ > Task :shared_preferences_android:compileReleaseAidl NO-SOURCE
+[08:17:11]: ▸ > Task :shared_preferences_android:mergeReleaseJniLibFolders
+[08:17:11]: ▸ > Task :shared_preferences_android:mergeReleaseNativeLibs NO-SOURCE
+[08:17:11]: ▸ > Task :shared_preferences_android:stripReleaseDebugSymbols NO-SOURCE
+[08:17:11]: ▸ > Task :shared_preferences_android:compileReleaseRenderscript NO-SOURCE
+[08:17:11]: ▸ > Task :shared_preferences_android:copyReleaseJniLibsProjectAndLocalJars
+[08:17:11]: ▸ > Task :shared_preferences_android:generateReleaseBuildConfig
+[08:17:11]: ▸ > Task :shared_preferences_android:generateReleaseResValues
+[08:17:11]: ▸ > Task :shared_preferences_android:generateReleaseResources
+[08:17:11]: ▸ > Task :shared_preferences_android:packageReleaseResources
+[08:17:12]: ▸ > Task :shared_preferences_android:javaPreCompileRelease
+[08:17:12]: ▸ > Task :shared_preferences_android:mergeReleaseShaders
+[08:17:12]: ▸ > Task :shared_preferences_android:compileReleaseShaders NO-SOURCE
+[08:17:12]: ▸ > Task :shared_preferences_android:generateReleaseAssets UP-TO-DATE
+[08:17:12]: ▸ > Task :shared_preferences_android:packageReleaseAssets
+[08:17:12]: ▸ > Task :shared_preferences_android:packageReleaseRenderscript NO-SOURCE
+[08:17:12]: ▸ > Task :shared_preferences_android:prepareReleaseArtProfile
+[08:17:12]: ▸ > Task :shared_preferences_android:prepareLintJarForPublish
+[08:17:12]: ▸ > Task :shared_preferences_android:processReleaseJavaRes NO-SOURCE
+[08:17:12]: ▸ > Task :shared_preferences_android:parseReleaseLocalResources
+[08:17:12]: ▸ > Task :firebase_core:preBuild UP-TO-DATE
+[08:17:12]: ▸ > Task :firebase_core:preReleaseBuild UP-TO-DATE
+[08:17:12]: ▸ > Task :firebase_core:compileReleaseAidl NO-SOURCE
+[08:17:12]: ▸ > Task :shared_preferences_android:writeReleaseAarMetadata
+[08:17:12]: ▸ > Task :firebase_crashlytics:preBuild UP-TO-DATE
+[08:17:12]: ▸ > Task :firebase_crashlytics:preReleaseBuild UP-TO-DATE
+[08:17:12]: ▸ > Task :firebase_crashlytics:compileReleaseAidl NO-SOURCE
+[08:17:12]: ▸ > Task :firebase_crashlytics:mergeReleaseJniLibFolders
+[08:17:12]: ▸ > Task :firebase_crashlytics:mergeReleaseNativeLibs NO-SOURCE
+[08:17:12]: ▸ > Task :firebase_crashlytics:stripReleaseDebugSymbols NO-SOURCE
+[08:17:12]: ▸ > Task :firebase_crashlytics:copyReleaseJniLibsProjectAndLocalJars
+[08:17:12]: ▸ > Task :firebase_core:compileReleaseRenderscript NO-SOURCE
+[08:17:12]: ▸ > Task :firebase_core:generateReleaseBuildConfig
+[08:17:12]: ▸ > Task :firebase_core:generateReleaseResValues
+[08:17:12]: ▸ > Task :firebase_core:generateReleaseResources
+[08:17:12]: ▸ > Task :firebase_core:packageReleaseResources
+[08:17:12]: ▸ > Task :shared_preferences_android:processReleaseManifest
+[08:17:12]: ▸ > Task :shared_preferences_android:mergeReleaseJavaResource
+[08:17:12]: ▸ > Task :firebase_core:parseReleaseLocalResources
+[08:17:14]: ▸ > Task :firebase_core:packageReleaseRenderscript NO-SOURCE
+[08:17:14]: ▸ > Task :firebase_crashlytics:compileReleaseRenderscript NO-SOURCE
+[08:17:14]: ▸ > Task :firebase_core:javaPreCompileRelease
+[08:17:14]: ▸ > Task :firebase_crashlytics:generateReleaseBuildConfig
+[08:17:14]: ▸ > Task :firebase_core:processReleaseManifest
+[08:17:14]: ▸ > Task :firebase_crashlytics:generateReleaseResValues
+[08:17:14]: ▸ > Task :shared_preferences_android:generateReleaseRFile
+[08:17:14]: ▸ > Task :firebase_core:generateReleaseRFile
+[08:17:19]: ▸ > Task :shared_preferences_android:extractReleaseAnnotations
+[08:17:20]: ▸ > Task :shared_preferences_android:compileReleaseJavaWithJavac
+[08:17:20]: ▸ > Task :shared_preferences_android:mergeReleaseGeneratedProguardFiles
+[08:17:20]: ▸ > Task :shared_preferences_android:mergeReleaseConsumerProguardFiles
+[08:17:20]: ▸ > Task :shared_preferences_android:syncReleaseLibJars
+[08:17:20]: ▸ > Task :shared_preferences_android:bundleReleaseLocalLintAar
+[08:17:21]: ▸ > Task :firebase_core:compileReleaseJavaWithJavac
+[08:17:21]: ▸ > Task :firebase_crashlytics:generateReleaseResources
+[08:17:21]: ▸ > Task :firebase_core:bundleLibCompileToJarRelease
+[08:17:21]: ▸ > Task :firebase_crashlytics:packageReleaseResources
+[08:17:21]: ▸ > Task :firebase_crashlytics:javaPreCompileRelease
+[08:17:21]: ▸ > Task :firebase_crashlytics:mergeReleaseShaders
+[08:17:21]: ▸ > Task :firebase_crashlytics:compileReleaseShaders NO-SOURCE
+[08:17:21]: ▸ > Task :firebase_crashlytics:generateReleaseAssets UP-TO-DATE
+[08:17:21]: ▸ > Task :firebase_crashlytics:processReleaseManifest
+[08:17:21]: ▸ > Task :firebase_crashlytics:packageReleaseAssets
+[08:17:21]: ▸ > Task :firebase_crashlytics:packageReleaseRenderscript NO-SOURCE
+[08:17:21]: ▸ > Task :firebase_crashlytics:parseReleaseLocalResources
+[08:17:21]: ▸ > Task :firebase_crashlytics:prepareLintJarForPublish
+[08:17:22]: ▸ > Task :firebase_crashlytics:prepareReleaseArtProfile
+[08:17:22]: ▸ > Task :firebase_crashlytics:processReleaseJavaRes NO-SOURCE
+[08:17:22]: ▸ > Task :firebase_crashlytics:mergeReleaseJavaResource
+[08:17:22]: ▸ > Task :firebase_crashlytics:writeReleaseAarMetadata
+[08:17:22]: ▸ > Task :firebase_core:mergeReleaseJniLibFolders
+[08:17:22]: ▸ > Task :firebase_core:mergeReleaseNativeLibs NO-SOURCE
+[08:17:22]: ▸ > Task :firebase_crashlytics:generateReleaseRFile
+[08:17:22]: ▸ > Task :firebase_crashlytics:extractReleaseAnnotations
+[08:17:22]: ▸ > Task :firebase_crashlytics:compileReleaseJavaWithJavac
+[08:17:22]: ▸ > Task :firebase_crashlytics:mergeReleaseGeneratedProguardFiles
+[08:17:22]: ▸ > Task :firebase_crashlytics:mergeReleaseConsumerProguardFiles
+[08:17:22]: ▸ > Task :firebase_crashlytics:syncReleaseLibJars
+[08:17:22]: ▸ > Task :firebase_crashlytics:bundleReleaseLocalLintAar
+[08:17:22]: ▸ > Task :firebase_core:stripReleaseDebugSymbols NO-SOURCE
+[08:17:22]: ▸ > Task :firebase_core:copyReleaseJniLibsProjectAndLocalJars
+[08:17:22]: ▸ > Task :firebase_core:extractReleaseAnnotations
+[08:17:22]: ▸ > Task :firebase_core:mergeReleaseGeneratedProguardFiles
+[08:17:22]: ▸ > Task :firebase_core:mergeReleaseConsumerProguardFiles
+[08:17:22]: ▸ > Task :firebase_core:mergeReleaseShaders
+[08:17:22]: ▸ > Task :firebase_core:compileReleaseShaders NO-SOURCE
+[08:17:22]: ▸ > Task :firebase_core:generateReleaseAssets UP-TO-DATE
+[08:17:22]: ▸ > Task :firebase_core:packageReleaseAssets
+[08:17:22]: ▸ > Task :firebase_core:prepareLintJarForPublish
+[08:17:22]: ▸ > Task :firebase_core:prepareReleaseArtProfile
+[08:17:22]: ▸ > Task :firebase_core:processReleaseJavaRes NO-SOURCE
+[08:17:22]: ▸ > Task :sign_in_with_apple:preBuild UP-TO-DATE
+[08:17:22]: ▸ > Task :firebase_core:writeReleaseAarMetadata
+[08:17:22]: ▸ > Task :sign_in_with_apple:preReleaseBuild UP-TO-DATE
+[08:17:22]: ▸ > Task :firebase_core:mergeReleaseJavaResource
+[08:17:22]: ▸ > Task :firebase_core:syncReleaseLibJars
+[08:17:22]: ▸ > Task :firebase_core:bundleReleaseLocalLintAar
+[08:17:22]: ▸ > Task :sign_in_with_apple:compileReleaseAidl NO-SOURCE
+[08:17:22]: ▸ > Task :sign_in_with_apple:mergeReleaseJniLibFolders
+[08:17:22]: ▸ > Task :sign_in_with_apple:mergeReleaseNativeLibs NO-SOURCE
+[08:17:22]: ▸ > Task :sign_in_with_apple:stripReleaseDebugSymbols NO-SOURCE
+[08:17:22]: ▸ > Task :sign_in_with_apple:copyReleaseJniLibsProjectAndLocalJars
+[08:17:22]: ▸ > Task :sign_in_with_apple:compileReleaseRenderscript NO-SOURCE
+[08:17:22]: ▸ > Task :sign_in_with_apple:generateReleaseBuildConfig
+[08:17:22]: ▸ > Task :sign_in_with_apple:generateReleaseResValues
+[08:17:22]: ▸ > Task :sign_in_with_apple:generateReleaseResources
+[08:17:22]: ▸ > Task :sign_in_with_apple:packageReleaseResources
+[08:17:23]: ▸ > Task :sign_in_with_apple:parseReleaseLocalResources
+[08:17:23]: ▸ > Task :sign_in_with_apple:javaPreCompileRelease
+[08:17:23]: ▸ > Task :sign_in_with_apple:mergeReleaseShaders
+[08:17:23]: ▸ > Task :sign_in_with_apple:compileReleaseShaders NO-SOURCE
+[08:17:23]: ▸ > Task :sign_in_with_apple:generateReleaseAssets UP-TO-DATE
+[08:17:23]: ▸ > Task :sign_in_with_apple:processReleaseManifest
+[08:17:23]: ▸ > Task :sign_in_with_apple:packageReleaseAssets
+[08:17:23]: ▸ > Task :sign_in_with_apple:packageReleaseRenderscript NO-SOURCE
+[08:17:23]: ▸ > Task :sign_in_with_apple:prepareLintJarForPublish
+[08:17:23]: ▸ > Task :sign_in_with_apple:generateReleaseRFile
+[08:17:23]: ▸ > Task :sign_in_with_apple:prepareReleaseArtProfile
+[08:17:26]: ▸ > Task :sign_in_with_apple:processReleaseJavaRes NO-SOURCE
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:preBuild UP-TO-DATE
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:preReleaseBuild UP-TO-DATE
+[08:17:26]: ▸ > Task :sign_in_with_apple:writeReleaseAarMetadata
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:compileReleaseAidl NO-SOURCE
+[08:17:26]: ▸ > Task :image_picker_android:preBuild UP-TO-DATE
+[08:17:26]: ▸ > Task :image_picker_android:preReleaseBuild UP-TO-DATE
+[08:17:26]: ▸ > Task :image_picker_android:compileReleaseAidl NO-SOURCE
+[08:17:26]: ▸ > Task :image_picker_android:mergeReleaseJniLibFolders
+[08:17:26]: ▸ > Task :image_picker_android:mergeReleaseNativeLibs NO-SOURCE
+[08:17:26]: ▸ > Task :image_picker_android:stripReleaseDebugSymbols NO-SOURCE
+[08:17:26]: ▸ > Task :image_picker_android:copyReleaseJniLibsProjectAndLocalJars
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:compileReleaseRenderscript NO-SOURCE
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:generateReleaseBuildConfig
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:generateReleaseResValues
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:generateReleaseResources
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:packageReleaseResources
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:parseReleaseLocalResources
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:javaPreCompileRelease
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:packageReleaseRenderscript NO-SOURCE
+[08:17:26]: ▸ > Task :image_picker_android:compileReleaseRenderscript NO-SOURCE
+[08:17:26]: ▸ > Task :image_picker_android:generateReleaseBuildConfig
+[08:17:26]: ▸ > Task :image_picker_android:generateReleaseResValues
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:processReleaseManifest
+[08:17:26]: ▸ > Task :image_picker_android:generateReleaseResources
+[08:17:26]: ▸ > Task :flutter_plugin_android_lifecycle:generateReleaseRFile
+[08:17:26]: ▸ > Task :image_picker_android:packageReleaseResources
+[08:17:27]: ▸ > Task :flutter_plugin_android_lifecycle:compileReleaseJavaWithJavac
+[08:17:27]: ▸ > Task :flutter_plugin_android_lifecycle:bundleLibCompileToJarRelease
+[08:17:27]: ▸ > Task :image_picker_android:parseReleaseLocalResources
+[08:17:27]: ▸ > Task :image_picker_android:javaPreCompileRelease
+[08:17:27]: ▸ > Task :image_picker_android:mergeReleaseShaders
+[08:17:27]: ▸ > Task :image_picker_android:compileReleaseShaders NO-SOURCE
+[08:17:27]: ▸ > Task :image_picker_android:generateReleaseAssets UP-TO-DATE
+[08:17:27]: ▸ > Task :image_picker_android:processReleaseManifest
+[08:17:27]: ▸ > Task :image_picker_android:packageReleaseAssets
+[08:17:28]: ▸ > Task :image_picker_android:packageReleaseRenderscript NO-SOURCE
+[08:17:28]: ▸ > Task :image_picker_android:prepareLintJarForPublish
+[08:17:28]: ▸ > Task :image_picker_android:prepareReleaseArtProfile
+[08:17:28]: ▸ > Task :image_picker_android:processReleaseJavaRes NO-SOURCE
+[08:17:28]: ▸ > Task :image_picker_android:generateReleaseRFile
+[08:17:28]: ▸ > Task :image_picker_android:mergeReleaseJavaResource
+[08:17:29]: ▸ > Task :image_picker_android:extractReleaseAnnotations
+[08:17:30]: ▸ > Task :image_picker_android:compileReleaseJavaWithJavac
+[08:17:30]: ▸ > Task :image_picker_android:mergeReleaseGeneratedProguardFiles
+[08:17:30]: ▸ > Task :image_picker_android:mergeReleaseConsumerProguardFiles
+[08:17:30]: ▸ > Task :image_picker_android:syncReleaseLibJars
+[08:17:30]: ▸ > Task :image_picker_android:writeReleaseAarMetadata
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:mergeReleaseJniLibFolders
+[08:17:30]: ▸ > Task :image_picker_android:bundleReleaseLocalLintAar
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:mergeReleaseNativeLibs NO-SOURCE
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:stripReleaseDebugSymbols NO-SOURCE
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:copyReleaseJniLibsProjectAndLocalJars
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:extractReleaseAnnotations
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:mergeReleaseGeneratedProguardFiles
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:mergeReleaseConsumerProguardFiles
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:mergeReleaseShaders
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:compileReleaseShaders NO-SOURCE
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:generateReleaseAssets UP-TO-DATE
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:packageReleaseAssets
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:prepareLintJarForPublish
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:prepareReleaseArtProfile
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:processReleaseJavaRes NO-SOURCE
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:writeReleaseAarMetadata
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:mergeReleaseJavaResource
+[08:17:30]: ▸ > Task :url_launcher_android:preBuild UP-TO-DATE
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:syncReleaseLibJars
+[08:17:30]: ▸ > Task :flutter_plugin_android_lifecycle:bundleReleaseLocalLintAar
+[08:17:30]: ▸ > Task :url_launcher_android:preReleaseBuild UP-TO-DATE
+[08:17:30]: ▸ > Task :url_launcher_android:compileReleaseAidl NO-SOURCE
+[08:17:30]: ▸ > Task :url_launcher_android:mergeReleaseJniLibFolders
+[08:17:30]: ▸ > Task :url_launcher_android:mergeReleaseNativeLibs NO-SOURCE
+[08:17:30]: ▸ > Task :url_launcher_android:stripReleaseDebugSymbols NO-SOURCE
+[08:17:30]: ▸ > Task :url_launcher_android:copyReleaseJniLibsProjectAndLocalJars
+[08:17:30]: ▸ > Task :url_launcher_android:compileReleaseRenderscript NO-SOURCE
+[08:17:30]: ▸ > Task :url_launcher_android:generateReleaseBuildConfig
+[08:17:30]: ▸ > Task :url_launcher_android:generateReleaseResValues
+[08:17:30]: ▸ > Task :url_launcher_android:generateReleaseResources
+[08:17:30]: ▸ > Task :url_launcher_android:packageReleaseResources
+[08:17:30]: ▸ > Task :url_launcher_android:parseReleaseLocalResources
+[08:17:30]: ▸ > Task :url_launcher_android:javaPreCompileRelease
+[08:17:30]: ▸ > Task :url_launcher_android:mergeReleaseShaders
+[08:17:30]: ▸ > Task :url_launcher_android:compileReleaseShaders NO-SOURCE
+[08:17:30]: ▸ > Task :url_launcher_android:generateReleaseAssets UP-TO-DATE
+[08:17:30]: ▸ > Task :url_launcher_android:processReleaseManifest
+[08:17:30]: ▸ > Task :url_launcher_android:packageReleaseAssets
+[08:17:30]: ▸ > Task :url_launcher_android:packageReleaseRenderscript NO-SOURCE
+[08:17:30]: ▸ > Task :url_launcher_android:prepareLintJarForPublish
+[08:17:30]: ▸ > Task :url_launcher_android:prepareReleaseArtProfile
+[08:17:30]: ▸ > Task :url_launcher_android:processReleaseJavaRes NO-SOURCE
+[08:17:30]: ▸ > Task :url_launcher_android:generateReleaseRFile
+[08:17:30]: ▸ > Task :url_launcher_android:mergeReleaseJavaResource
+[08:17:30]: ▸ > Task :url_launcher_android:extractReleaseAnnotations
+[08:17:30]: ▸ > Task :url_launcher_android:compileReleaseJavaWithJavac
+[08:17:30]: ▸ > Task :url_launcher_android:mergeReleaseGeneratedProguardFiles
+[08:17:30]: ▸ > Task :url_launcher_android:mergeReleaseConsumerProguardFiles
+[08:17:30]: ▸ > Task :url_launcher_android:syncReleaseLibJars
+[08:17:30]: ▸ > Task :video_player_android:preBuild UP-TO-DATE
+[08:17:30]: ▸ > Task :video_player_android:preReleaseBuild UP-TO-DATE
+[08:17:30]: ▸ > Task :url_launcher_android:writeReleaseAarMetadata
+[08:17:30]: ▸ > Task :url_launcher_android:bundleReleaseLocalLintAar
+[08:17:30]: ▸ > Task :video_player_android:compileReleaseAidl NO-SOURCE
+[08:17:30]: ▸ > Task :video_player_android:mergeReleaseJniLibFolders
+[08:17:30]: ▸ > Task :video_player_android:mergeReleaseNativeLibs NO-SOURCE
+[08:17:30]: ▸ > Task :video_player_android:stripReleaseDebugSymbols NO-SOURCE
+[08:17:30]: ▸ > Task :video_player_android:copyReleaseJniLibsProjectAndLocalJars
+[08:17:30]: ▸ > Task :video_player_android:compileReleaseRenderscript NO-SOURCE
+[08:17:30]: ▸ > Task :video_player_android:generateReleaseBuildConfig
+[08:17:30]: ▸ > Task :video_player_android:generateReleaseResValues
+[08:17:30]: ▸ > Task :video_player_android:generateReleaseResources
+[08:17:30]: ▸ > Task :video_player_android:packageReleaseResources
+[08:17:30]: ▸ > Task :video_player_android:parseReleaseLocalResources
+[08:17:30]: ▸ > Task :video_player_android:javaPreCompileRelease
+[08:17:30]: ▸ > Task :video_player_android:mergeReleaseShaders
+[08:17:30]: ▸ > Task :video_player_android:processReleaseManifest
+[08:17:30]: ▸ > Task :video_player_android:compileReleaseShaders NO-SOURCE
+[08:17:32]: ▸ > Task :video_player_android:generateReleaseAssets UP-TO-DATE
+[08:17:32]: ▸ > Task :video_player_android:packageReleaseAssets
+[08:17:32]: ▸ > Task :video_player_android:packageReleaseRenderscript NO-SOURCE
+[08:17:32]: ▸ > Task :video_player_android:generateReleaseRFile
+[08:17:32]: ▸ > Task :video_player_android:prepareLintJarForPublish
+[08:17:33]: ▸ > Task :sign_in_with_apple:compileReleaseKotlin
+[08:17:33]: ▸ w: /home/circleci/development/flutter/.pub-cache/hosted/pub.dev/sign_in_with_apple-4.3.0/android/src/main/kotlin/com/aboutyou/dart_packages/sign_in_with_apple/SignInWithApplePlugin.kt: (17, 48): 'Registrar' is deprecated. Deprecated in Java
+[08:17:33]: ▸ w: /home/circleci/development/flutter/.pub-cache/hosted/pub.dev/sign_in_with_apple-4.3.0/android/src/main/kotlin/com/aboutyou/dart_packages/sign_in_with_apple/SignInWithApplePlugin.kt: (54, 33): 'Registrar' is deprecated. Deprecated in Java
+[08:17:33]: ▸ > Task :video_player_android:extractReleaseAnnotations
+[08:17:33]: ▸ > Task :sign_in_with_apple:extractReleaseAnnotations
+[08:17:34]: ▸ > Task :sign_in_with_apple:compileReleaseJavaWithJavac
+[08:17:34]: ▸ > Task :sign_in_with_apple:mergeReleaseGeneratedProguardFiles
+[08:17:34]: ▸ > Task :sign_in_with_apple:mergeReleaseConsumerProguardFiles
+[08:17:34]: ▸ > Task :sign_in_with_apple:mergeReleaseJavaResource
+[08:17:34]: ▸ > Task :video_player_android:compileReleaseJavaWithJavac
+[08:17:34]: ▸ > Task :sign_in_with_apple:syncReleaseLibJars
+[08:17:34]: ▸ > Task :sign_in_with_apple:bundleReleaseLocalLintAar
+[08:17:34]: ▸ > Task :video_player_android:mergeReleaseGeneratedProguardFiles
+[08:17:34]: ▸ > Task :video_player_android:mergeReleaseConsumerProguardFiles
+[08:17:34]: ▸ > Task :video_player_android:prepareReleaseArtProfile
+[08:17:34]: ▸ > Task :video_player_android:processReleaseJavaRes NO-SOURCE
+[08:17:35]: ▸ > Task :video_player_android:mergeReleaseJavaResource
+[08:17:35]: ▸ > Task :video_player_android:writeReleaseAarMetadata
+[08:17:35]: ▸ > Task :google_sign_in_android:preBuild UP-TO-DATE
+[08:17:35]: ▸ > Task :video_player_android:syncReleaseLibJars
+[08:17:35]: ▸ > Task :video_player_android:bundleReleaseLocalLintAar
+[08:17:35]: ▸ > Task :google_sign_in_android:preReleaseBuild UP-TO-DATE
+[08:17:35]: ▸ > Task :google_sign_in_android:compileReleaseAidl NO-SOURCE
+[08:17:35]: ▸ > Task :google_sign_in_android:mergeReleaseJniLibFolders
+[08:17:35]: ▸ > Task :google_sign_in_android:mergeReleaseNativeLibs NO-SOURCE
+[08:17:35]: ▸ > Task :google_sign_in_android:stripReleaseDebugSymbols NO-SOURCE
+[08:17:35]: ▸ > Task :google_sign_in_android:copyReleaseJniLibsProjectAndLocalJars
+[08:17:35]: ▸ > Task :google_sign_in_android:compileReleaseRenderscript NO-SOURCE
+[08:17:35]: ▸ > Task :google_sign_in_android:generateReleaseBuildConfig
+[08:17:35]: ▸ > Task :google_sign_in_android:generateReleaseResValues
+[08:17:35]: ▸ > Task :google_sign_in_android:generateReleaseResources
+[08:17:35]: ▸ > Task :google_sign_in_android:packageReleaseResources
+[08:17:35]: ▸ > Task :google_sign_in_android:parseReleaseLocalResources
+[08:17:35]: ▸ > Task :google_sign_in_android:javaPreCompileRelease
+[08:17:35]: ▸ > Task :google_sign_in_android:mergeReleaseShaders
+[08:17:35]: ▸ > Task :google_sign_in_android:compileReleaseShaders NO-SOURCE
+[08:17:35]: ▸ > Task :google_sign_in_android:generateReleaseAssets UP-TO-DATE
+[08:17:35]: ▸ > Task :google_sign_in_android:processReleaseManifest
+[08:17:35]: ▸ > Task :google_sign_in_android:packageReleaseAssets
+[08:17:35]: ▸ > Task :google_sign_in_android:packageReleaseRenderscript NO-SOURCE
+[08:17:35]: ▸ > Task :google_sign_in_android:prepareLintJarForPublish
+[08:17:35]: ▸ > Task :google_sign_in_android:prepareReleaseArtProfile
+[08:17:35]: ▸ > Task :google_sign_in_android:processReleaseJavaRes NO-SOURCE
+[08:17:35]: ▸ > Task :google_sign_in_android:writeReleaseAarMetadata
+[08:17:35]: ▸ > Task :google_sign_in_android:generateReleaseRFile
+[08:17:35]: ▸ > Task :connectivity_plus:preBuild UP-TO-DATE
+[08:17:35]: ▸ > Task :google_sign_in_android:mergeReleaseJavaResource
+[08:17:36]: ▸ > Task :google_sign_in_android:extractReleaseAnnotations
+[08:17:36]: ▸ > Task :google_sign_in_android:compileReleaseJavaWithJavac
+[08:17:36]: ▸ > Task :google_sign_in_android:mergeReleaseGeneratedProguardFiles
+[08:17:36]: ▸ > Task :google_sign_in_android:mergeReleaseConsumerProguardFiles
+[08:17:36]: ▸ > Task :google_sign_in_android:syncReleaseLibJars
+[08:17:36]: ▸ > Task :google_sign_in_android:bundleReleaseLocalLintAar
+[08:17:36]: ▸ > Task :connectivity_plus:preReleaseBuild UP-TO-DATE
+[08:17:36]: ▸ > Task :connectivity_plus:compileReleaseAidl NO-SOURCE
+[08:17:36]: ▸ > Task :connectivity_plus:mergeReleaseJniLibFolders
+[08:17:36]: ▸ > Task :connectivity_plus:mergeReleaseNativeLibs NO-SOURCE
+[08:17:36]: ▸ > Task :connectivity_plus:stripReleaseDebugSymbols NO-SOURCE
+[08:17:36]: ▸ > Task :connectivity_plus:copyReleaseJniLibsProjectAndLocalJars
+[08:17:36]: ▸ > Task :connectivity_plus:compileReleaseRenderscript NO-SOURCE
+[08:17:36]: ▸ > Task :connectivity_plus:generateReleaseBuildConfig
+[08:17:36]: ▸ > Task :connectivity_plus:generateReleaseResValues
+[08:17:36]: ▸ > Task :connectivity_plus:generateReleaseResources
+[08:17:36]: ▸ > Task :connectivity_plus:packageReleaseResources
+[08:17:36]: ▸ > Task :connectivity_plus:parseReleaseLocalResources
+[08:17:36]: ▸ > Task :connectivity_plus:javaPreCompileRelease
+[08:17:36]: ▸ > Task :connectivity_plus:mergeReleaseShaders
+[08:17:36]: ▸ > Task :connectivity_plus:compileReleaseShaders NO-SOURCE
+[08:17:36]: ▸ > Task :connectivity_plus:generateReleaseAssets UP-TO-DATE
+[08:17:36]: ▸ > Task :connectivity_plus:processReleaseManifest
+[08:17:36]: ▸ > Task :connectivity_plus:packageReleaseAssets
+[08:17:36]: ▸ > Task :connectivity_plus:packageReleaseRenderscript NO-SOURCE
+[08:17:36]: ▸ > Task :connectivity_plus:prepareLintJarForPublish
+[08:17:36]: ▸ > Task :connectivity_plus:prepareReleaseArtProfile
+[08:17:36]: ▸ > Task :connectivity_plus:processReleaseJavaRes NO-SOURCE
+[08:17:36]: ▸ > Task :connectivity_plus:generateReleaseRFile
+[08:17:36]: ▸ > Task :connectivity_plus:mergeReleaseJavaResource
+[08:17:36]: ▸ > Task :connectivity_plus:writeReleaseAarMetadata
+[08:17:36]: ▸ > Task :connectivity_plus:extractReleaseAnnotations
+[08:17:36]: ▸ > Task :connectivity_plus:compileReleaseJavaWithJavac
+[08:17:36]: ▸ > Task :connectivity_plus:mergeReleaseGeneratedProguardFiles
+[08:17:36]: ▸ > Task :connectivity_plus:mergeReleaseConsumerProguardFiles
+[08:17:36]: ▸ > Task :connectivity_plus:syncReleaseLibJars
+[08:17:36]: ▸ > Task :connectivity_plus:bundleReleaseLocalLintAar
+[08:17:36]: ▸ > Task :webview_flutter_android:preBuild UP-TO-DATE
+[08:17:36]: ▸ > Task :webview_flutter_android:preReleaseBuild UP-TO-DATE
+[08:17:36]: ▸ > Task :webview_flutter_android:compileReleaseAidl NO-SOURCE
+[08:17:36]: ▸ > Task :webview_flutter_android:mergeReleaseJniLibFolders
+[08:17:36]: ▸ > Task :webview_flutter_android:mergeReleaseNativeLibs NO-SOURCE
+[08:17:36]: ▸ > Task :webview_flutter_android:stripReleaseDebugSymbols NO-SOURCE
+[08:17:36]: ▸ > Task :webview_flutter_android:copyReleaseJniLibsProjectAndLocalJars
+[08:17:36]: ▸ > Task :webview_flutter_android:compileReleaseRenderscript NO-SOURCE
+[08:17:36]: ▸ > Task :webview_flutter_android:generateReleaseBuildConfig
+[08:17:36]: ▸ > Task :webview_flutter_android:generateReleaseResValues
+[08:17:36]: ▸ > Task :webview_flutter_android:generateReleaseResources
+[08:17:36]: ▸ > Task :webview_flutter_android:packageReleaseResources
+[08:17:36]: ▸ > Task :webview_flutter_android:parseReleaseLocalResources
+[08:17:36]: ▸ > Task :webview_flutter_android:javaPreCompileRelease
+[08:17:36]: ▸ > Task :webview_flutter_android:mergeReleaseShaders
+[08:17:36]: ▸ > Task :webview_flutter_android:compileReleaseShaders NO-SOURCE
+[08:17:36]: ▸ > Task :webview_flutter_android:generateReleaseAssets UP-TO-DATE
+[08:17:36]: ▸ > Task :webview_flutter_android:processReleaseManifest
+[08:17:36]: ▸ > Task :webview_flutter_android:packageReleaseAssets
+[08:17:37]: ▸ > Task :webview_flutter_android:packageReleaseRenderscript NO-SOURCE
+[08:17:37]: ▸ > Task :webview_flutter_android:prepareLintJarForPublish
+[08:17:37]: ▸ > Task :webview_flutter_android:prepareReleaseArtProfile
+[08:17:37]: ▸ > Task :webview_flutter_android:processReleaseJavaRes NO-SOURCE
+[08:17:37]: ▸ > Task :webview_flutter_android:generateReleaseRFile
+[08:17:37]: ▸ > Task :webview_flutter_android:mergeReleaseJavaResource
+[08:17:37]: ▸ > Task :webview_flutter_android:writeReleaseAarMetadata
+[08:17:37]: ▸ > Task :webview_flutter_android:extractReleaseAnnotations
+[08:17:37]: ▸ > Task :webview_flutter_android:compileReleaseJavaWithJavac
+[08:17:37]: ▸ > Task :webview_flutter_android:mergeReleaseGeneratedProguardFiles
+[08:17:37]: ▸ > Task :webview_flutter_android:mergeReleaseConsumerProguardFiles
+[08:17:37]: ▸ > Task :webview_flutter_android:syncReleaseLibJars
+[08:17:37]: ▸ > Task :webview_flutter_android:bundleReleaseLocalLintAar
+[08:17:37]: ▸ > Task :app:buildKotlinToolingMetadata
+[08:18:07]: ▸ > Task :app:compileFlutterBuildDevRelease
+[08:18:25]: ▸ > Task :app:packLibsflutterBuildDevRelease
+[08:18:25]: ▸ > Task :app:preBuild UP-TO-DATE
+[08:18:25]: ▸ > Task :app:preDevReleaseBuild UP-TO-DATE
+[08:18:25]: ▸ > Task :app:compileDevReleaseAidl NO-SOURCE
+[08:18:25]: ▸ > Task :app:compileDevReleaseRenderscript NO-SOURCE
+[08:18:25]: ▸ > Task :app:generateDevReleaseBuildConfig
+[08:18:25]: ▸ > Task :app:cleanMergeDevReleaseAssets UP-TO-DATE
+[08:18:25]: ▸ > Task :app:mergeDevReleaseShaders
+[08:18:25]: ▸ > Task :app:compileDevReleaseShaders NO-SOURCE
+[08:18:25]: ▸ > Task :app:generateDevReleaseAssets UP-TO-DATE
+[08:18:25]: ▸ > Task :app:checkDevReleaseAarMetadata
+[08:18:25]: ▸ > Task :app:mergeDevReleaseAssets
+[08:18:25]: ▸ > Task :app:copyFlutterAssetsDevRelease
+[08:18:25]: ▸ > Task :app:generateDevReleaseResValues
+[08:18:25]: ▸ > Task :app:generateDevReleaseResources
+[08:18:25]: ▸ > Task :app:injectCrashlyticsMappingFileIdDevRelease
+[08:18:25]: ▸ > Task :app:processDevReleaseGoogleServices
+[08:18:26]: ▸ > Task :app:createDevReleaseCompatibleScreenManifests
+[08:18:26]: ▸ > Task :app:extractDeepLinksDevRelease
+[08:18:26]: ▸ > Task :connectivity_plus:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :firebase_core:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :firebase_crashlytics:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :flutter_plugin_android_lifecycle:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :google_sign_in_android:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :image_picker_android:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :shared_preferences_android:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :sign_in_with_apple:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :url_launcher_android:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :video_player_android:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :webview_flutter_android:extractDeepLinksRelease
+[08:18:26]: ▸ > Task :app:processDevReleaseMainManifest
+[08:18:26]: ▸ > Task :app:mergeDevReleaseResources
+[08:18:26]: ▸ > Task :app:processDevReleaseManifest
+[08:18:26]: ▸ > Task :app:mapDevReleaseSourceSetPaths
+[08:18:26]: ▸ > Task :connectivity_plus:bundleLibCompileToJarRelease
+[08:18:26]: ▸ > Task :firebase_crashlytics:bundleLibCompileToJarRelease
+[08:18:26]: ▸ > Task :google_sign_in_android:bundleLibCompileToJarRelease
+[08:18:26]: ▸ > Task :app:processDevReleaseManifestForPackage
+[08:18:26]: ▸ > Task :image_picker_android:bundleLibCompileToJarRelease
+[08:18:27]: ▸ > Task :shared_preferences_android:bundleLibCompileToJarRelease
+[08:18:27]: ▸ > Task :sign_in_with_apple:bundleLibCompileToJarRelease
+[08:18:27]: ▸ > Task :url_launcher_android:bundleLibCompileToJarRelease
+[08:18:27]: ▸ > Task :video_player_android:bundleLibCompileToJarRelease
+[08:18:27]: ▸ > Task :app:javaPreCompileDevRelease
+[08:18:27]: ▸ > Task :app:extractProguardFiles
+[08:18:27]: ▸ > Task :connectivity_plus:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :webview_flutter_android:bundleLibCompileToJarRelease
+[08:18:27]: ▸ > Task :connectivity_plus:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :connectivity_plus:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :connectivity_plus:createFullJarRelease
+[08:18:27]: ▸ > Task :firebase_core:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :firebase_core:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :firebase_crashlytics:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :firebase_core:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :firebase_crashlytics:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :firebase_core:createFullJarRelease
+[08:18:27]: ▸ > Task :firebase_crashlytics:createFullJarRelease
+[08:18:27]: ▸ > Task :firebase_crashlytics:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :flutter_plugin_android_lifecycle:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :flutter_plugin_android_lifecycle:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :flutter_plugin_android_lifecycle:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :google_sign_in_android:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :flutter_plugin_android_lifecycle:createFullJarRelease
+[08:18:27]: ▸ > Task :google_sign_in_android:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :google_sign_in_android:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :image_picker_android:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :google_sign_in_android:createFullJarRelease
+[08:18:27]: ▸ > Task :image_picker_android:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :shared_preferences_android:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :image_picker_android:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :shared_preferences_android:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :image_picker_android:createFullJarRelease
+[08:18:27]: ▸ > Task :shared_preferences_android:createFullJarRelease
+[08:18:27]: ▸ > Task :shared_preferences_android:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :sign_in_with_apple:bundleLibResRelease
+[08:18:27]: ▸ > Task :sign_in_with_apple:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :sign_in_with_apple:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :sign_in_with_apple:createFullJarRelease
+[08:18:27]: ▸ > Task :url_launcher_android:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :url_launcher_android:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :url_launcher_android:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :url_launcher_android:createFullJarRelease
+[08:18:27]: ▸ > Task :video_player_android:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :video_player_android:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :webview_flutter_android:bundleLibResRelease NO-SOURCE
+[08:18:27]: ▸ > Task :video_player_android:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :video_player_android:createFullJarRelease
+[08:18:27]: ▸ > Task :webview_flutter_android:writeReleaseLintModelMetadata
+[08:18:27]: ▸ > Task :webview_flutter_android:bundleLibRuntimeToJarRelease
+[08:18:27]: ▸ > Task :app:mergeDevReleaseJniLibFolders
+[08:18:27]: ▸ > Task :webview_flutter_android:createFullJarRelease
+[08:18:27]: ▸ > Task :connectivity_plus:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :firebase_core:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :firebase_crashlytics:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :flutter_plugin_android_lifecycle:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :google_sign_in_android:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :image_picker_android:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :shared_preferences_android:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :sign_in_with_apple:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :url_launcher_android:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :video_player_android:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :webview_flutter_android:copyReleaseJniLibsProjectOnly
+[08:18:27]: ▸ > Task :app:processDevReleaseResources
+[08:18:27]: ▸ > Task :app:mergeDevReleaseArtProfile
+[08:18:28]: ▸ > Task :app:mergeDevReleaseNativeLibs
+[08:18:29]: ▸ > Task :app:stripDevReleaseDebugSymbols
+[08:18:29]: ▸ Unable to strip the following libraries, packaging them as they are: libapp.so, libflutter.so.
+[08:18:29]: ▸ > Task :app:extractDevReleaseNativeSymbolTables
+[08:18:29]: ▸ Unable to extract native debug metadata from /home/circleci/project/build/app/intermediates/merged_native_libs/devRelease/out/lib/arm64-v8a/libapp.so because unable to locate the objcopy executable for the arm64-v8a ABI.
+[08:18:29]: ▸ Unable to extract native debug metadata from /home/circleci/project/build/app/intermediates/merged_native_libs/devRelease/out/lib/arm64-v8a/libflutter.so because unable to locate the objcopy executable for the arm64-v8a ABI.
+[08:18:29]: ▸ Unable to extract native debug metadata from /home/circleci/project/build/app/intermediates/merged_native_libs/devRelease/out/lib/armeabi-v7a/libapp.so because unable to locate the objcopy executable for the armeabi-v7a ABI.
+[08:18:29]: ▸ Unable to extract native debug metadata from /home/circleci/project/build/app/intermediates/merged_native_libs/devRelease/out/lib/armeabi-v7a/libflutter.so because unable to locate the objcopy executable for the armeabi-v7a ABI.
+[08:18:29]: ▸ Unable to extract native debug metadata from /home/circleci/project/build/app/intermediates/merged_native_libs/devRelease/out/lib/x86_64/libapp.so because unable to locate the objcopy executable for the x86_64 ABI.
+[08:18:29]: ▸ Unable to extract native debug metadata from /home/circleci/project/build/app/intermediates/merged_native_libs/devRelease/out/lib/x86_64/libflutter.so because unable to locate the objcopy executable for the x86_64 ABI.
+[08:18:29]: ▸ > Task :app:mergeDevReleaseNativeDebugMetadata NO-SOURCE
+[08:18:29]: ▸ > Task :shared_preferences_android:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :firebase_crashlytics:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :firebase_core:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :sign_in_with_apple:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :app:checkDevReleaseDuplicateClasses
+[08:18:29]: ▸ > Task :image_picker_android:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :flutter_plugin_android_lifecycle:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :url_launcher_android:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :video_player_android:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :google_sign_in_android:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :connectivity_plus:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :webview_flutter_android:exportReleaseConsumerProguardFiles
+[08:18:29]: ▸ > Task :app:processDevReleaseJavaRes NO-SOURCE
+[08:18:29]: ▸ > Task :app:processApplicationManifestDevReleaseForBundle
+[08:18:30]: ▸ > Task :app:compileDevReleaseKotlin
+[08:18:30]: ▸ > Task :app:compressDevReleaseAssets
+[08:18:30]: ▸ Execution optimizations have been disabled for task ':app:compressDevReleaseAssets' to ensure correctness due to the following reasons:
+[08:18:30]: ▸ - Gradle detected a problem with the following location: '/home/circleci/project/build/app/intermediates/assets/devRelease/mergeDevReleaseAssets'. Reason: Task ':app:compressDevReleaseAssets' uses this output of task ':app:copyFlutterAssetsDevRelease' without declaring an explicit or implicit dependency. This can lead to incorrect results being produced, depending on what order the tasks are executed. Please refer to https://docs.gradle.org/7.5/userguide/validation_problems.html#implicit_dependency for more details about this problem.
+[08:18:30]: ▸ > Task :app:collectDevReleaseDependencies
+[08:18:30]: ▸ > Task :app:bundleDevReleaseResources
+[08:18:30]: ▸ > Task :app:compileDevReleaseJavaWithJavac
+[08:18:31]: ▸ > Task :app:mergeDevReleaseGeneratedProguardFiles
+[08:18:31]: ▸ > Task :app:sdkDevReleaseDependencyData
+[08:18:31]: ▸ > Task :app:validateSigningDevRelease
+[08:18:31]: ▸ > Task :app:writeDevReleaseAppMetadata
+[08:18:31]: ▸ > Task :app:writeDevReleaseSigningConfigVersions
+[08:18:31]: ▸ > Task :app:mergeDevReleaseJavaResource
+[08:18:37]: ▸ > Task :app:lintVitalAnalyzeDevRelease
+[08:18:55]: ▸ > Task :app:minifyDevReleaseWithR8
+[08:18:55]: ▸ > Task :app:lintVitalReportDevRelease
+[08:18:55]: ▸ > Task :app:compileDevReleaseArtProfile
+[08:18:56]: ▸ > Task :app:uploadCrashlyticsMappingFileDevRelease
+[08:18:56]: ▸ > Task :app:lintVitalDevRelease
+[08:18:56]: ▸ > Task :app:shrinkDevReleaseRes
+[08:18:56]: ▸ > Task :app:optimizeDevReleaseResources
+[08:18:57]: ▸ > Task :app:packageDevRelease
+[08:18:57]: ▸ > Task :app:createDevReleaseApkListingFileRedirect
+[08:18:57]: ▸ > Task :app:assembleDevRelease
+[08:18:57]: ▸ Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+[08:18:57]: ▸ You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+[08:18:57]: ▸ See https://docs.gradle.org/7.5/userguide/command_line_interface.html#sec:command_line_warnings
+[08:18:57]: ▸ Execution optimizations have been disabled for 1 invalid unit(s) of work during this build to ensure correctness.
+[08:18:57]: ▸ Please consult deprecation warnings for more details.
+[08:18:57]: ▸ BUILD SUCCESSFUL in 3m 21s
+[08:18:57]: ▸ 361 actionable tasks: 360 executed, 1 up-to-date
+[08:18:57]: Couldn't find any new signed apk files...
+[08:18:57]: -------------------
+[08:18:57]: --- Step: is_ci ---
+[08:18:57]: -------------------
+[08:18:57]: ---------------------------------------
+[08:18:57]: --- Step: firebase_app_distribution ---
+[08:18:57]: ---------------------------------------
+[08:18:57]: 🔐 Authenticating with FIREBASE_TOKEN environment variable
+[08:18:57]: ⌛ Uploading the APK.
+[08:19:09]: ✅ Uploaded APK successfully and created release 1.0 (1).
+[08:19:09]: ✅ Posted release notes.
+[08:19:10]: ✅ Added testers/groups.
+[08:19:10]: 🎉 App Distribution upload finished successfully. Setting Actions.lane_context[SharedValues::FIREBASE_APP_DISTRO_RELEASE] to the uploaded release.
+[08:19:10]: 🔗 View this release in the Firebase console: https://console.firebase.google.com/project/bright-proxy-337209/appdistribution/app/android:com.duytq.example.dev/releases/6p31pi8b3idbg?utm_source=fastlane
+[08:19:10]: 🔗 Share this release with testers who have access: https://appdistribution.firebase.google.com/testerapps/1:497869998462:android:0deaff1de7075c36b34b2f/releases/6p31pi8b3idbg?utm_source=fastlane
+[08:19:10]: 🔗 Download the release binary (link expires in 1 hour): https://firebaseappdistribution.googleapis.com/app-binary-downloads/projects/497869998462/apps/1:497869998462:android:0deaff1de7075c36b34b2f/releases/6p31pi8b3idbg/binaries/f52a639b2991e51cffd1df75cb7d76e7f7b5315a91660846bc7875e2f2a71331/app.apk?utm_source=fastlane&token=AFb1MRwAAAAAZF4EjSJBpo6xjFPKoc04TnQwJbkNsUzGbvscG8-OKeLRKrRrAe9SoQEG9pxXgiLefMLgWPMzLQGGW3eLrWG3bgsyBQuaeMaRLQ8K5N4pEtKcX4BJa4io1XvbI3w3PIiUVhPukBV4aKWCpvMI5fsH9iazX4XHmMKiqBjtrfoLdQHK06cfFRRnjWjQoJkcYnf0atcTcxCOSWceWf8lFxAh6b3YmuEBLethbYiE2sbJbVHsBwzRQqOp3ZS7P2h8R0-3YxaNMer88gRkjfYSAc31tbMpRImP_1KctDxJ5ggijYz-726smzg-mb2ytqhrPwlsZ-jyjAkk76w3oAiFBB-zWzV_NeY
+
++------+---------------------------+-------------+
+|                fastlane summary                |
++------+---------------------------+-------------+
+| Step | Action                    | Time (in s) |
++------+---------------------------+-------------+
+| 1    | default_platform          | 0           |
+| 2    | assembledevRelease    | 201         |
+| 3    | is_ci                     | 0           |
+| 4    | firebase_app_distribution | 12          |
++------+---------------------------+-------------+
+
+[08:19:10]: fastlane.tools finished successfully 🎉
