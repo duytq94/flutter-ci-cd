@@ -12,6 +12,7 @@ Table of Contents
   - [Trigger pipelines](#trigger-pipelines)
   - [Output log](#output-log)
   - [Secure secret files](#secure-secret-files)
+  - [Local build](#local-build)
 
 
 ## Preamble
@@ -227,3 +228,12 @@ You can store secret files (like p8, json key, token...) to CircleCI Environment
 Or put them in environment variables, then load them from .env file, and make them more secure by using the dedicated secret manager, like Vault by HashiCorp or Secret Manager by Google Cloud.
 
 <img src="./photos/circle-env-variables.png" alt= "circle-env-variables" width="700">
+
+## Local build
+Now with fastlane, you also able to build output files with local computer
+- iOS:
+  - `cd ios`
+  - `fastlane adhoc` or `fastlane beta`
+- android:
+  - `cd android`
+  - `fastlane adhoc` or `fastlane beta`

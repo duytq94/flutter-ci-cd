@@ -2,40 +2,63 @@ default_platform(:android)
 
 platform :android do
 
-  desc "Build adhoc and send to Firebase"
+  desc "Build apk with dev env & send to Firebase"
   lane :adhoc do
+
+    app_id = "1:497869998462:android:0deaff1de7075c36b34b2f"
+
+    # Get info firebase latest build & increment versionCode
+
+    # Notice that change "versionCode flutterVersionCode.toInteger()" to "versionCode 1" at app/build.gradle
+    # because increment_version_code plugin actually work with native android project (which using "versionCode 1")
+    # if not the plugin will get the wrong syntax and can't change versionCode for you
+    latest_release = firebase_app_distribution_get_latest_release(
+      app: app_id
+    )
+    increment_version_code(
+      version_code: latest_release[:buildVersion].to_i + 1 
+    )
+
+    # Build apk
     gradle(
       task: 'assemble',
       build_type: 'Release',
       flavor: 'dev',
       flags: "-Ptarget=lib/app/main_dev.dart"
     )
+
+    # Upload to Firebase
     if is_ci
       firebase_app_distribution(
-        app: "1:497869998462:android:0deaff1de7075c36b34b2f",
+        app: app_id,
         release_notes: "Upload to Firebase",
         groups: "testers",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-dev-release.apk"
       )
     end
+
   end
 
-  desc "Build and upload to Internal Testing on Google Play"
+  desc "Build aab with production env & upload to Internal Testing on Google Play"
   lane :beta do
+
+    # Get current_version_code of latest build on Google Play & increment versionCode
     current_version_code = google_play_track_version_codes(
       track: "internal"
     )[0]
-    new_version_code = current_version_code + 1
+    increment_version_code(
+      version_code: current_version_code + 1
+    )
 
+    # Build aab
     gradle(
       task: 'bundle',
       build_type: 'Release',
       flavor: 'prod',
-      flags: "-Ptarget=lib/app/main.dart",
-      properties: {
-        "versionCode" => new_version_code
-      }
+      flags: "-Ptarget=lib/app/main.dart"
     )
+
+    # Upload to Google Play internal
     if is_ci
       supply(
         track: 'internal',
@@ -44,6 +67,7 @@ platform :android do
         skip_upload_changelogs: true
       )
     end
-    
+
   end
+
 end

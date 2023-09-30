@@ -2,55 +2,79 @@ default_platform(:ios)
 
 platform :ios do
 
+  # For fastlane match
   before_all do
     if is_ci
       setup_circle_ci
     end
   end
 
-  desc "Build adhoc and send to Firebase"
+  desc "Build dev env & send to Firebase"
   lane :adhoc do
+
+    app_id = "1:497869998462:ios:b30502bdbfa8f791b34b2f"
+
+    # Get info firebase latest build & increment buildNumber
+    latest_release = firebase_app_distribution_get_latest_release(
+      app: app_id
+    )
+    increment_build_number({ build_number: latest_release[:buildVersion].to_i + 1 })
+
+    # Handle cert & provisioning
     match(
       type: "adhoc",
       app_identifier: "com.duytq.example.dev",
       readonly: true
     )
+
+    # Build ipa
     gym(
       scheme: "dev",
       export_method: "ad-hoc",
       output_directory: "output"
     )
+
+    # Upload to Firebase
     if is_ci
       firebase_app_distribution(
-        app: "1:497869998462:ios:b30502bdbfa8f791b34b2f",
+        app: app_id,
         release_notes: "Upload to Firebase",
         groups: "testers"
       )
     end
+
   end
 
-  desc "Build and upload to TestFlight"
+  desc "Build prod env & upload to TestFlight"
   lane :beta do
+
+    # Get info AppStore latest build & increment buildNumber
     app_store_connect_api_key(
       key_id: "3I935WSDHE",
       issuer_id: "ed1f387a-d513-4de6-947a-46bpo9he3108",
-      key_filepath: "fastlane/AuthKey_334DJE5TPX.p8",
+      key_filepath: "fastlane/AuthKey_334DJE5TPX.p8"
     )
     increment_build_number(
       build_number: latest_testflight_build_number(
         initial_build_number: 1,
         version: get_version_number(xcodeproj: "Runner.xcodeproj")
-      ) + 1,
+      ) + 1
     )
+
+    # Handle cert & provisioning
     match(
       type: "appstore",
       app_identifier: "com.duytq.example",
       readonly: true
     )
+
+    # Build ipa
     gym(
       scheme: "prod",
       export_method: "app-store"
     )
+
+    # Upload to TestFlight
     if is_ci
       pilot(
         app_identifier: "com.duytq.example",
@@ -58,6 +82,7 @@ platform :ios do
         skip_waiting_for_build_processing: true
       )
     end
+
   end
   
 end
