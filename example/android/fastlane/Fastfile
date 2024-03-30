@@ -2,16 +2,15 @@ default_platform(:android)
 
 platform :android do
 
-  desc "Build apk with dev env & send to Firebase"
+  desc "Build apk with dev env & upload to Firebase"
   lane :adhoc do
-
     app_id = "1:497869998462:android:0deaff1de7075c36b34b2f"
-
-    # Get info firebase latest build & increment versionCode
 
     # Notice that change "versionCode flutterVersionCode.toInteger()" to "versionCode 1" at app/build.gradle
     # because increment_version_code plugin actually work with native android project (which using "versionCode 1")
     # if not the plugin will get the wrong syntax and can't change versionCode for you
+    
+    # Get info firebase latest build & increment versionCode
     latest_release = firebase_app_distribution_get_latest_release(
       app: app_id
     )
@@ -39,15 +38,30 @@ platform :android do
 
   end
 
-  desc "Build aab with production env & upload to Internal Testing on Google Play"
+  desc "Build aab with production env & upload to Google Play"
   lane :beta do
+    # Change type you would like to build: production, beta, alpha, internal
+    mode_distribute = "internal"
 
-    # Get current_version_code of latest build on Google Play & increment versionCode
-    current_version_code = google_play_track_version_codes(
-      track: "internal"
-    )[0]
+    # find latest version code
+    def latest_google_play_version_code
+      tracks = ["internal", "alpha", "beta", "production"]
+      version_codes = []
+      tracks.each do | track |
+          begin
+        vc = google_play_track_version_codes(track: track)
+      rescue
+      puts "No track found for " + track
+      else
+        version_codes.concat(vc)
+      end
+      end
+      version_codes.max
+    end
+
+    # Auto increment build number
     increment_version_code(
-      version_code: current_version_code + 1
+      version_code: latest_google_play_version_code + 1
     )
 
     # Build aab
@@ -58,13 +72,14 @@ platform :android do
       flags: "-Ptarget=lib/app/main.dart"
     )
 
-    # Upload to Google Play internal
+    # Upload to Google Play
     if is_ci
       supply(
-        track: 'internal',
-        release_status: 'draft',
+        track: mode_distribute,
+        release_status: 'completed',
         aab: '../build/app/outputs/bundle/prodRelease/app-prod-release.aab',
-        skip_upload_changelogs: true
+        skip_upload_changelogs: true,
+        skip_upload_metadata: true
       )
     end
 

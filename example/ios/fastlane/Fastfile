@@ -11,7 +11,6 @@ platform :ios do
 
   desc "Build dev env & send to Firebase"
   lane :adhoc do
-
     app_id = "1:497869998462:ios:b30502bdbfa8f791b34b2f"
 
     # Get info firebase latest build & increment buildNumber
@@ -47,7 +46,6 @@ platform :ios do
 
   desc "Build prod env & upload to TestFlight"
   lane :beta do
-
     # Get info AppStore latest build & increment buildNumber
     app_store_connect_api_key(
       key_id: "3I935WSDHE",
